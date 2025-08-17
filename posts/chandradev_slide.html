@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>चंद्रदेव की कथा | The Story of Chandra Dev</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Noto Sans Devanagari', Arial, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .slide {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 1000px;
+            width: 100%;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+        }
+        
+        .main-title {
+            font-size: 24px;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 15px;
+            line-height: 1.4;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            font-weight: 600;
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .story-card {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #667eea;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .story-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+        }
+        
+        .card-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #2d3748;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+        
+        .check-icon {
+            color: #48bb78;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+        
+        .card-content {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #4a5568;
+        }
+        
+        .card-content ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        
+        .card-content li {
+            margin-bottom: 8px;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .card-content li::before {
+            content: "•";
+            color: #667eea;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        .highlight {
+            font-weight: 600;
+            color: #2d3748;
+        }
+        
+        .sources {
+            background: linear-gradient(135deg, #fed7d7 0%, #feb2b2 100%);
+            border-radius: 15px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .language-switch {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .language-switch a {
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 600;
+            color: #667eea;
+            margin: 0 10px;
+        }
+
+        .language-switch a:hover {
+            text-decoration: underline;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="slide" id="hindi-version">
+        <div class="header">
+            <h1 class="main-title">चंद्रदेव की कथा</h1>
+            <h2 class="subtitle">एक पौराणिक कथा</h2>
+        </div>
+        <div class="story-card">
+            <div class="card-title">
+                <span class="check-icon">✅</span>
+                समलैंगिक संबंधों के प्रति सम्मान
+            </div>
+            <div class="card-content">
+                <p>वेदों और पुराणों की विभिन्न कथाओं में समलैंगिक संबंधों के प्रति सम्मान दिखाई देता है। ऐसी ही एक कथा चंद्रदेव की है, जो उनके जीवन के विभिन्न पहलुओं को दर्शाती है।</p>
+            </div>
+        </div>
+        <div class="content-grid">
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    1. चंद्रदेव और तारा का विवाद
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>चंद्रदेव ने <span class="highlight">तारा</span>, जो बृहस्पति की पत्नी थीं, का अपहरण कर लिया।</li>
+                        <li>इससे देवताओं और ऋषियों के बीच <span class="highlight">महान विवाद</span> हुआ।</li>
+                        <li>बृहस्पति और चंद्रदेव के बीच युद्ध की स्थिति उत्पन्न हो गई, जिसे <span class="highlight">देवताओं के हस्तक्षेप</span> से रोका गया।</li>
+                        <li>तारा को बृहस्पति को वापस कर दिया गया, लेकिन वह गर्भवती थीं।</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    2. बुध का जन्म
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>तारा ने एक तेजस्वी पुत्र को जन्म दिया।</li>
+                        <li>बृहस्पति ने पूछा कि पिता कौन है। पहले तारा ने चुप्पी साधी, फिर बताया कि यह <span class="highlight">चंद्र का पुत्र</span> है।</li>
+                        <li>बालक का नाम पड़ा <span class="highlight">बुध</span>, जो ज्ञान और बुद्धि के लिए प्रसिद्ध हुआ।</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    3. इला का शाप और लिंग परिवर्तन
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>राजा <span class="highlight">सुद्युम्न</span> एक बार शिव-पार्वती के वन में गए।</li>
+                        <li>शाप के कारण वे <span class="highlight">स्त्री (इला)</span> बन गए।</li>
+                        <li>बाद में शिव ने वर दिया कि इला <span class="highlight">एक माह स्त्री और एक माह पुरुष</span> रहेंगे।</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    4. बुध और इला का विवाह
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>इला के स्त्री रूप में रहते समय <span class="highlight">बुध उनसे प्रेम कर बैठे</span>।</li>
+                        <li>उनका विवाह हुआ और एक पुत्र हुआ <span class="highlight">पुरूरवा</span>, जो चंद्रवंश का आरंभ करता है।</li>
+                        <li>बुध ने इला के बदलते रूप को स्वीकार किया।</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="sources">
+                <div class="sources-title">
+                    <span class="book-icon">📚</span>
+                    स्रोत:
+                </div>
+                <div class="sources-list">
+                    <span class="highlight">भागवत पुराण</span>, स्कंध 9, अध्याय 14<br>
+                    <span class="highlight">विष्णु पुराण</span>, <span class="highlight">पद्म पुराण</span>, <span class="highlight">हरिवंश पुराण</span>
+                </div>
+            </div>
+        </div>
+        <div class="language-switch">
+            <a href="#english-version" onclick="switchLanguage('english')">Switch to English</a>
+        </div>
+    </div>
+    <div class="slide hidden" id="english-version">
+        <div class="header">
+            <h1 class="main-title">The Story of Chandra Dev</h1>
+            <h2 class="subtitle">A Mythological Tale</h2>
+        </div>
+        <div class="story-card">
+            <div class="card-title">
+                <span class="check-icon">✅</span>
+                Respect for Same-Sex Relationships
+            </div>
+            <div class="card-content">
+                <p>Respect for same-sex relationships is evident in various stories from the Vedas and Puranas. One such story is that of Chandra Dev, which highlights different aspects of his life.</p>
+            </div>
+        </div>
+        <div class="content-grid">
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    1. The Conflict Between Chandra Dev and Tara
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Chandra Dev abducted <span class="highlight">Tara</span>, who was the wife of Brihaspati.</li>
+                        <li>This led to a <span class="highlight">great conflict</span> among the gods and sages.</li>
+                        <li>A war almost broke out between Brihaspati and Chandra Dev, but it was stopped by the <span class="highlight">intervention of the gods</span>.</li>
+                        <li>Tara was returned to Brihaspati, but she was already pregnant.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    2. The Birth of Budh
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>Tara gave birth to a radiant son.</li>
+                        <li>Brihaspati asked who the father was. Initially, Tara remained silent, but later revealed that it was <span class="highlight">Chandra's son</span>.</li>
+                        <li>The child was named <span class="highlight">Budh</span>, who became renowned for wisdom and intellect.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    3. Ila's Curse and Gender Transformation
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>King <span class="highlight">Sudhyumna</span> once entered the forest of Shiva and Parvati.</li>
+                        <li>Due to a curse, he was transformed into a <span class="highlight">woman (Ila)</span>.</li>
+                        <li>Later, Shiva granted a boon that Ila would alternate between being a <span class="highlight">woman for one month and a man for the next</span>.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="story-card">
+                <div class="card-title">
+                    <span class="check-icon">✅</span>
+                    4. The Marriage of Budh and Ila
+                </div>
+                <div class="card-content">
+                    <ul>
+                        <li>While Ila was in her female form, <span class="highlight">Budh fell in love with her</span>.</li>
+                        <li>They got married and had a son named <span class="highlight">Pururava</span>, who became the founder of the Lunar Dynasty (Chandravansh).</li>
+                        <li>Budh accepted Ila's alternating forms with love and understanding.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="sources">
+                <div class="sources-title">
+                    <span class="book-icon">📚</span>
+                    Sources:
+                </div>
+                <div class="sources-list">
+                    <span class="highlight">Bhagavata Purana</span>, Skanda 9, Chapter 14<br>
+                    <span class="highlight">Vishnu Purana</span>, <span class="highlight">Padma Purana</span>, <span class="highlight">Harivamsa Purana</span>
+                </div>
+            </div>
+        </div>
+        <div class="language-switch">
+            <a href="#hindi-version" onclick="switchLanguage('hindi')">स्विच करें हिंदी में</a>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(language) {
+            const hindiVersion = document.getElementById('hindi-version');
+            const englishVersion = document.getElementById('english-version');
+
+            if (language === 'english') {
+                hindiVersion.classList.add('hidden');
+                englishVersion.classList.remove('hidden');
+            } else {
+                englishVersion.classList.add('hidden');
+                hindiVersion.classList.remove('hidden');
+            }
+        }
+    </script>
+</body>
+</html>
