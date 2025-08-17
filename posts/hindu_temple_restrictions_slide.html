@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>हिंदू मंदिरों में प्रवेश प्रतिबंध</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #ff9933 0%, #ffffff 50%, #138808 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .slide-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px;
+            border: 2px solid rgba(255, 153, 51, 0.3);
+        }
+        
+        .language-nav {
+            text-align: center;
+            margin-bottom: 30px;
+            position: sticky;
+            top: 20px;
+            z-index: 100;
+        }
+        
+        .nav-buttons {
+            display: inline-flex;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 25px;
+            padding: 5px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .nav-btn {
+            padding: 12px 30px;
+            border: none;
+            background: none;
+            color: #8B4513;
+            font-weight: bold;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+            cursor: pointer;
+        }
+        
+        .nav-btn.active {
+            background: linear-gradient(135deg, #ff9933, #ffcc66);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+        }
+        
+        .nav-btn:hover:not(.active) {
+            background: rgba(255, 255, 255, 0.7);
+            transform: translateY(-2px);
+        }
+        
+        .version-section {
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+        
+        .version-section.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+        
+        .header::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 3px;
+            background: linear-gradient(90deg, #ff9933, #138808);
+            border-radius: 2px;
+        }
+        
+        .title {
+            font-size: 2.5rem;
+            color: #8B4513;
+            margin-bottom: 10px;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            font-style: italic;
+        }
+        
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+        
+        .section {
+            background: rgba(255, 248, 220, 0.8);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #ff9933;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        
+        .section-title {
+            font-size: 1.4rem;
+            color: #8B4513;
+            margin-bottom: 15px;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .temple-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-top: 15px;
+        }
+        
+        .temple-item {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 8px 12px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            color: #333;
+            border: 1px solid rgba(255, 153, 51, 0.2);
+        }
+        
+        .temple-name {
+            font-weight: bold;
+            color: #8B4513;
+        }
+        
+        .temple-location {
+            color: #666;
+            font-size: 0.8rem;
+        }
+        
+        .reason-box {
+            background: rgba(255, 245, 238, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #ff9933;
+            margin: 15px 0;
+        }
+        
+        .vedic-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, rgba(19, 136, 8, 0.1), rgba(255, 153, 51, 0.1));
+            border-left: 5px solid #138808;
+        }
+        
+        .mantra-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+        
+        .mantra-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid rgba(19, 136, 8, 0.3);
+            position: relative;
+        }
+        
+        .mantra-card::before {
+            content: '🕉️';
+            position: absolute;
+            top: -10px;
+            right: 15px;
+            font-size: 1.5rem;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 5px;
+            border-radius: 50%;
+        }
+        
+        .mantra-text {
+            font-style: italic;
+            color: #2c5530;
+            font-weight: bold;
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+        
+        .mantra-meaning {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+        }
+        
+        .mantra-principle {
+            color: #8B4513;
+            font-weight: bold;
+            font-size: 0.9rem;
+        }
+        
+        .icon {
+            font-size: 1.2rem;
+            margin-right: 5px;
+        }
+        
+        .highlight {
+            background: linear-gradient(120deg, #ff9933, #ffcc66);
+            color: white;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid rgba(255, 153, 51, 0.3);
+            color: #666;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 25px;
+            }
+            
+            .temple-list {
+                grid-template-columns: 1fr;
+            }
+            
+            .title {
+                font-size: 2rem;
+            }
+            
+            .slide-container {
+                padding: 25px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="slide-container">
+        <div class="language-nav">
+            <div class="nav-buttons">
+                <button class="nav-btn active" data-section="hindi">हिंदी</button>
+                <button class="nav-btn" data-section="english">English</button>
+                <button class="nav-btn" data-section="german">Deutsch</button>
+            </div>
+        </div>
+
+        <!-- HINDI VERSION -->
+        <div id="hindi-section" class="version-section active">
+            <div class="header">
+                <h1 class="title">हिंदू मंदिरों में प्रवेश प्रतिबंध</h1>
+                <p class="subtitle">आगम शास्त्र और वैदिक दृष्टिकोण का तुलनात्मक अध्ययन</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="icon">🏛️</span>
+                        प्रमुख मंदिर उदाहरण
+                    </h2>
+                    <p style="margin-bottom: 15px; color: #666;">भारत और अन्य क्षेत्रों के प्रमुख मंदिर जहाँ केवल हिंदू भक्तों को प्रवेश की अनुमति है:</p>
+                    
+                    <div class="temple-list">
+                        <div class="temple-item">
+                            <div class="temple-name">जगन्नाथ मंदिर</div>
+                            <div class="temple-location">पुरी, ओडिशा</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">गुरुवायुर मंदिर</div>
+                            <div class="temple-location">केरल</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">पद्मनाभस्वामी मंदिर</div>
+                            <div class="temple-location">तिरुवनंतपुरम</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">काशी विश्वनाथ मंदिर</div>
+                            <div class="temple-location">वाराणसी</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">लिंगराज मंदिर</div>
+                            <div class="temple-location">भुवनेश्वर</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">कपालीश्वरर मंदिर</div>
+                            <div class="temple-location">चेन्नई</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">कामाक्षी अम्मन मंदिर</div>
+                            <div class="temple-location">कांचीपुरम</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">पलानी मुरुगन मंदिर</div>
+                            <div class="temple-location">तमिलनाडु</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">सोमनाथ मंदिर</div>
+                            <div class="temple-location">गुजरात</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">श्रीरंगम रंगनाथस्वामी मंदिर</div>
+                            <div class="temple-location">तमिलनाडु</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">पशुपतिनाथ मंदिर</div>
+                            <div class="temple-location">काठमांडू</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="icon">📜</span>
+                        प्रतिबंध का कारण
+                    </h2>
+                    
+                    <div class="reason-box">
+                        <h3 style="color: #8B4513; margin-bottom: 10px;">आगम शास्त्र के नियम</h3>
+                        <p style="color: #333; line-height: 1.6;">
+                            मंदिर <span class="highlight">आगम शास्त्र</span> के नियमों का पालन करते हैं। 
+                            आगम शास्त्र प्राचीन ग्रंथ हैं जो मंदिर निर्माण, पूजा-विधि और 
+                            पवित्रता के नियम निर्धारित करते हैं।
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 240, 245, 0.8); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">
+                            ये नियम मंदिर की आध्यात्मिक शुद्धता और पारंपरिक पूजा पद्धति को 
+                            बनाए रखने के उद्देश्य से बनाए गए हैं।
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="section vedic-section">
+                    <h2 class="section-title">
+                        <span class="icon">🕉️</span>
+                        वैदिक दृष्टिकोण और समावेशिता
+                    </h2>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="color: #2c5530; margin-bottom: 10px;">मुख्य बिंदु:</h3>
+                        <ul style="color: #333; line-height: 1.6; padding-left: 20px;">
+                            <li>वेदों में गैर-हिंदू पूजा पर कोई प्रतिबंध नहीं</li>
+                            <li>वैदिक पूजा = यज्ञ (अग्नि पूजा), मूर्ति-पूजा नहीं</li>
+                            <li>वैदिक काल में मंदिर संस्कृति नहीं थी</li>
+                            <li>"हिंदू/गैर-हिंदू" की अवधारणा नहीं थी</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 style="color: #2c5530; margin-bottom: 15px; font-size: 1.2rem;">वेदों के समावेशी मंत्र:</h3>
+                    
+                    <div class="mantra-grid">
+                        <div class="mantra-card">
+                            <div class="mantra-text">"सभी प्राणी शुभ देखें, सब मिलकर सुख से रहें।"</div>
+                            <div class="mantra-meaning">ऋग्वेद 1.89.1</div>
+                            <div class="mantra-principle">→ समावेशी दृष्टि</div>
+                        </div>
+                        
+                        <div class="mantra-card">
+                            <div class="mantra-text">"साथ चलो, साथ बोलो, मन एक करो।"</div>
+                            <div class="mantra-meaning">ऋग्वेद 10.191.2</div>
+                            <div class="mantra-principle">→ सामूहिक आध्यात्मिकता</div>
+                        </div>
+                        
+                        <div class="mantra-card">
+                            <div class="mantra-text">"सत्य एक है, ज्ञानी उसे अनेक नामों से पुकारते हैं।"</div>
+                            <div class="mantra-meaning">ऋग्वेद 1.164.46</div>
+                            <div class="mantra-principle">→ सार्वभौमिकता</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>यह प्रस्तुति शैक्षणिक उद्देश्य से तैयार की गई है • आगम शास्त्र और वैदिक परंपरा के बीच अंतर को समझने के लिए</p>
+            </div>
+        </div>
+
+        <!-- ENGLISH VERSION -->
+        <div id="english-section" class="version-section">
+            <div class="header">
+                <h1 class="title">Entry Restrictions in Hindu Temples</h1>
+                <p class="subtitle">Comparative Study of Agama Shastra and Vedic Perspective</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="icon">🏛️</span>
+                        Major Temple Examples
+                    </h2>
+                    <p style="margin-bottom: 15px; color: #666;">Major temples in India and other regions where only Hindu devotees are allowed entry:</p>
+                    
+                    <div class="temple-list">
+                        <div class="temple-item">
+                            <div class="temple-name">Jagannath Temple</div>
+                            <div class="temple-location">Puri, Odisha</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Guruvayur Temple</div>
+                            <div class="temple-location">Kerala</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Padmanabhaswamy Temple</div>
+                            <div class="temple-location">Thiruvananthapuram</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Kashi Vishwanath Temple</div>
+                            <div class="temple-location">Varanasi</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Lingaraj Temple</div>
+                            <div class="temple-location">Bhubaneswar</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Kapaleeshwarar Temple</div>
+                            <div class="temple-location">Chennai</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Kamakshi Amman Temple</div>
+                            <div class="temple-location">Kanchipuram</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Palani Murugan Temple</div>
+                            <div class="temple-location">Tamil Nadu</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Somnath Temple</div>
+                            <div class="temple-location">Gujarat</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Srirangam Ranganathaswamy Temple</div>
+                            <div class="temple-location">Tamil Nadu</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Pashupatinath Temple</div>
+                            <div class="temple-location">Kathmandu</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="icon">📜</span>
+                        Reason for Restrictions
+                    </h2>
+                    
+                    <div class="reason-box">
+                        <h3 style="color: #8B4513; margin-bottom: 10px;">Agama Shastra Rules</h3>
+                        <p style="color: #333; line-height: 1.6;">
+                            Temples follow the rules of <span class="highlight">Agama Shastra</span>. 
+                            Agama Shastras are ancient texts that prescribe rules for temple construction, 
+                            worship procedures, and purity guidelines.
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 240, 245, 0.8); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">
+                            These rules were created to maintain the spiritual sanctity of the temple 
+                            and preserve traditional worship practices.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="section vedic-section">
+                    <h2 class="section-title">
+                        <span class="icon">🕉️</span>
+                        Vedic Perspective and Inclusivity
+                    </h2>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="color: #2c5530; margin-bottom: 10px;">Key Points:</h3>
+                        <ul style="color: #333; line-height: 1.6; padding-left: 20px;">
+                            <li>No restrictions on non-Hindu worship in the Vedas</li>
+                            <li>Vedic worship = Yajna (fire worship), not idol worship</li>
+                            <li>Temple culture did not exist in Vedic times</li>
+                            <li>Concept of "Hindu/non-Hindu" did not exist</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 style="color: #2c5530; margin-bottom: 15px; font-size: 1.2rem;">Inclusive Mantras from the Vedas:</h3>
+                    
+                    <div class="mantra-grid">
+                        <div class="mantra-card">
+                            <div class="mantra-text">"May all beings see auspiciousness, may all live together in happiness."</div>
+                            <div class="mantra-meaning">Rig Veda 1.89.1</div>
+                            <div class="mantra-principle">→ Inclusive Vision</div>
+                        </div>
+                        
+                        <div class="mantra-card">
+                            <div class="mantra-text">"Walk together, speak together, unite your minds."</div>
+                            <div class="mantra-meaning">Rig Veda 10.191.2</div>
+                            <div class="mantra-principle">→ Collective Spirituality</div>
+                        </div>
+                        
+                        <div class="mantra-card">
+                            <div class="mantra-text">"Truth is one, the wise call it by many names."</div>
+                            <div class="mantra-meaning">Rig Veda 1.164.46</div>
+                            <div class="mantra-principle">→ Universality</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>This presentation is prepared for educational purposes • To understand the difference between Agama Shastra and Vedic traditions</p>
+            </div>
+        </div>
+
+        <!-- GERMAN VERSION -->
+        <div id="german-section" class="version-section">
+            <div class="header">
+                <h1 class="title">Eintrittsbeschränkungen in Hindu-Tempeln</h1>
+                <p class="subtitle">Vergleichsstudie von Agama Shastra und vedischer Perspektive</p>
+            </div>
+            
+            <div class="content-grid">
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="icon">🏛️</span>
+                        Wichtige Tempel-Beispiele
+                    </h2>
+                    <p style="margin-bottom: 15px; color: #666;">Bedeutende Tempel in Indien und anderen Regionen, wo nur Hindu-Gläubigen der Eintritt gestattet ist:</p>
+                    
+                    <div class="temple-list">
+                        <div class="temple-item">
+                            <div class="temple-name">Jagannath-Tempel</div>
+                            <div class="temple-location">Puri, Odisha</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Guruvayur-Tempel</div>
+                            <div class="temple-location">Kerala</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Padmanabhaswamy-Tempel</div>
+                            <div class="temple-location">Thiruvananthapuram</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Kashi Vishwanath-Tempel</div>
+                            <div class="temple-location">Varanasi</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Lingaraj-Tempel</div>
+                            <div class="temple-location">Bhubaneswar</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Kapaleeshwarar-Tempel</div>
+                            <div class="temple-location">Chennai</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Kamakshi Amman-Tempel</div>
+                            <div class="temple-location">Kanchipuram</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Palani Murugan-Tempel</div>
+                            <div class="temple-location">Tamil Nadu</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Somnath-Tempel</div>
+                            <div class="temple-location">Gujarat</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Srirangam Ranganathaswamy-Tempel</div>
+                            <div class="temple-location">Tamil Nadu</div>
+                        </div>
+                        <div class="temple-item">
+                            <div class="temple-name">Pashupatinath-Tempel</div>
+                            <div class="temple-location">Kathmandu</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h2 class="section-title">
+                        <span class="icon">📜</span>
+                        Grund für Beschränkungen
+                    </h2>
+                    
+                    <div class="reason-box">
+                        <h3 style="color: #8B4513; margin-bottom: 10px;">Agama Shastra Regeln</h3>
+                        <p style="color: #333; line-height: 1.6;">
+                            Tempel folgen den Regeln der <span class="highlight">Agama Shastra</span>. 
+                            Agama Shastras sind alte Texte, die Regeln für Tempelbau, 
+                            Verehrungsverfahren und Reinheitsrichtlinien vorschreiben.
+                        </p>
+                    </div>
+                    
+                    <div style="background: rgba(255, 240, 245, 0.8); padding: 15px; border-radius: 10px; margin-top: 15px;">
+                        <p style="color: #666; font-size: 0.95rem; line-height: 1.5;">
+                            Diese Regeln wurden geschaffen, um die spirituelle Heiligkeit des Tempels 
+                            zu wahren und traditionelle Verehrungspraktiken zu bewahren.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="section vedic-section">
+                    <h2 class="section-title">
+                        <span class="icon">🕉️</span>
+                        Vedische Perspektive und Inklusivität
+                    </h2>
+                    
+                    <div style="background: rgba(255, 255, 255, 0.7); padding: 15px; border-radius: 10px; margin-bottom: 20px;">
+                        <h3 style="color: #2c5530; margin-bottom: 10px;">Hauptpunkte:</h3>
+                        <ul style="color: #333; line-height: 1.6; padding-left: 20px;">
+                            <li>Keine Beschränkungen für Nicht-Hindu-Verehrung in den Veden</li>
+                            <li>Vedische Verehrung = Yajna (Feuerverehrung), nicht Götzenverehrung</li>
+                            <li>Tempelkultur existierte nicht in vedischen Zeiten</li>
+                            <li>Konzept von "Hindu/Nicht-Hindu" existierte nicht</li>
+                        </ul>
+                    </div>
+                    
+                    <h3 style="color: #2c5530; margin-bottom: 15px; font-size: 1.2rem;">Inklusive Mantras aus den Veden:</h3>
+                    
+                    <div class="mantra-grid">
+                        <div class="mantra-card">
+                            <div class="mantra-text">"Mögen alle Wesen Gutes sehen, mögen alle zusammen in Glück leben."</div>
+                            <div class="mantra-meaning">Rig Veda 1.89.1</div>
+                            <div class="mantra-principle">→ Inklusive Vision</div>
+                        </div>
+                        
+                        <div class="mantra-card">
+                            <div class="mantra-text">"Geht zusammen, sprecht zusammen, vereint eure Gedanken."</div>
+                            <div class="mantra-meaning">Rig Veda 10.191.2</div>
+                            <div class="mantra-principle">→ Kollektive Spiritualität</div>
+                        </div>
+                        
+                        <div class="mantra-card">
+                            <div class="mantra-text">"Die Wahrheit ist eine, die Weisen nennen sie mit vielen Namen."</div>
+                            <div class="mantra-meaning">Rig Veda 1.164.46</div>
+                            <div class="mantra-principle">→ Universalität</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer">
+                <p>Diese Präsentation wurde für Bildungszwecke erstellt • Um den Unterschied zwischen Agama Shastra und vedischen Traditionen zu verstehen</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const navButtons = document.querySelectorAll('.nav-btn');
+            const sections = document.querySelectorAll('.version-section');
+            
+            navButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const targetSection = this.getAttribute('data-section');
+                    
+                    // Update active button
+                    navButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                    
+                    // Show target section, hide others
+                    sections.forEach(section => {
+                        section.classList.remove('active');
+                        if (section.id === targetSection + '-section') {
+                            section.classList.add('active');
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
