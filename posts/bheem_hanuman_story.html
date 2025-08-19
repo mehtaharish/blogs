@@ -1,241 +1,532 @@
-<div class="story-card">
-    <div class="card-number">२</div>
-    <div class="card-title">रहस्यमय बाधा</div>
-    <div class="card-content">
-        घने वन में नदी का अनुसरण करते हुए, भीम एक सुंदर स्थान पर पहुंचा जहां उसे एक वृद्ध बंदर दिखा। यह बंदर अत्यंत कमजोर और बूढ़ा प्रतीत हो रहा था, और अपनी विशाल पूंछ से पूरा रास्ता रोके पड़ा था। भीम का अहंकार जाग उठा और उसने गर्जन<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Bheem and Hanuman's Encounter</title>
-<style>
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-}
-
-body {
-font-family: 'Georgia', serif;
-background: linear-gradient(135deg, #ff9a56, #ff6b35, #f7931e);
-min-height: 100vh;
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 20px;
-}
-
-.slide-container {
-background: rgba(255, 255, 255, 0.95);
-border-radius: 20px;
-box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
-max-width: 1000px;
-width: 100%;
-padding: 40px;
-position: relative;
-overflow: hidden;
-}
-
-.slide-container::before {
-content: '';
-position: absolute;
-top: 0;
-left: 0;
-right: 0;
-height: 6px;
-background: linear-gradient(90deg, #ff6b35, #f7931e, #ff9a56);
-}
-
-.title {
-text-align: center;
-color: #d73027;
-font-size: 2.5em;
-margin-bottom: 30px;
-text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-border-bottom: 3px solid #ff6b35;
-padding-bottom: 15px;
-}
-
-.story-grid {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-gap: 25px;
-margin-top: 30px;
-}
-
-.story-card {
-background: linear-gradient(145deg, #fff8f0, #ffe8d6);
-border-radius: 15px;
-padding: 25px;
-border-left: 5px solid #ff6b35;
-box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-transition: transform 0.3s ease, box-shadow 0.3s ease;
-position: relative;
-overflow: hidden;
-}
-
-.story-card::before {
-content: '';
-position: absolute;
-top: -50%;
-left: -50%;
-width: 200%;
-height: 200%;
-background: radial-gradient(circle, rgba(255, 154, 86, 0.1) 0%, transparent 70%);
-transform: scale(0);
-transition: transform 0.3s ease;
-}
-
-.story-card:hover::before {
-transform: scale(1);
-}
-
-.story-card:hover {
-transform: translateY(-8px);
-box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.card-number {
-background: #ff6b35;
-color: white;
-width: 40px;
-height: 40px;
-border-radius: 50%;
-display: flex;
-align-items: center;
-justify-content: center;
-font-weight: bold;
-font-size: 1.2em;
-margin-bottom: 15px;
-box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
-}
-
-.card-title {
-color: #d73027;
-font-size: 1.3em;
-font-weight: bold;
-margin-bottom: 10px;
-position: relative;
-z-index: 1;
-}
-
-.card-content {
-color: #5d4e37;
-line-height: 1.6;
-font-size: 1em;
-position: relative;
-z-index: 1;
-}
-
-.lesson-box {
-background: linear-gradient(135deg, #ff6b35, #f7931e);
-color: white;
-padding: 25px;
-border-radius: 15px;
-margin-top: 30px;
-text-align: center;
-box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
-}
-
-.lesson-title {
-font-size: 1.5em;
-font-weight: bold;
-margin-bottom: 15px;
-text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.lesson-content {
-font-size: 1.1em;
-line-height: 1.6;
-font-style: italic;
-}
-
-.decorative-element {
-position: absolute;
-top: 20px;
-right: 20px;
-font-size: 3em;
-opacity: 0.1;
-color: #ff6b35;
-}
-
-@media (max-width: 768px) {
-.title {
-    font-size: 2em;
-}
-
-.slide-container {
-    padding: 25px;
-}
-
-.story-grid {
-    grid-template-columns: 1fr;
-}
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bheem and Hanuman's Encounter</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            background: linear-gradient(135deg, #ff9a56, #ff6b35, #f7931e);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .slide-container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            width: 100%;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .slide-container::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 6px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e, #ff9a56);
+        }
+        
+        .decorative-element {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3em;
+            opacity: 0.1;
+            color: #ff6b35;
+        }
+        
+        /* Hindi Section Styles */
+        .hindi-section {
+            margin-bottom: 50px;
+        }
+        
+        .title {
+            text-align: center;
+            color: #d73027;
+            font-size: 2.5em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            border-bottom: 3px solid #ff6b35;
+            padding-bottom: 15px;
+        }
+        
+        .intro-section {
+            margin: 30px 0;
+            text-align: center;
+        }
+        
+        .story-intro {
+            background: linear-gradient(135deg, #fff8f0, #ffe8d6);
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #ff9a56;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .story-intro::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #ff6b35, #f7931e, #ff9a56);
+        }
+        
+        .story-intro h2 {
+            color: #d73027;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: bold;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+        }
+        
+        .story-intro p {
+            color: #5d4e37;
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .story-intro p:last-child {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #8b4513;
+        }
+        
+        .story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .story-card {
+            background: linear-gradient(145deg, #fff8f0, #ffe8d6);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #ff6b35;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .story-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 154, 86, 0.1) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .story-card:hover::before {
+            transform: scale(1);
+        }
+        
+        .story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .card-number {
+            background: #ff6b35;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
+        }
+        
+        .card-title {
+            color: #d73027;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .card-content {
+            color: #5d4e37;
+            line-height: 1.6;
+            font-size: 1em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .lesson-box {
+            background: linear-gradient(135deg, #ff6b35, #f7931e);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(255, 107, 53, 0.3);
+        }
+        
+        .lesson-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .lesson-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        /* English Section Styles */
+        .english-section {
+            margin-top: 50px;
+            padding-top: 40px;
+            border-top: 3px solid #ff6b35;
+        }
+        
+        .english-title {
+            text-align: center;
+            color: #d73027;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .english-intro {
+            background: linear-gradient(135deg, #f0f8ff, #e6f3ff);
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #4682b4;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        
+        .english-intro h3 {
+            color: #2f4f4f;
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+        
+        .english-intro p {
+            color: #2c2c54;
+            font-size: 1.1em;
+            line-height: 1.7;
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+        
+        .english-intro p:last-child {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #4682b4;
+        }
+        
+        .english-story-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-top: 30px;
+        }
+        
+        .english-story-card {
+            background: linear-gradient(145deg, #f8f8ff, #f0f0ff);
+            border-radius: 15px;
+            padding: 25px;
+            border-left: 5px solid #4682b4;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .english-story-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(70, 130, 180, 0.1) 0%, transparent 70%);
+            transform: scale(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .english-story-card:hover::before {
+            transform: scale(1);
+        }
+        
+        .english-story-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .english-card-number {
+            background: #4682b4;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(70, 130, 180, 0.4);
+        }
+        
+        .english-card-title {
+            color: #2f4f4f;
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .english-card-content {
+            color: #2c2c54;
+            line-height: 1.6;
+            font-size: 1em;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .english-lesson-box {
+            background: linear-gradient(135deg, #4682b4, #5f9ea0);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(70, 130, 180, 0.3);
+        }
+        
+        .english-lesson-title {
+            font-size: 1.5em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+        }
+        
+        .english-lesson-content {
+            font-size: 1.1em;
+            line-height: 1.6;
+            font-style: italic;
+        }
+        
+        @media (max-width: 768px) {
+            .title {
+                font-size: 2em;
+            }
+            
+            .slide-container {
+                padding: 25px;
+            }
+            
+            .story-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .story-intro h2 {
+                font-size: 1.4em;
+            }
+            
+            .story-intro p {
+                font-size: 1em;
+            }
+            
+            .english-story-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .english-title {
+                font-size: 1.8em;
+            }
+            
+            .english-intro h3 {
+                font-size: 1.4em;
+            }
+            
+            .english-intro p {
+                font-size: 1em;
+            }
+        }
+    </style>
 </head>
 <body>
-<div class="slide-container">
-<div class="decorative-element">🕉️</div>
-
-<h1 class="title">भीम और हनुमान की भेंट</h1>
-
-<div class="story-grid">
-<div class="story-card">
-    <div class="card-number">१</div>
-    <div class="card-title">यात्रा की शुरुआत</div>
-    <div class="card-content">
-        द्वापर युग में, पांडवों के वनवास के दौरान, द्रौपदी ने एक दिन नदी में बहते हुए सुंदर सुगंधित सौगंधिक कमल देखे। उनकी दिव्य सुगंध और स्वर्णिम चमक से मोहित होकर, द्रौपदी ने भीम से अधिक फूल लाने को कहा। वायु पुत्र भीम ने अपनी अपार शक्ति पर गर्व करते हुए, प्रिया द्रौपदी के लिए उन दिव्य कमलों को खोजने का संकल्प लिया।
+    <div class="slide-container">
+        <div class="decorative-element">🕉️</div>
+        
+        <!-- Hindi Section -->
+        <div class="hindi-section">
+            <h1 class="title">भीम और हनुमान की भेंट</h1>
+            
+            <div class="intro-section">
+                <div class="story-intro">
+                    <h2>महाभारत से एक अमर कथा</h2>
+                    <p>यह कहानी द्वापर युग की है, जब पांडव अपने तेरह वर्षों के वनवास में थे। इस काल में धर्म और अधर्म के बीच संघर्ष चल रहा था। भीम, जो अपनी अपार शक्ति के लिए प्रसिद्ध था, एक ऐसी घटना से गुजरा जिसने उसे जीवन भर के लिए विनम्रता का पाठ पढ़ाया।</p>
+                    <p>यह मुलाकात केवल दो भाइयों की भेंट नहीं थी, बल्कि एक ऐसा मिलन था जिसने भीम के जीवन को हमेशा के लिए बदल दिया। आइए जानते हैं इस पावन कथा को...</p>
+                </div>
+            </div>
+            
+            <div class="story-grid">
+                <div class="story-card">
+                    <div class="card-number">१</div>
+                    <div class="card-title">यात्रा की शुरुआत</div>
+                    <div class="card-content">
+                        द्वापर युग में, पांडवों के वनवास के दौरान, द्रौपदी ने एक दिन नदी में बहते हुए सुंदर सुगंधित सौगंधिक कमल देखे। उनकी दिव्य सुगंध और स्वर्णिम चमक से मोहित होकर, द्रौपदी ने भीम से अधिक फूल लाने को कहा। वायु पुत्र भीम ने अपनी अपार शक्ति पर गर्व करते हुए, प्रिया द्रौपदी के लिए उन दिव्य कमलों को खोजने का संकल्प लिया।
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="card-number">२</div>
+                    <div class="card-title">रहस्यमय बाधा</div>
+                    <div class="card-content">
+                        घने वन में नदी का अनुसरण करते हुए, भीम एक सुंदर स्थान पर पहुंचा जहां उसे एक वृद्ध बंदर दिखा। यह बंदर अत्यंत कमजोर और बूढ़ा प्रतीत हो रहा था, और अपनी विशाल पूंछ से पूरा रास्ता रोके पड़ा था। भीम का अहंकार जाग उठा और उसने गर्जना करते हुए कहा, "अरे बंदर! मैं पांडुपुत्र भीम हूं, वायु का पुत्र और संसार का सबसे बलवान। तुरंत रास्ता छोड़ दे!"
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="card-number">३</div>
+                    <div class="card-title">विनम्र चुनौती</div>
+                    <div class="card-content">
+                        बूढ़े बंदर ने धीमी आवाज में कहा, "हे वीर, मैं अत्यंत वृद्ध और रोगी हूं। मेरे शरीर में इतनी शक्ति नहीं कि मैं अपना भारी शरीर हिला सकूं। आप इतने बलवान हैं, तो क्यों न आप मेरी पूंछ को उठाकर आगे बढ़ जाएं?" यह सुनकर भीम हंसा और सोचा कि यह तो बहुत आसान काम है। उसने सोचा कि एक हाथ से ही इस बंदर की पूंछ को फेंक देगा।
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="card-number">४</div>
+                    <div class="card-title">गर्व का पतन</div>
+                    <div class="card-content">
+                        भीम ने पहले एक हाथ से पूंछ उठाने की कोशिश की - कुछ नहीं हुआ। फिर दोनों हाथों से पूरी शक्ति लगाई, लेकिन पूंछ पर्वत की तरह अडिग रही। भीम के माथे पर पसीना आ गया। उसने पैर जमाकर, दांत भींचकर, अपनी संपूर्ण शक्ति लगाई जिससे पूरी पृथ्वी कांप उठी, लेकिन पूंछ जरा सी भी नहीं हिली। पहली बार भीम को अपनी शक्ति की सीमा का अहसास हुआ और वह स्तब्ध रह गया।
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="card-number">५</div>
+                    <div class="card-title">महान रहस्योद्घाटन</div>
+                    <div class="card-content">
+                        विनम्र होकर भीम ने पूछा, "आप कौन हैं?" तब वह बंदर अपने विशाल और तेजस्वी रूप में प्रकट हुआ। उसका शरीर स्वर्ण के समान चमक रहा था, आंखों में दिव्य तेज था। "मैं हनुमान हूं, वायु पुत्र, राम भक्त, और तुम्हारा बड़ा भाई।" भीम समझ गया कि वह महान हनुमान के सामने है - जिन्होंने समुद्र लांघा था, लंका जलाई थी, और सीता माता को खोजा था। वह श्रद्धा से नतमस्तक हो गया।
+                    </div>
+                </div>
+                
+                <div class="story-card">
+                    <div class="card-number">६</div>
+                    <div class="card-title">दिव्य आशीर्वाद और वरदान</div>
+                    <div class="card-content">
+                        हनुमान जी ने भीम को गले लगाया और कहा, "वत्स, बल के साथ विनम्रता होनी चाहिए। धर्म के बिना शक्ति व्यर्थ है।" उन्होंने भीम को दिव्य आशीर्वाद दिया और वादा किया कि आने वाले महाभारत युद्ध में वे अर्जुन के रथ की ध्वजा पर विराजमान होकर अपनी गर्जना से पांडवों का उत्साह बढ़ाएंगे और शत्रुओं के हृदय में भय भरेंगे। भीम ने सौगंधिक कमल प्राप्त किए और नई समझ के साथ वापस लौटा।
+                    </div>
+                </div>
+            </div>
+            
+            <div class="lesson-box">
+                <div class="lesson-title">शाश्वत शिक्षा</div>
+                <div class="lesson-content">
+                    "सच्ची शक्ति केवल शारीरिक बल में नहीं, बल्कि विनम्रता, भक्ति और धर्म में निहित है। जो व्यक्ति अपने बल पर अहंकार करता है, वह पतन की ओर जाता है। सबसे बलवान को भी धर्म के आगे झुकना चाहिए और अपनी शक्ति का उपयोग न्याय की सेवा, दीन-दुखियों की रक्षा, और परमात्मा की भक्ति में करना चाहिए। यही हनुमान जी की महान शिक्षा थी।"
+                </div>
+            </div>
+        </div>
+        
+        <!-- English Section -->
+        <div class="english-section">
+            <h2 class="english-title">English Translation</h2>
+            
+            <div class="english-intro">
+                <h3>An Immortal Tale from Mahabharata</h3>
+                <p>This story belongs to the Dwapara Yuga, when the Pandavas were in their thirteen years of exile. During this period, there was an ongoing struggle between dharma (righteousness) and adharma (unrighteousness). Bheem, who was famous for his immense strength, went through an incident that taught him the lesson of humility for his entire life.</p>
+                <p>This meeting was not just an encounter between two brothers, but such a union that changed Bheem's life forever. Let us know this sacred tale...</p>
+            </div>
+            
+            <div class="english-story-grid">
+                <div class="english-story-card">
+                    <div class="english-card-number">1</div>
+                    <div class="english-card-title">The Journey Begins</div>
+                    <div class="english-card-content">
+                        In the Dwapara Yuga, during the Pandavas' exile, Draupadi one day saw beautiful fragrant Saugandhika lotuses floating in the river. Enchanted by their divine fragrance and golden glow, Draupadi asked Bheem to bring more flowers. The son of Vayu, Bheem, proud of his immense strength, resolved to find those divine lotuses for beloved Draupadi.
+                    </div>
+                </div>
+                
+                <div class="english-story-card">
+                    <div class="english-card-number">2</div>
+                    <div class="english-card-title">The Mysterious Obstacle</div>
+                    <div class="english-card-content">
+                        Following the river through the dense forest, Bheem reached a beautiful place where he saw an old monkey. This monkey appeared extremely weak and old, lying across the entire path with its massive tail. Bheem's pride awakened and he roared, "Hey monkey! I am Bheem, son of Pandu, son of Vayu, and the strongest in the world. Immediately clear the path!"
+                    </div>
+                </div>
+                
+                <div class="english-story-card">
+                    <div class="english-card-number">3</div>
+                    <div class="english-card-title">The Humble Challenge</div>
+                    <div class="english-card-content">
+                        The old monkey said in a slow voice, "O brave one, I am extremely old and sick. My body doesn't have the strength to move my heavy body. You are so powerful, why don't you just lift my tail and move ahead?" Hearing this, Bheem laughed and thought this was a very easy task. He thought he would throw this monkey's tail away with just one hand.
+                    </div>
+                </div>
+                
+                <div class="english-story-card">
+                    <div class="english-card-number">4</div>
+                    <div class="english-card-title">The Fall of Pride</div>
+                    <div class="english-card-content">
+                        Bheem first tried to lift the tail with one hand - nothing happened. Then he used both hands with full strength, but the tail remained unmoved like a mountain. Sweat appeared on Bheem's forehead. He planted his feet firmly, clenched his teeth, and applied his entire strength which made the whole earth tremble, but the tail didn't move even slightly. For the first time, Bheem realized the limits of his strength and was stunned.
+                    </div>
+                </div>
+                
+                <div class="english-story-card">
+                    <div class="english-card-number">5</div>
+                    <div class="english-card-title">The Great Revelation</div>
+                    <div class="english-card-content">
+                        Becoming humble, Bheem asked, "Who are you?" Then that monkey appeared in his massive and radiant form. His body was glowing like gold, his eyes had divine radiance. "I am Hanuman, son of Vayu, devotee of Rama, and your elder brother." Bheem understood that he was before the great Hanuman - who had crossed the ocean, burned Lanka, and found Mother Sita. He bowed down with reverence.
+                    </div>
+                </div>
+                
+                <div class="english-story-card">
+                    <div class="english-card-number">6</div>
+                    <div class="english-card-title">Divine Blessings and Boons</div>
+                    <div class="english-card-content">
+                        Hanuman embraced Bheem and said, "My child, along with strength there should be humility. Without dharma, power is useless." He gave Bheem divine blessings and promised that in the upcoming Mahabharata war, he would sit on Arjuna's chariot flag and with his roar would boost the Pandavas' enthusiasm and fill fear in the enemies' hearts. Bheem obtained the Saugandhika lotuses and returned with new understanding.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="english-lesson-box">
+                <div class="english-lesson-title">The Eternal Teaching</div>
+                <div class="english-lesson-content">
+                    "True strength lies not only in physical power, but in humility, devotion, and dharma. A person who takes pride in their strength moves toward downfall. Even the strongest must bow before dharma and use their strength in service of justice, protection of the helpless, and devotion to the Supreme. This was the great teaching of Hanuman."
+                </div>
+            </div>
+        </div>
     </div>
-</div>
-
-<div class="story-card">
-    <div class="card-number">२</div>
-    <div class="card-title">बाधा</div>
-    <div class="card-content">
-        भीम को अपने रास्ते में एक बूढ़ा, कमजोर दिखने वाला बंदर मिलता है जो अपनी पूंछ से रास्ता रोके पड़ा है। अहंकार से भरकर, वह बंदर से रास्ता छोड़ने की मांग करता है।
-    </div>
-</div>
-
-<div class="story-card">
-    <div class="card-number">३</div>
-    <div class="card-title">चुनौती</div>
-    <div class="card-content">
-        बूढ़ा बंदर अपनी कमजोरी का बहाना बनाकर भीम से कहता है कि वह सिर्फ उसकी पूंछ हटा दे। भीम आत्मविश्वास से भरकर मान जाता है, सोचकर कि यह आसान काम है।
-    </div>
-</div>
-
-<div class="story-card">
-    <div class="card-number">४</div>
-    <div class="card-title">अपमान</div>
-    <div class="card-content">
-        अपनी पूरी शक्ति लगाने के बावजूद, भीम उस पूंछ को जरा सा भी नहीं हिला सकता। पहली बार उसका सामना अपने से भी शक्तिशाली से होता है।
-    </div>
-</div>
-
-<div class="story-card">
-    <div class="card-number">५</div>
-    <div class="card-title">रहस्योद्घाटन</div>
-    <div class="card-content">
-        बंदर अपना असली रूप दिखाकर हनुमान के रूप में प्रकट होता है, जो पवन पुत्र होने के नाते भीम का बड़ा भाई है। भीम समझ जाता है कि वह श्री राम के महान भक्त के सामने खड़ा है।
-    </div>
-</div>
-
-<div class="story-card">
-    <div class="card-number">६</div>
-    <div class="card-title">आशीर्वाद</div>
-    <div class="card-content">
-        हनुमान भीम को आशीर्वाद देते हैं और वादा करते हैं कि महाभारत युद्ध में अर्जुन के रथ की ध्वजा पर बैठकर पांडवों का उत्साह बढ़ाएंगे और शत्रुओं को भयभीत करेंगे।
-    </div>
-</div>
-</div>
-
-<div class="lesson-box">
-<div class="lesson-title">शाश्वत शिक्षा</div>
-<div class="lesson-content">
-    "सच्ची शक्ति केवल शारीरिक बल में नहीं, बल्कि विनम्रता, भक्ति और धर्म में निहित है। सबसे बलवान को भी धर्म के आगे झुकना चाहिए और अपनी शक्ति का उपयोग न्याय की सेवा में करना चाहिए।"
-</div>
-</div>
-</div>
 </body>
 </html>
