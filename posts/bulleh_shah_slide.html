@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulleh Shah - The Revolutionary Sufi Mystic</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;1,400&family=Playfair+Display:wght@400;700&family=Noto+Sans+Devanagari:wght@400;600;700&display=swap');
+        
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Crimson Text', serif;
+            background: linear-gradient(135deg, #2c1810 0%, #8b4513 25%, #d2691e 50%, #f4a460 75%, #ffeaa7 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .background-pattern {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.1;
+            background-image: 
+                radial-gradient(circle at 20% 20%, rgba(255,255,255,0.2) 2px, transparent 2px),
+                radial-gradient(circle at 60% 80%, rgba(255,255,255,0.15) 1px, transparent 1px),
+                radial-gradient(circle at 80% 40%, rgba(255,255,255,0.1) 1.5px, transparent 1.5px);
+            background-size: 50px 50px, 30px 30px, 70px 70px;
+        }
+
+        .language-toggle {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            z-index: 1000;
+            background: rgba(139, 69, 19, 0.9);
+            border-radius: 25px;
+            padding: 8px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .toggle-btn {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 8px 16px;
+            margin: 0 4px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
+        .toggle-btn.active {
+            background: rgba(255,255,255,0.9);
+            color: #8b4513;
+            border-color: rgba(255,255,255,0.9);
+        }
+
+        .toggle-btn:hover:not(.active) {
+            background: rgba(255,255,255,0.1);
+        }
+
+        .slide-container {
+            width: 95%;
+            max-width: 1200px;
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            padding: 40px;
+            position: relative;
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(139, 69, 19, 0.3);
+        }
+
+        .language-version {
+            display: none;
+        }
+
+        .language-version.active {
+            display: block;
+        }
+
+        .hindi-content {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .english-content {
+            font-family: 'Crimson Text', serif;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+        }
+
+        .title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.2em;
+            font-weight: 700;
+            color: #8b4513;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .hindi-title {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .subtitle {
+            font-size: 1.4em;
+            color: #d2691e;
+            font-style: italic;
+            margin-bottom: 5px;
+        }
+
+        .dates {
+            font-size: 1.1em;
+            color: #666;
+            font-weight: 600;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-top: 30px;
+        }
+
+        .section {
+            background: rgba(139, 69, 19, 0.05);
+            padding: 25px;
+            border-radius: 15px;
+            border-left: 5px solid #d2691e;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6em;
+            font-weight: 700;
+            color: #8b4513;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .hindi-section-title {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .section-title::before {
+            content: "●";
+            color: #d2691e;
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .teachings ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .teachings li {
+            position: relative;
+            padding-left: 25px;
+            margin-bottom: 12px;
+            line-height: 1.6;
+            font-size: 1.05em;
+            color: #444;
+        }
+
+        .teachings li::before {
+            content: "♦";
+            position: absolute;
+            left: 0;
+            color: #d2691e;
+            font-size: 1.1em;
+        }
+
+        .opposition-points {
+            font-size: 1.05em;
+            line-height: 1.7;
+            color: #444;
+        }
+
+        .opposition-points strong {
+            color: #8b4513;
+        }
+
+        .poetry-section {
+            grid-column: 1 / -1;
+            background: linear-gradient(135deg, #8b4513 0%, #d2691e 100%);
+            color: white;
+            text-align: center;
+            padding: 30px;
+            border-radius: 15px;
+            margin-top: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .poetry-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: repeating-linear-gradient(
+                45deg,
+                transparent,
+                transparent 20px,
+                rgba(255,255,255,0.05) 20px,
+                rgba(255,255,255,0.05) 40px
+            );
+            animation: shimmer 20s linear infinite;
+        }
+
+        @keyframes shimmer {
+            0% { transform: translateX(-100%) translateY(-100%); }
+            100% { transform: translateX(100%) translateY(100%); }
+        }
+
+        .poetry-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hindi-poetry-title {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .urdu-text {
+            font-family: 'Crimson Text', serif;
+            font-size: 1.4em;
+            line-height: 1.8;
+            margin-bottom: 15px;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .english-text {
+            font-style: italic;
+            font-size: 1.15em;
+            line-height: 1.6;
+            opacity: 0.9;
+            position: relative;
+            z-index: 1;
+        }
+
+        .youtube-link {
+            margin-top: 20px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .youtube-link a {
+            color: #ffeaa7;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .youtube-link a:hover {
+            background: rgba(255,255,255,0.2);
+            transform: scale(1.05);
+        }
+
+        .legacy {
+            grid-column: 1 / -1;
+            background: rgba(255, 234, 167, 0.3);
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid rgba(210, 105, 30, 0.3);
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .legacy-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5em;
+            color: #8b4513;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .hindi-legacy-title {
+            font-family: 'Noto Sans Devanagari', sans-serif;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, rgba(210, 105, 30, 0.2) 0%, rgba(210, 105, 30, 0.1) 100%);
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+
+        .decorative-border {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            right: 10px;
+            bottom: 10px;
+            border: 1px solid rgba(139, 69, 19, 0.2);
+            border-radius: 15px;
+            pointer-events: none;
+        }
+
+        @media (max-width: 768px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .title {
+                font-size: 2.5em;
+            }
+            
+            .slide-container {
+                padding: 25px;
+                margin: 10px;
+            }
+
+            .language-toggle {
+                top: 10px;
+                right: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background-pattern"></div>
+    
+    <div class="language-toggle">
+        <button class="toggle-btn active" onclick="switchLanguage('hindi')">हिंदी</button>
+        <button class="toggle-btn" onclick="switchLanguage('english')">English</button>
+    </div>
+
+    <div class="slide-container">
+        <div class="decorative-border"></div>
+        
+        <!-- Hindi Version -->
+        <div class="language-version hindi-content active" id="hindi-version">
+            <div class="header">
+                <h1 class="title hindi-title">बुल्लेह शाह</h1>
+                <p class="subtitle">क्रांतिकारी सूफी संत</p>
+                <p class="dates">1680–1757, बहावलपुर</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="section teachings">
+                    <h2 class="section-title hindi-section-title">मुख्य शिक्षाएं</h2>
+                    <ul>
+                        <li><strong>ईश्वर के प्रति प्रेम</strong> - दिव्य संबंध का मार्ग</li>
+                        <li><strong>आंतरिक साक्षात्कार</strong> बाहरी धार्मिक दिखावे से कहीं महत्वपूर्ण</li>
+                        <li><strong>आध्यात्मिक समानता</strong> - जाति और सांप्रदायिक भेदभाव का त्याग</li>
+                        <li>सच्ची भक्ति के बिना <strong>खोखले कर्मकांडों</strong> की आलोचना</li>
+                        <li>अपने <span class="highlight">काफियों</span> (गाए जाने वाले रहस्यवादी कविताओं) के लिए प्रसिद्ध</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title hindi-section-title">धर्मगुरुओं का विरोध क्यों?</h2>
+                    <div class="opposition-points">
+                        <p>• घोषणा की कि <strong>ईश्वर मानव हृदय में निवास करता है</strong>, मस्जिदों या मंदिरों में बंधा नहीं है</p>
+                        <p>• <strong>हिंदू और मुसलमान ईश्वर की नज़र में बराबर</strong> हैं - यह घोषणा</p>
+                        <p>• उनके गुरु <strong>शाह इनायत एक माली</strong> थे - एक सैयद का "निम्न पेशे वाले" के सामने झुकना समाज को झकझोर गया</p>
+                        <p>• <strong>संगीत और नृत्य</strong> को आध्यात्मिक अभ्यास के रूप में अपनाया</p>
+                        <p>• धार्मिक <strong>शक्ति संरचनाओं को चुनौती</strong> दी और मानवीय गरिमा का साथ दिया</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poetry-section">
+                <div class="poetry-title hindi-poetry-title">उनकी कविता का सुंदर उदाहरण</div>
+                <div class="urdu-text">
+                    Pad pad ilm te faazil hoya<br>
+                    Kade apne aap nu padeya ee na<br>
+                    Ja ja varda ai masitan wich<br>
+                    Kade man apne wich vardia ee na
+                </div>
+                <div class="english-text">
+                    "पढ़ते पढ़ते विद्वान बन गए,<br>
+                    लेकिन कभी अपने आप को नहीं पढ़ा।<br>
+                    मस्जिदों और मदरसों में घूमते रहते हो,<br>
+                    लेकिन कभी अपने दिल में प्रवेश नहीं किया।"
+                </div>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/watch?v=Ra5nTlty6CM&list=RDRa5nTlty6CM&start_radio=1" target="_blank">
+                        🎵 यूट्यूब पर सुनें
+                    </a>
+                </div>
+            </div>
+
+            <div class="legacy">
+                <div class="legacy-title hindi-legacy-title">उनकी स्थायी विरासत</div>
+                <p>जब बुल्लेह शाह का <strong>1757</strong> में निधन हुआ, धर्मगुरुओं ने कसूर के मुख्य मुस्लिम कब्रिस्तान में दफनाने से इनकार कर दिया। उनके शरीर को शहर के बाहर दफनाया गया, जो बाद में <span class="highlight">बुल्लेह शाह दरगाह</span> बना - अब यह पंजाब के सबसे अधिक देखे जाने वाले आध्यात्मिक स्थलों में से एक है, जो धार्मिक कट्टरता पर प्रेम और एकता के उनके संदेश की विजय का प्रमाण है।</p>
+            </div>
+        </div>
+
+        <!-- English Version -->
+        <div class="language-version english-content" id="english-version">
+            <div class="header">
+                <h1 class="title">Bulleh Shah</h1>
+                <p class="subtitle">The Revolutionary Sufi Mystic</p>
+                <p class="dates">1680–1757, Bahawalpur</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="section teachings">
+                    <h2 class="section-title">Core Teachings</h2>
+                    <ul>
+                        <li><strong>Love of God</strong> as the path to divine connection</li>
+                        <li><strong>Inner realization</strong> over outward religious show</li>
+                        <li><strong>Spiritual equality</strong> - rejecting caste and sectarian divisions</li>
+                        <li>Critique of <strong>empty rituals</strong> without sincere devotion</li>
+                        <li>Famous for his <span class="highlight">kafis</span> (mystical poems often sung)</li>
+                    </ul>
+                </div>
+
+                <div class="section">
+                    <h2 class="section-title">Why Clerics Opposed Him</h2>
+                    <div class="opposition-points">
+                        <p>• Declared <strong>God lives within the human heart</strong>, not bound to mosques or temples</p>
+                        <p>• Proclaimed <strong>Hindus and Muslims equal</strong> in God's eyes</p>
+                        <p>• His master <strong>Shah Inayat was a gardener</strong> - a Sayyid bowing to a "lowly" profession shocked society</p>
+                        <p>• Embraced <strong>music and dance</strong> as spiritual practices</p>
+                        <p>• Challenged religious <strong>power structures</strong> and sided with human dignity</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="poetry-section">
+                <div class="poetry-title">A Beautiful Example of His Poetry</div>
+                <div class="urdu-text">
+                    Pad pad ilm te faazil hoya<br>
+                    Kade apne aap nu padeya ee na<br>
+                    Ja ja varda ai masitan wich<br>
+                    Kade man apne wich vardia ee na
+                </div>
+                <div class="english-text">
+                    "Read, read so much, you became a scholar,<br>
+                    But you never read yourself.<br>
+                    You roam around in mosques and seminaries,<br>
+                    But you never entered your own heart."
+                </div>
+                <div class="youtube-link">
+                    <a href="https://www.youtube.com/watch?v=Ra5nTlty6CM&list=RDRa5nTlty6CM&start_radio=1" target="_blank">
+                        🎵 Listen on YouTube
+                    </a>
+                </div>
+            </div>
+
+            <div class="legacy">
+                <div class="legacy-title">His Enduring Legacy</div>
+                <p>When Bulleh Shah died in <strong>1757</strong>, clerics refused his burial in the main Muslim graveyard. His body was laid to rest outside Kasur, which became the site of <span class="highlight">Bulleh Shah Dargah</span> - now one of Punjab's most visited spiritual destinations, testament to the triumph of his message of love and unity over religious orthodoxy.</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(language) {
+            // Hide all versions
+            const versions = document.querySelectorAll('.language-version');
+            versions.forEach(version => {
+                version.classList.remove('active');
+            });
+
+            // Show selected version
+            document.getElementById(language + '-version').classList.add('active');
+
+            // Update toggle buttons
+            const buttons = document.querySelectorAll('.toggle-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+
+            event.target.classList.add('active');
+        }
+    </script>
+</body>
+</html>
