@@ -485,7 +485,61 @@
     </div>
 
     <script>
-        function switchLanguage(language) {
+        // Function to get URL parameter (works in iframe environment)
+        function getURLParameter(name) {
+            try {
+                const urlParams = new URLSearchParams(window.location.search);
+                return urlParams.get(name);
+            } catch (e) {
+                // Fallback for iframe/restricted environments
+                return sessionStorage.getItem('bulleh_shah_lang');
+            }
+        }
+
+        // Function to set URL parameter (safe for iframe environment)
+        function setURLParameter(name, value) {
+            try {
+                // Try to update URL if possible
+                const url = new URL(window.location);
+                url.searchParams.set(name, value);
+                window.history.pushState({}, '', url);
+            } catch (e) {
+                // Fallback to sessionStorage in iframe environments
+                sessionStorage.setItem('bulleh_shah_lang', value);
+            }
+        }
+
+        // Initialize language on page load
+        function initializeLanguage() {
+            let urlLang;
+            try {
+                urlLang = getURLParameter('lang');
+            } catch (e) {
+                urlLang = null;
+            }
+            
+            const defaultLang = 'hindi'; // Default language
+            
+            // Determine which language to show
+            let activeLanguage;
+            if (urlLang === 'english' || urlLang === 'hindi') {
+                activeLanguage = urlLang;
+            } else {
+                activeLanguage = defaultLang;
+                // Try to set the default (will use sessionStorage if URL fails)
+                try {
+                    setURLParameter('lang', activeLanguage);
+                } catch (e) {
+                    // Silent fail in restricted environments
+                }
+            }
+            
+            // Show the appropriate language version
+            switchLanguageInternal(activeLanguage);
+        }
+
+        // Internal function to switch language without URL update (to avoid recursion)
+        function switchLanguageInternal(language) {
             // Hide all versions
             const versions = document.querySelectorAll('.language-version');
             versions.forEach(version => {
@@ -493,7 +547,10 @@
             });
 
             // Show selected version
-            document.getElementById(language + '-version').classList.add('active');
+            const targetVersion = document.getElementById(language + '-version');
+            if (targetVersion) {
+                targetVersion.classList.add('active');
+            }
 
             // Update toggle buttons
             const buttons = document.querySelectorAll('.toggle-btn');
@@ -501,7 +558,41 @@
                 btn.classList.remove('active');
             });
 
-            event.target.classList.add('active');
+            // Set active button based on language
+            if (language === 'hindi') {
+                const hindiBtn = document.querySelector('.toggle-btn[onclick*="hindi"]');
+                if (hindiBtn) hindiBtn.classList.add('active');
+            } else {
+                const englishBtn = document.querySelector('.toggle-btn[onclick*="english"]');
+                if (englishBtn) englishBtn.classList.add('active');
+            }
+        }
+
+        // Public function for button clicks
+        function switchLanguage(language) {
+            // Try to update URL parameter (will fallback to sessionStorage if needed)
+            try {
+                setURLParameter('lang', language);
+            } catch (e) {
+                // Silent fail and use sessionStorage fallback
+            }
+            
+            // Switch the language display
+            switchLanguageInternal(language);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initializeLanguage();
+        });
+
+        // Handle browser back/forward buttons (only if not in iframe)
+        try {
+            window.addEventListener('popstate', function() {
+                initializeLanguage();
+            });
+        } catch (e) {
+            // Silent fail in restricted environments
         }
     </script>
 </body>
