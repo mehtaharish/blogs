@@ -916,21 +916,28 @@
     function switchLanguage(lang) {
         const englishContent = document.getElementById('content-en');
         const hindiContent = document.getElementById('content-hi');
-        const buttons = document.querySelectorAll('.lang-btn');
+        const langButtons = document.querySelectorAll('.lang-btn');
+
+        // Remove active class from all buttons
+        langButtons.forEach(btn => btn.classList.remove('active'));
 
         if (lang === 'en') {
             englishContent.style.display = 'block';
             hindiContent.style.display = 'none';
+            langButtons[0].classList.add('active');
         } else if (lang === 'hi') {
             englishContent.style.display = 'none';
             hindiContent.style.display = 'block';
+            langButtons[1].classList.add('active');
         }
-
-        buttons.forEach(button => {
-            button.classList.remove('active');
-        });
-        document.querySelector(`.lang-btn[onclick="switchLanguage('${lang}')"]`).classList.add('active');
     }
+
+    // Check for language parameter in the URL
+    document.addEventListener('DOMContentLoaded', function () {
+        const urlParams = new URLSearchParams(window.location.search);
+        const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+        switchLanguage(lang);
+    });
 </script>
 </body>
 </html>
