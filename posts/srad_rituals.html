@@ -20,6 +20,19 @@
         margin: 20px 0;
     }
 
+    .toggle-btn {
+            background: transparent;
+            border: 2px solid rgba(255,255,255,0.3);
+            color: white;
+            padding: 8px 16px;
+            margin: 0 4px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+
     .lang-btn {
         display: inline-block;
         padding: 10px 20px;
@@ -44,6 +57,7 @@
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
+    
     .lang-btn:focus {
         outline: none;
     }
@@ -158,11 +172,24 @@
         font-size: 1em;
         color: #333;
     }
+    .language-toggle {
+        position: fixed;
+        top: 10px; /* Adjust the position as needed */
+        right: 10px; /* Adjust the position as needed */
+        z-index: 1000; /* Ensure it stays on top of other elements */
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        padding: 5px 10px;
+    }
+
+
 </style>
     </style>
 </head>
 <body>
-    <div class="language-switcher">
+    <div class="language-toggle">
         <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
         <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
     </div>
@@ -658,13 +685,18 @@
         if (lang === 'en') {
             englishContent.style.display = 'block';
             hindiContent.style.display = 'none';
-            langButtons[0].classList.add('active');
+            document.querySelector('.lang-btn[onclick="switchLanguage(\'en\')"]').classList.add('active');
         } else if (lang === 'hi') {
             englishContent.style.display = 'none';
             hindiContent.style.display = 'block';
-            langButtons[1].classList.add('active');
+            document.querySelector('.lang-btn[onclick="switchLanguage(\'hi\')"]').classList.add('active');
         }
     }
+
+    // Optional: Set default language on page load
+    document.addEventListener('DOMContentLoaded', () => {
+        switchLanguage('en'); // Default to English
+    });
 
     // Check for language parameter in the URL
     document.addEventListener('DOMContentLoaded', function () {

@@ -49,17 +49,22 @@
         }
 
         .toggle-btn {
-            background: transparent;
-            border: 2px solid rgba(255,255,255,0.3);
-            color: white;
-            padding: 8px 16px;
-            margin: 0 4px;
-            border-radius: 20px;
-            cursor: pointer;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            font-size: 14px;
-        }
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* Semi-transparent border */
+    color: white; /* Text color */
+    padding: 8px 16px; /* Padding inside the button */
+    margin: 0 4px; /* Margin between buttons */
+    border-radius: 20px; /* Curly edges */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-weight: 600; /* Bold text */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+    font-size: 14px; /* Font size */
+}
+.toggle-btn:hover {
+    background: rgba(255, 255, 255, 0.2); /* Slight background color on hover */
+    color: #fff; /* Keep text white */
+    border-color: rgba(255, 255, 255, 0.5); /* Slightly darker border on hover */
+}
 
         .toggle-btn.active {
             background: rgba(255,255,255,0.9);
