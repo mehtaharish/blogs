@@ -1,13 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Blog - Home</title>
-    <meta name="description" content="Welcome to my personal blog where I share thoughts, memes, and insights from the digital world.">
+    <meta name="description"
+        content="Welcome to my personal blog where I share thoughts, memes, and insights from the digital world.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;700&display=swap"
+        rel="stylesheet">
     <style>
         :root {
             --primary-gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
@@ -67,13 +71,40 @@
             animation: float 6s ease-in-out infinite;
         }
 
-        .circle-1 { width: 80px; height: 80px; top: 20%; left: 10%; animation-delay: 0s; }
-        .circle-2 { width: 60px; height: 60px; top: 60%; right: 15%; animation-delay: 2s; }
-        .circle-3 { width: 100px; height: 100px; bottom: 20%; left: 20%; animation-delay: 4s; }
+        .circle-1 {
+            width: 80px;
+            height: 80px;
+            top: 20%;
+            left: 10%;
+            animation-delay: 0s;
+        }
+
+        .circle-2 {
+            width: 60px;
+            height: 60px;
+            top: 60%;
+            right: 15%;
+            animation-delay: 2s;
+        }
+
+        .circle-3 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 20%;
+            animation-delay: 4s;
+        }
 
         @keyframes float {
-            0%, 100% { transform: translateY(0px) rotate(0deg); }
-            50% { transform: translateY(-20px) rotate(180deg); }
+
+            0%,
+            100% {
+                transform: translateY(0px) rotate(0deg);
+            }
+
+            50% {
+                transform: translateY(-20px) rotate(180deg);
+            }
         }
 
         /* Header Styling */
@@ -175,8 +206,17 @@
         }
 
         @keyframes pulse {
-            0%, 100% { transform: scale(1); opacity: 0.5; }
-            50% { transform: scale(1.1); opacity: 0.8; }
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: scale(1.1);
+                opacity: 0.8;
+            }
         }
 
         .hero-content {
@@ -422,22 +462,63 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
-            .container { padding: 0 16px; }
-            .nav { flex-direction: column; gap: 1rem; }
-            .nav-links { gap: 1rem; }
-            .hero h1 { font-size: 2.5rem; }
-            .hero p { font-size: 1.1rem; }
-            .hero-stats { flex-direction: column; gap: 1.5rem; }
-            .post-card { padding: 1.5rem; }
-            .post-card h3 { font-size: 1.5rem; }
-            .blog-posts h2 { font-size: 2rem; }
-            .circle-1, .circle-2, .circle-3 { display: none; }
+            .container {
+                padding: 0 16px;
+            }
+
+            .nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .hero-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .post-card {
+                padding: 1.5rem;
+            }
+
+            .post-card h3 {
+                font-size: 1.5rem;
+            }
+
+            .blog-posts h2 {
+                font-size: 2rem;
+            }
+
+            .circle-1,
+            .circle-2,
+            .circle-3 {
+                display: none;
+            }
         }
 
         @media (max-width: 480px) {
-            .hero h1 { font-size: 2rem; }
-            .post-card { padding: 1rem; }
-            .post-tags { gap: 0.5rem; }
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .post-card {
+                padding: 1rem;
+            }
+
+            .post-tags {
+                gap: 0.5rem;
+            }
         }
 
         /* Scroll animations */
@@ -453,6 +534,7 @@
         }
     </style>
 </head>
+
 <body>
     <!-- Animated Background -->
     <div class="bg-decoration">
@@ -505,7 +587,10 @@
                     <div class="post-date">September 16, 2025</div>
                     <h3><a href="posts/Navratras.html"></a>Navratri - Significance & Mythology"</h3>
                     <p class="post-excerpt">
-                        It is a festival dedicated to the Divine Feminine, especially Goddess Durga (and her various forms). The word "Navratri" translates to "nine nights" in Sanskrit, reflecting the festival's duration of nine nights and ten days. However, the festival "Navratri" is not directly mentioned in the Vedas.
+                        It is a festival dedicated to the Divine Feminine, especially Goddess Durga (and her various
+                        forms). The word "Navratri" translates to "nine nights" in Sanskrit, reflecting the festival's
+                        duration of nine nights and ten days. However, the festival "Navratri" is not directly mentioned
+                        in the Vedas.
                     </p>
                     <div class="post-tags">
                         <span class="tag">Navratri</span>
@@ -521,7 +606,8 @@
                     <div class="post-date">September 8, 2025</div>
                     <h3><a href="posts/srad_rituals.html"></a>Śrād (श्राद्ध)</h3>
                     <p class="post-excerpt">
-                        In Hinduism, Srad/Śrāddha (श्राद्ध) is a ritual performed to honor and pay respect to one’s deceased ancestors (pitṛs). The word comes from “śraddhā” meaning faith, devotion, reverence.
+                        In Hinduism, Srad/Śrāddha (श्राद्ध) is a ritual performed to honor and pay respect to one’s
+                        deceased ancestors (pitṛs). The word comes from “śraddhā” meaning faith, devotion, reverence.
                     </p>
                     <div class="post-tags">
                         <span class="tag">Srad</span>
@@ -532,11 +618,13 @@
                     <a href="posts/srad_rituals.html" class="read-more">Read More</a>
                 </article>
 
-              <article class="post-card fade-in">
+                <article class="post-card fade-in">
                     <div class="post-date">September 7, 2025</div>
-                    <h3><a href="posts/Ganpati_Visarjan.html">Ganesh Visarjan and its relation to Veads and environment</a></h3>
+                    <h3><a href="posts/Ganpati_Visarjan.html">Ganesh Visarjan and its relation to Veads and
+                            environment</a></h3>
                     <p class="post-excerpt">
-                        Ganesh Visarjan (गणेश विसर्जन) is the ritual of immersing the idol of Lord Ganesha in water at the end of the festival Ganesh Chaturthi.
+                        Ganesh Visarjan (गणेश विसर्जन) is the ritual of immersing the idol of Lord Ganesha in water at
+                        the end of the festival Ganesh Chaturthi.
                     </p>
                     <div class="post-tags">
                         <span class="tag">Ganesha</span>
@@ -548,12 +636,13 @@
                 </article>
 
 
-                
+
                 <article class="post-card fade-in">
                     <div class="post-date">September 5, 2025</div>
                     <h3><a href="posts/vedas.html">History of Vedas and Role of Aryans</a></h3>
                     <p class="post-excerpt">
-                        This document explores the rich history of the Vedas, the migration of Indo-Aryan peoples, and the linguistic heritage that shaped ancient Indian civilization.
+                        This document explores the rich history of the Vedas, the migration of Indo-Aryan peoples, and
+                        the linguistic heritage that shaped ancient Indian civilization.
                     </p>
                     <div class="post-tags">
                         <span class="tag">Vedas</span>
@@ -565,7 +654,7 @@
                 </article>
 
 
-                
+
                 <article class="post-card fade-in">
                     <div class="post-date">September 4, 2025</div>
                     <h3><a href="posts/quran_women_rights.html">Comparison of Women’s Rights</a></h3>
@@ -580,7 +669,7 @@
                     </div>
                     <a href="posts/quran_women_rights.html" class="read-more">Read More</a>
                 </article>
-                
+
                 <article class="post-card fade-in">
                     <div class="post-date">August 25, 2025</div>
                     <h3><a href="posts/blasphemy.html">Blasphemy</a></h3>
@@ -599,7 +688,8 @@
 
                 <article class="post-card fade-in">
                     <div class="post-date">August 24, 2025</div>
-                    <h3><a href="posts/deuteronomy_slides_en_hindi.html?lang=english">Deuteronomy 20:16-17 Analysis</a></h3>
+                    <h3><a href="posts/deuteronomy_slides_en_hindi.html?lang=english">Deuteronomy 20:16-17 Analysis</a>
+                    </h3>
                     <p class="post-excerpt">
                         Bible - Deuteronomy 20:16-17 Analysis.
                     </p>
@@ -627,7 +717,7 @@
                     <a href="posts/bulleh_shah_slide.html?lang=english" class="read-more">Read More</a>
                 </article>
 
-                
+
                 <article class="post-card fade-in">
                     <div class="post-date">August 19, 2025</div>
                     <h3><a href="posts/india_dairy_impact.html">The Hidden Impact of Dairy in India</a></h3>
@@ -657,7 +747,7 @@
                     </div>
                     <a href="posts/janmashtami-message.html" class="read-more">Read More</a>
                 </article>
-               
+
                 <article class="post-card fade-in">
                     <div class="post-date">August 18, 2025</div>
                     <h3><a href="posts/bheem_hanuman_story.html">भीम और हनुमान की भेंट</a></h3>
@@ -671,10 +761,11 @@
                     </div>
                     <a href="posts/bheem_hanuman_story.html" class="read-more">Read More</a>
                 </article>
-               
+
                 <article class="post-card fade-in">
                     <div class="post-date">August 17, 2025</div>
-                    <h3><a href="posts/hindu_temple_restrictions_slide.html">Entry Restrictions in Hindu Temples</a></h3>
+                    <h3><a href="posts/hindu_temple_restrictions_slide.html">Entry Restrictions in Hindu Temples</a>
+                    </h3>
                     <p class="post-excerpt">
                         Entry Restrictions in Hindu Temples
                     </p>
@@ -685,13 +776,15 @@
                     </div>
                     <a href="posts/hindu_temple_restrictions_slide.html" class="read-more">Read More</a>
                 </article>
-               
+
                 <article class="post-card fade-in">
                     <div class="post-date">August 17, 2025</div>
                     <h3><a href="posts/Bulleh Shah - Charkha.html">Charkha: A Great Poem by Bulleh Shah</a></h3>
                     <p class="post-excerpt">
-                    Bulleh Shah (1680–1757) was a renowned Punjabi Sufi poet, humanist, and spiritual thinker from the Punjab region (now divided between Pakistan and India). He is widely regarded as one of South Asia's greatest mystical poets.
-   </p>
+                        Bulleh Shah (1680–1757) was a renowned Punjabi Sufi poet, humanist, and spiritual thinker from
+                        the Punjab region (now divided between Pakistan and India). He is widely regarded as one of
+                        South Asia's greatest mystical poets.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">Sufi</span>
                         <span class="tag">Poet</span>
@@ -704,8 +797,9 @@
                     <div class="post-date">August 17, 2025</div>
                     <h3><a href="posts/chandradev_slide.html">Respect for Same-Sex Relationships</a></h3>
                     <p class="post-excerpt">
-                        Respect for same-sex relationships is evident in various stories from the Vedas and Puranas. One such story is that of Chandra Dev, which highlights different aspects of his life.
-                     </p>
+                        Respect for same-sex relationships is evident in various stories from the Vedas and Puranas. One
+                        such story is that of Chandra Dev, which highlights different aspects of his life.
+                    </p>
                     <div class="post-tags">
                         <span class="tag">Same-Sex Relationships</span>
                         <span class="tag">Chandra Dev</span>
@@ -755,7 +849,7 @@
 
             // Enhanced post card interactions
             document.querySelectorAll('.post-card').forEach(card => {
-                card.addEventListener('click', function(e) {
+                card.addEventListener('click', function (e) {
                     if (e.target.tagName !== 'A') {
                         const link = this.querySelector('h3 a');
                         if (link) {
@@ -767,4 +861,5 @@
         });
     </script>
 </body>
+
 </html>

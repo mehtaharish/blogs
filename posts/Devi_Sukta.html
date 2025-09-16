@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -14,39 +15,39 @@
             background-color: #fefefe;
             color: #333;
         }
-        
+
         .language-switcher {
-        text-align: center;
-        margin: 20px 0;
-    }
+            text-align: center;
+            margin: 20px 0;
+        }
 
-    .lang-btn {
-        display: inline-block;
-        padding: 10px 20px;
-        margin: 0 10px;
-        font-size: 16px;
-        font-weight: bold;
-        color: #fff;
-        background-color: #007BFF;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease, transform 0.2s ease;
-    }
+        .lang-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
 
-    .lang-btn:hover {
-        background-color: #0056b3;
-        transform: scale(1.05);
-    }
+        .lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
 
-    .lang-btn.active {
-        background-color: #28a745;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        .lang-btn.active {
+            background-color: #28a745;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
 
-    .lang-btn:focus {
-        outline: none;
-    }
+        .lang-btn:focus {
+            outline: none;
+        }
 
         h1 {
             color: #8B4513;
@@ -55,7 +56,7 @@
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
-        
+
         h2 {
             color: #B8860B;
             border-left: 5px solid #DAA520;
@@ -63,12 +64,12 @@
             margin-top: 30px;
             margin-bottom: 15px;
         }
-        
+
         h3 {
             color: #CD853F;
             margin-top: 25px;
         }
-        
+
         .section {
             margin-bottom: 40px;
             padding: 20px;
@@ -76,26 +77,26 @@
             border: 1px solid #e8e0d5;
             border-radius: 8px;
         }
-        
+
         .highlight {
             background-color: #fff8dc;
             padding: 2px 4px;
             border-radius: 3px;
         }
-        
+
         .sanskrit-term {
             font-style: italic;
             color: #8B0000;
             font-weight: bold;
         }
-        
+
         .timeline {
             background-color: #f0f8ff;
             padding: 15px;
             border-left: 4px solid #4169E1;
             margin: 15px 0;
         }
-        
+
         .example {
             background-color: #f5f5dc;
             padding: 10px;
@@ -103,15 +104,15 @@
             margin: 10px 0;
             font-style: italic;
         }
-        
+
         ul {
             padding-left: 25px;
         }
-        
+
         li {
             margin-bottom: 8px;
         }
-        
+
         .conclusion {
             background-color: #e6ffe6;
             padding: 15px;
@@ -119,324 +120,594 @@
             border-left: 5px solid #32CD32;
             margin: 20px 0;
         }
-        
+
         .note {
             font-size: 0.9em;
             color: #666;
             font-style: italic;
         }
-        
+
         .divider {
             text-align: center;
             margin: 30px 0;
             font-size: 1.5em;
             color: #DAA520;
         }
+
         .devi-sukta {
-        background-color: #fffaf0;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #ffdab9;
-        margin: 20px 0;
-        font-size: 1em;
-        line-height: 1.6;
-        color: #5a3e2b;
-    }
+            background-color: #fffaf0;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ffdab9;
+            margin: 20px 0;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #5a3e2b;
+        }
 
-    .devi-sukta h2 {
-        color: #8b4513;
-        text-align: center;
-    }
+        .devi-sukta h2 {
+            color: #8b4513;
+            text-align: center;
+        }
 
-    .devi-sukta h3 {
-        margin-top: 15px;
-        color: #6b4226;
-    }
+        .devi-sukta h3 {
+            margin-top: 15px;
+            color: #6b4226;
+        }
 
-    .devi-sukta p {
-        margin: 10px 0;
-    }
+        .devi-sukta p {
+            margin: 10px 0;
+        }
 
-    .devi-sukta ul {
-        margin: 10px 0 0 20px;
-        padding: 0;
-        list-style-type: disc;
-    }
-    .metadata {
-        background-color: #f9f9f9;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #ddd;
-        margin: 20px 0;
-        font-size: 1em;
-        line-height: 1.6;
-        color: #333;
-    }
+        .devi-sukta ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
 
-    .metadata h2 {
-        color: #444;
-        text-align: left;
-    }
+        .metadata {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ddd;
+            margin: 20px 0;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #333;
+        }
 
-    .metadata h3 {
-        margin-top: 15px;
-        color: #555;
-    }
+        .metadata h2 {
+            color: #444;
+            text-align: left;
+        }
 
-    .metadata ul {
-        margin: 10px 0 0 20px;
-        padding: 0;
-        list-style-type: disc;
-    }
+        .metadata h3 {
+            margin-top: 15px;
+            color: #555;
+        }
 
-    .metadata li {
-        margin-bottom: 8px;
-    }
-    .devi-meaning {
-        background-color: #fef9e7;
-        padding: 20px;
-        border-radius: 8px;
-        border: 1px solid #f9e79f;
-        margin: 20px 0;
-        font-size: 1em;
-        line-height: 1.6;
-        color: #6e2c00;
-    }
+        .metadata ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
 
-    .devi-meaning h2 {
-        color: #935116;
-        text-align: left;
-    }
+        .metadata li {
+            margin-bottom: 8px;
+        }
 
-    .devi-meaning h3 {
-        margin-top: 15px;
-        color: #935116;
-    }
+        .devi-meaning {
+            background-color: #fef9e7;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #f9e79f;
+            margin: 20px 0;
+            font-size: 1em;
+            line-height: 1.6;
+            color: #6e2c00;
+        }
 
-    .devi-meaning ul {
-        margin: 10px 0 0 20px;
-        padding: 0;
-        list-style-type: disc;
-    }
+        .devi-meaning h2 {
+            color: #935116;
+            text-align: left;
+        }
 
-    .devi-meaning li {
-        margin-bottom: 8px;
-    }
+        .devi-meaning h3 {
+            margin-top: 15px;
+            color: #935116;
+        }
+
+        .devi-meaning ul {
+            margin: 10px 0 0 20px;
+            padding: 0;
+            list-style-type: disc;
+        }
+
+        .devi-meaning li {
+            margin-bottom: 8px;
+        }
     </style>
 </head>
-<body>
-    
-    <div id="content-en"> 
-    <h1>🌺 Rigveda 10.125 – Devī Sūkta (Vāk Sūkta)</h1>
 
-    <div class="note">
-        <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
-        <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for debate, but for thoughtful exchange of perspectives.
+<body>
+
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
     </div>
 
 
-    <div class="devi-sukta">
-        
-        <p><strong>ऋषिका:</strong> वाक् अंबृणी (एक स्त्री ऋषिका)<br>
-        <strong>देवता:</strong> वाक् (देवी शक्ति / सार्वभौमिक ऊर्जा)<br>
-        <strong>छन्दस्:</strong> त्रिष्टुप्</p>
-        
-        <p><strong>Rishika (Sage):</strong> Vak Ambhrini (a female sage)<br>
-            <strong>Deity:</strong> Vak (Goddess Shakti / Universal Energy)<br>
-            <strong>Chandas (Meter):</strong> Trishtubh</p>
-        
+
+    <div id="content-en">
+        <h1>🌺 Rigveda 10.125 – Devī Sūkta (Vāk Sūkta)</h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for
+            debate, but for thoughtful exchange of perspectives.
+        </div>
+
+        <div class="devi-sukta">
+
+            <p><strong>ऋषिका:</strong> वाक् अंबृणी (एक स्त्री ऋषिका)<br>
+                <strong>देवता:</strong> वाक् (देवी शक्ति / सार्वभौमिक ऊर्जा)<br>
+                <strong>छन्दस्:</strong> त्रिष्टुप्
+            </p>
+
+            <p><strong>Rishika (Sage):</strong> Vak Ambhrini (a female sage)<br>
+                <strong>Deity:</strong> Vak (Goddess Shakti / Universal Energy)<br>
+                <strong>Chandas (Meter):</strong> Trishtubh
+            </p>
+
             <h3>मंत्र 1</h3>
 
-        <p><strong>Sanskrit:</strong><br>
-        अहं रुद्रेभिर्वसुभिश्चराम्यहमादित्यैरुत विश्वदेवैः।<br>
-        अहं मित्रावरुणोभा बिभर्म्यहमिन्द्राग्नी अहमश्विनोभा॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं रुद्रों और वसुओं के साथ विचरण करती हूँ। मैं आदित्यों और समस्त देवताओं के साथ रहती हूँ।<br>
-        मैं मित्र और वरुण दोनों को धारण करती हूँ। मैं इन्द्र और अग्नि को संभालती हूँ। मैं अश्विनीकुमारों को भी धारण करती हूँ।</p>
-        <p><strong>English:</strong><br>
-        I move with the Rudras and the Vasus, with the Ādityas and all the gods.<br>
-        I uphold Mitra and Varuṇa, I support Indra and Agni, and also the twin Aśvins.</p>
-    
-        <h3>मंत्र 2</h3>
-        <p><strong>Sanskrit:</strong><br>
-        अहं सोममाहनसं बिभर्म्यहं त्वष्टारमुत पूषणं भगम्।<br>
-        अहं दधामि द्रविणं हविष्मते सुप्राव्ये यजमानाय सुन्वते॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं सोम को धारण करती हूँ, त्वष्टा, पूषण और भाग्य देवता को भी।<br>
-        मैं यज्ञ करने वाले को धन प्रदान करती हूँ, और हवन करने वाले यजमान को समृद्धि देती हूँ।</p>
-        <p><strong>English:</strong><br>
-        I sustain Soma, Tvaṣṭṛ, Pūṣan and Bhaga.<br>
-        I grant wealth to the sacrificer, and prosperity to the one who offers oblations.</p>
-    
-        <h3>मंत्र 3</h3>
-        <p><strong>Sanskrit:</strong><br>
-        अहं राष्ट्री संगमनी वसूनां चिकितुषी प्रथमा यज्ञियानाम्।<br>
-        तां मा देवा व्यदधुः पुरुत्रा भूरिस्थात्रां भूर्यावेśayantīm॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं राष्ट्रों की स्वामिनी हूँ, सम्पत्ति की संचालिनी हूँ, बुद्धिमान और यज्ञ में प्रथम पूज्य हूँ।<br>
-        देवताओं ने मुझे अनेक स्थानों पर स्थापित किया है, ताकि मैं सब जगह निवास कर सकूँ।</p>
-        <p><strong>English:</strong><br>
-        I am the sovereign of nations, the gatherer of wealth, the wise, the foremost among those worthy of sacrifice.<br>
-        The gods have established me in many places, to pervade and dwell in many regions.</p>
-    
-        <h3>मंत्र 4</h3>
-        <p><strong>Sanskrit:</strong><br>
-        मया सो अन्नमत्ति यो विपश्यति यः प्राणिति य ईं शृणोत्युक्तम्।<br>
-        अमन्तवो मां त उप क्षियन्ति श्रुधि श्रुत श्रद्धिवं ते वदामि॥</p>
-        <p><strong>Hindi:</strong><br>
-        मेरे द्वारा ही वह भोजन करता है जो देखता है; मेरे द्वारा ही प्राण लेता है, मेरे द्वारा ही वह सुनता है।<br>
-        जो मुझे न समझते हैं, वे नष्ट हो जाते हैं। सुनो! मैं तुम्हें सत्य श्रद्धा सहित वचन कहती हूँ।</p>
-        <p><strong>English:</strong><br>
-        Through me one eats food, sees, breathes, and hears what is spoken.<br>
-        Those who do not recognize me perish. Listen! I speak to you words worthy of faith.</p>
-    
-        <h3>मंत्र 5</h3>
-        <p><strong>Sanskrit:</strong><br>
-        अहमेव स्वयमिदं वदामि जुष्टं देवेभिरुत मानुषेभिः।<br>
-        यं कामये तं-तमुग्रं कृणोमि तं ब्रह्माणं तं ऋषिं तं सुमेधाम्॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं स्वयं यह घोषणा करती हूँ, देवताओं और मनुष्यों द्वारा पूजित होकर।<br>
-        जिसे मैं चाहती हूँ, उसे बलशाली बनाती हूँ; उसे ब्राह्मण, ऋषि और बुद्धिमान बना देती हूँ।</p>
-        <p><strong>English:</strong><br>
-        I myself proclaim this, honored by gods and men.<br>
-        Whom I love, I make mighty; I make him a priest, a seer, or a wise man.</p>
-    
-        <h3>मंत्र 6</h3>
-        <p><strong>Sanskrit:</strong><br>
-        अहं रुद्राय धनुरातनोमि ब्रह्मद्विषे शरवे हन्तवा उ।<br>
-        अहं जनाय समदं कृणोम्यहम् द्यावापृथिवी आविवेश॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं रुद्र के लिए धनुष तानती हूँ, ब्रह्मद्वेषी के विनाश के लिए बाण छोड़ती हूँ।<br>
-        मैं लोगों के लिए संघर्ष रचती हूँ। मैंने ही आकाश और पृथ्वी में प्रवेश किया है।</p>
-        <p><strong>English:</strong><br>
-        I stretch the bow for Rudra, to slay the hater of sacred knowledge.<br>
-        I stir up battle for the people. I pervade both heaven and earth.</p>
-    
-        <h3>मंत्र 7</h3>
-        <p><strong>Sanskrit:</strong><br>
-        अहं सुवे पितरमस्य मूर्धन् मम योनि-रप्स्वन्तः समुद्रे।<br>
-        ततो वि तिष्ठे भुवनानु विश्वोता मा ध्यामु-द्यं त्रिविष्टम॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं इस जगत के पिता (ब्रह्मा) को उत्पन्न करती हूँ। मेरा गर्भ जल और समुद्र में है।<br>
-        वहाँ से मैं सम्पूर्ण विश्व को व्याप्त करती हूँ और आकाश तथा स्वर्ग तक फैल जाती हूँ।</p>
-        <p><strong>English:</strong><br>
-        I give birth to the Father of this world. My womb is in the waters, in the ocean.<br>
-        From there I extend over all beings and reach up to the heavens.</p>
-    
-        <h3>मंत्र 8</h3>
-        <p><strong>Sanskrit:</strong><br>
-        अहमेव वात इव प्र वाम्यारभमाणा भुवनानि विश्वा।<br>
-        परो दिवा पर एना पृथिव्यैतावती महिना सं बभूव॥</p>
-        <p><strong>Hindi:</strong><br>
-        मैं ही वायु की भाँति सबको गति देती हूँ, सभी लोकों को धारण करती हूँ।<br>
-        मैं स्वर्ग से परे, पृथ्वी से परे, अपने महान सामर्थ्य से विस्तृत हूँ।</p>
-        <p><strong>English:</strong><br>
-        I move like the wind, holding together all the worlds.<br>
-        I transcend beyond heaven and beyond earth, such is my greatness.</p>
-    
-        <h3>🌟 सारांश:</h3>
-        <ul>
-            <li>यह सूक्त देवी को एक सर्वव्यापी शक्ति (Universal Power) के रूप में दिखाता है।</li>
-            <li>जो सभी देवताओं को बल देती है, सभी जीवों को जीवन देती है, और ब्रह्मांड को चलाती है।</li>
-            <li>यहाँ देवी = वाक् (Divine Word, Cosmic Feminine Energy)।</li>
-        </ul>
+            <p><strong>Sanskrit:</strong><br>
+                अहं रुद्रेभिर्वसुभिश्चराम्यहमादित्यैरुत विश्वदेवैः।<br>
+                अहं मित्रावरुणोभा बिभर्म्यहमिन्द्राग्नी अहमश्विनोभा॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं रुद्रों और वसुओं के साथ विचरण करती हूँ। मैं आदित्यों और समस्त देवताओं के साथ रहती हूँ।<br>
+                मैं मित्र और वरुण दोनों को धारण करती हूँ। मैं इन्द्र और अग्नि को संभालती हूँ। मैं अश्विनीकुमारों को भी
+                धारण करती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I move with the Rudras and the Vasus, with the Ādityas and all the gods.<br>
+                I uphold Mitra and Varuṇa, I support Indra and Agni, and also the twin Aśvins.</p>
+
+            <h3>मंत्र 2</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं सोममाहनसं बिभर्म्यहं त्वष्टारमुत पूषणं भगम्।<br>
+                अहं दधामि द्रविणं हविष्मते सुप्राव्ये यजमानाय सुन्वते॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं सोम को धारण करती हूँ, त्वष्टा, पूषण और भाग्य देवता को भी।<br>
+                मैं यज्ञ करने वाले को धन प्रदान करती हूँ, और हवन करने वाले यजमान को समृद्धि देती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I sustain Soma, Tvaṣṭṛ, Pūṣan and Bhaga.<br>
+                I grant wealth to the sacrificer, and prosperity to the one who offers oblations.</p>
+
+            <h3>मंत्र 3</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं राष्ट्री संगमनी वसूनां चिकितुषी प्रथमा यज्ञियानाम्।<br>
+                तां मा देवा व्यदधुः पुरुत्रा भूरिस्थात्रां भूर्यावेśayantīm॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं राष्ट्रों की स्वामिनी हूँ, सम्पत्ति की संचालिनी हूँ, बुद्धिमान और यज्ञ में प्रथम पूज्य हूँ।<br>
+                देवताओं ने मुझे अनेक स्थानों पर स्थापित किया है, ताकि मैं सब जगह निवास कर सकूँ।</p>
+            <p><strong>English:</strong><br>
+                I am the sovereign of nations, the gatherer of wealth, the wise, the foremost among those worthy of
+                sacrifice.<br>
+                The gods have established me in many places, to pervade and dwell in many regions.</p>
+
+            <h3>मंत्र 4</h3>
+            <p><strong>Sanskrit:</strong><br>
+                मया सो अन्नमत्ति यो विपश्यति यः प्राणिति य ईं शृणोत्युक्तम्।<br>
+                अमन्तवो मां त उप क्षियन्ति श्रुधि श्रुत श्रद्धिवं ते वदामि॥</p>
+            <p><strong>Hindi:</strong><br>
+                मेरे द्वारा ही वह भोजन करता है जो देखता है; मेरे द्वारा ही प्राण लेता है, मेरे द्वारा ही वह सुनता
+                है।<br>
+                जो मुझे न समझते हैं, वे नष्ट हो जाते हैं। सुनो! मैं तुम्हें सत्य श्रद्धा सहित वचन कहती हूँ।</p>
+            <p><strong>English:</strong><br>
+                Through me one eats food, sees, breathes, and hears what is spoken.<br>
+                Those who do not recognize me perish. Listen! I speak to you words worthy of faith.</p>
+
+            <h3>मंत्र 5</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहमेव स्वयमिदं वदामि जुष्टं देवेभिरुत मानुषेभिः।<br>
+                यं कामये तं-तमुग्रं कृणोमि तं ब्रह्माणं तं ऋषिं तं सुमेधाम्॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं स्वयं यह घोषणा करती हूँ, देवताओं और मनुष्यों द्वारा पूजित होकर।<br>
+                जिसे मैं चाहती हूँ, उसे बलशाली बनाती हूँ; उसे ब्राह्मण, ऋषि और बुद्धिमान बना देती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I myself proclaim this, honored by gods and men.<br>
+                Whom I love, I make mighty; I make him a priest, a seer, or a wise man.</p>
+
+            <h3>मंत्र 6</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं रुद्राय धनुरातनोमि ब्रह्मद्विषे शरवे हन्तवा उ।<br>
+                अहं जनाय समदं कृणोम्यहम् द्यावापृथिवी आविवेश॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं रुद्र के लिए धनुष तानती हूँ, ब्रह्मद्वेषी के विनाश के लिए बाण छोड़ती हूँ।<br>
+                मैं लोगों के लिए संघर्ष रचती हूँ। मैंने ही आकाश और पृथ्वी में प्रवेश किया है।</p>
+            <p><strong>English:</strong><br>
+                I stretch the bow for Rudra, to slay the hater of sacred knowledge.<br>
+                I stir up battle for the people. I pervade both heaven and earth.</p>
+
+            <h3>मंत्र 7</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं सुवे पितरमस्य मूर्धन् मम योनि-रप्स्वन्तः समुद्रे।<br>
+                ततो वि तिष्ठे भुवनानु विश्वोता मा ध्यामु-द्यं त्रिविष्टम॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं इस जगत के पिता (ब्रह्मा) को उत्पन्न करती हूँ। मेरा गर्भ जल और समुद्र में है।<br>
+                वहाँ से मैं सम्पूर्ण विश्व को व्याप्त करती हूँ और आकाश तथा स्वर्ग तक फैल जाती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I give birth to the Father of this world. My womb is in the waters, in the ocean.<br>
+                From there I extend over all beings and reach up to the heavens.</p>
+
+            <h3>मंत्र 8</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहमेव वात इव प्र वाम्यारभमाणा भुवनानि विश्वा।<br>
+                परो दिवा पर एना पृथिव्यैतावती महिना सं बभूव॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं ही वायु की भाँति सबको गति देती हूँ, सभी लोकों को धारण करती हूँ।<br>
+                मैं स्वर्ग से परे, पृथ्वी से परे, अपने महान सामर्थ्य से विस्तृत हूँ।</p>
+            <p><strong>English:</strong><br>
+                I move like the wind, holding together all the worlds.<br>
+                I transcend beyond heaven and beyond earth, such is my greatness.</p>
+
+            <h3>🌟 सारांश:</h3>
+            <ul>
+                <li>यह सूक्त देवी को एक सर्वव्यापी शक्ति (Universal Power) के रूप में दिखाता है।</li>
+                <li>जो सभी देवताओं को बल देती है, सभी जीवों को जीवन देती है, और ब्रह्मांड को चलाती है।</li>
+                <li>यहाँ देवी = वाक् (Divine Word, Cosmic Feminine Energy)।</li>
+            </ul>
+        </div>
+
+
+        <div class="metadata">
+            <h2>Metadata</h2>
+            <p>These are the metadata of the Vedic mantras:</p>
+
+            <ul>
+                <li><strong>Rishika (Seer):</strong> Vak Ambhrini</li>
+                <li><strong>Deity:</strong> Vak (Goddess Shakti)</li>
+                <li><strong>Chandas (Metre):</strong> Trishtubh</li>
+            </ul>
+
+            <h3>1. Rishi / Rishika</h3>
+            <ul>
+                <li>Every Vedic mantra has a Rishi (seer) who “saw” or experienced the mantra.</li>
+                <li>Most mantras are attributed to male Rishis, but in rare cases, female Rishikas have also composed
+                    mantras.</li>
+                <li>Here, Rishika Ambhrini is a female seer who directly experienced this Sukta.</li>
+            </ul>
+
+            <h3>2. Deity</h3>
+            <ul>
+                <li>Every mantra is dedicated to a specific deity (e.g., Agni, Indra, Varuna).</li>
+                <li>However, here the deity is Vak (speech) — which appears as a cosmic feminine power (Goddess Shakti).
+                </li>
+                <li>Hence, this Sukta is also called “Devi Sukta.”</li>
+            </ul>
+
+            <h3>3. Chandas (Metre)</h3>
+            <ul>
+                <li>Vedic mantras are written in a poetic rhythm (metre).</li>
+                <li>Just as Hindi–English poetry has “meter,” the Vedas have “Chandas.”</li>
+                <li>Here, the Trishtubh metre is used → each line (Pada) contains approximately 11 syllables.</li>
+                <li>About 40% of the Rigveda is composed in this metre.</li>
+            </ul>
+
+            <h3>🌟 Simple Understanding</h3>
+            <ul>
+                <li><strong>Rishika (Seer):</strong> The one who saw the mantra → Ambhrini.</li>
+                <li><strong>Deity:</strong> The element to which the mantra is dedicated → Vak (Divine Speech / Goddess
+                    Shakti).</li>
+                <li><strong>Chandas (Metre):</strong> The poetic rhythm of the mantra → Trishtubh.</li>
+            </ul>
+        </div>
+
+        <div class="devi-meaning">
+            <h2>Meaning of Devi</h2>
+            <p><strong>Devi</strong> in Rigveda 10.125 (Devi Sukta / Vak Sukta) has a deeper meaning. Here, “Devi” is
+                not a specific worshipped form (like Durga, Lakshmi, or Saraswati). Here, Devi means:</p>
+
+            <h3>1. Vak (Speech / Word / Logos)</h3>
+            <ul>
+                <li>This Sukta was composed by a female Rishika – Ambhrini (the speaker), who presented herself as Vak
+                    (speech, voice).</li>
+                <li>Vak here is not just “spoken speech,” but the divine voice that gives birth to creation.</li>
+                <li>In this sense, it is similar to the Logos (word-principle) that governs everything. Just as the
+                    Bible says, “In the beginning was the Word (Logos)…,” the Vedas say: the word is the foundation of
+                    creation.</li>
+                <li>Here, Vak is considered a cosmic sound-energy that drives creation.</li>
+            </ul>
+
+            <h3>2. Shakti (Cosmic Energy / Universal Power)</h3>
+            <ul>
+                <li>Devi here is a universal creative power that empowers all deities.</li>
+                <li>Indra, Agni, Varuna — all derive their strength from Devi.</li>
+                <li>It is important to understand that the Vedic vision is: Devi is the root of nature and energy.</li>
+            </ul>
+
+            <h3>3. Manifestation of Brahman</h3>
+            <ul>
+                <li>This Sukta says, “I am everywhere, I support heaven and earth.”</li>
+                <li>Here, Devi = the manifested form of Brahman (the ultimate reality).</li>
+                <li>Later, in the Puranas, this was referred to as “Maha-Maya,” “Jagat-Janani,” or “Durga.”</li>
+            </ul>
+
+            <h3>4. Source of Kingship, Wealth, and Knowledge</h3>
+            <ul>
+                <li>Devi says that she can make anyone a priest, king, poet, or scholar as she desires.</li>
+                <li>This means that this power is the inherent principle behind all social and religious order.</li>
+            </ul>
+
+            <h3>🌟 Simple Understanding</h3>
+            <ul>
+                <li>Devi here = the all-pervading primordial feminine power that governs everything.</li>
+                <li>She is the mother of creation,</li>
+                <li>She gives strength to all gods and humans,</li>
+                <li>And she pervades everything as Vak (word, knowledge, consciousness).</li>
+                <li>Later, she was established as Devi Saraswati, Ambika, Chandi, and Durga.</li>
+            </ul>
+        </div>
+        <div class="divider">❖ ❖ ❖</div>
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not
+            meant for debate, but rather for the exchange of knowledge and perspectives.
+        </div>
     </div>
 
-    <div class="metadata">
-        <h2>Metadata</h2>
-        <p>ये वैदिक मंत्रों के मेटाडेटा होते हैं:</p>
-    
-        <ul>
-            <li><strong>ऋषिका:</strong> वाक् अंबृणी</li>
-            <li><strong>देवता:</strong> वाक् (देवी शक्ति)</li>
-            <li><strong>छन्दस्:</strong> त्रिष्टुप्</li>
-        </ul>
-    
-        <h3>1. ऋषि / ऋषिका (Rishi / Rishikā)</h3>
-        <ul>
-            <li>हर वेद मंत्र के साथ एक ऋषि (seer) होता है, जो उस मंत्र को “दृष्टा” (जिसने अनुभव किया) है।</li>
-            <li>ज़्यादातर मंत्र पुरुष ऋषियों के हैं, लेकिन कुछ दुर्लभ मामलों में महिला ऋषिका ने भी मंत्र गाए हैं।</li>
-            <li>यहाँ ऋषिका अंबृणी (Ambhṛṇī Rishikā) एक स्त्री-ऋषि हैं जिन्हें यह सूक्त प्रत्यक्ष हुआ।</li>
-        </ul>
-    
-        <h3>2. देवता (Devatā)</h3>
-        <ul>
-            <li>हर मंत्र किसी एक देवता को समर्पित होता है (जैसे अग्नि, इंद्र, वरुण)।</li>
-            <li>लेकिन यहाँ देवता वाक् (वाणी / speech) है — जो एक cosmic feminine power (देवी शक्ति) के रूप में आई है।</li>
-            <li>इसलिए इस सूक्त को “देवी सूक्त” भी कहते हैं।</li>
-        </ul>
-    
-        <h3>3. छन्दस् (Chandas – Metre)</h3>
-        <ul>
-            <li>वैदिक मंत्र एक poetic rhythm (metre) में लिखे गए हैं।</li>
-            <li>जैसे हिंदी–अंग्रेज़ी कविता में “meter” होता है, वैसे ही वेदों में “छन्दस्”।</li>
-            <li>यहाँ त्रिष्टुप् छन्दस् है → जिसमें प्रत्येक पाद (line) में लगभग 11 अक्षर (syllables) होते हैं।</li>
-            <li>ऋग्वेद का लगभग 40% इसी छन्दस् में है।</li>
-        </ul>
-    
-        <h3>🌟 सरल समझ</h3>
-        <ul>
-            <li><strong>ऋषिका (seer):</strong> जिसने मंत्र देखा → अंबृणी।</li>
-            <li><strong>देवता (deity):</strong> मंत्र किस तत्व को समर्पित है → वाक् (Divine Speech / देवी शक्ति)।</li>
-            <li><strong>छन्दस् (metre):</strong> मंत्र की काव्य-रूपी लय → त्रिष्टुप्।</li>
-        </ul>
     </div>
 
+    <div id="content-hi">
+        <h1>🌺 Rigveda 10.125 – Devī Sūkta (Vāk Sūkta)</h1>
 
-    <div class="devi-meaning">
-        <h2>Meaning of Devī</h2>
-        <p><strong>Devī</strong> in Rigveda 10.125 (Devī Sūkta / Vāk Sūkta) का अर्थ थोड़ा गहरा है। यहाँ “Devī” कोई एक अलग पूजा-पात्र रूप (जैसे कि दुर्गा, लक्ष्मी या सरस्वती) नहीं है। यहाँ Devī का अर्थ है:</p>
-    
-        <h3>1. वाक् (Speech / Word / Logos)</h3>
-        <ul>
-            <li>यह सूक्त एक ऋषिका स्त्री – अंबृणी (वक्त्री) ने अपने आप को वाक् (speech, वाणी) के रूप में प्रस्तुत किया है।</li>
-            <li>वाक् यहाँ केवल “बोलने की वाणी” नहीं, बल्कि सृष्टि को जन्म देने वाली दिव्य वाणी है।</li>
-            <li>इस संदर्भ में यह Logos (word-principle) जैसा है जो सब कुछ चलाता है। जैसे बाइबल में “In the beginning was the Word (Logos)…” लिखा है, उसी तरह वेद कहते हैं: शब्द ही सृष्टि का आधार है।</li>
-            <li>	यहाँ वाक् को एक cosmic sound-energy माना गया जो सृष्टि को चलाती है।</li>
-        </ul>
-    
-        <h3>2. शक्ति (Cosmic Energy / Universal Power)</h3>
-        <ul>
-            <li>Devī यहाँ एक universal creative power है जो सभी देवताओं को बल देती है।</li>
-            <li>इंद्र, अग्नि, वरुण – सभी को Devī ही शक्ति देती है।</li>
-            <li>यह समझना चाहिए कि वेद का दृष्टिकोण है: Devī ही प्रकृति और शक्ति का मूल है।</li>
-        </ul>
-    
-        <h3>3. ब्रह्म में प्रकाश (Self-manifestation of Brahman)</h3>
-        <ul>
-            <li>यह सूक्त कहता है कि “मैं हर जगह हूँ, मैं स्वर्ग और पृथ्वी को सहारा देती हूँ।”</li>
-            <li>यहाँ Devī = ब्रह्म का प्रकट रूप (the manifested aspect of the ultimate reality)।</li>
-            <li>जिसे हम बाद में पुराणों में “महा-माया”, “जगत-जननी” या “दुर्गा” कहने लगे।</li>
-        </ul>
-    
-        <h3>4. राजत्व, धन, और ज्ञान का स्रोत (Source of Kingship, Wealth, Knowledge)</h3>
-        <ul>
-            <li>Devī कहती है कि वह जिस व्यक्ति को चाहे, उसे पुरोहित, राजा, कवि, विद्वान बना देती है।</li>
-            <li>मतलब यह शक्ति सभी सामाजिक और धार्मिक क्रम के पीछे का अंतर्निहित तत्व है।</li>
-        </ul>
-    
-        <h3>🌟 सरल समझ</h3>
-        <ul>
-            <li>Devī यहाँ = सब में व्याप्त एक आदि-शक्ति (primordial feminine power) जो सबको चलाती है।</li>
-            <li>सृष्टि (creation) की जननी है,</li>
-            <li>सभी देवता और मनुष्य को शक्ति देती है,</li>
-            <li>और जो वाक् (शब्द, ज्ञान, चेतना) के रूप में व्याप्त है।</li>
-            <li>बाद में इसको ही Devī सरस्वती, अंबिका, चंडी, दुर्गा के रूप में स्थापित किया गया।</li>
-        </ul>
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>नोट:</strong> यह लेख विचार और चिंतन के लिए है। यह बहस के लिए नहीं, बल्कि ज्ञान और दृष्टिकोण के
+            आदान-प्रदान के लिए है।
+        </div>
+
+
+        <div class="devi-sukta">
+
+            <p><strong>ऋषिका:</strong> वाक् अंबृणी (एक स्त्री ऋषिका)<br>
+                <strong>देवता:</strong> वाक् (देवी शक्ति / सार्वभौमिक ऊर्जा)<br>
+                <strong>छन्दस्:</strong> त्रिष्टुप्
+            </p>
+
+            <p><strong>Rishika (Sage):</strong> Vak Ambhrini (a female sage)<br>
+                <strong>Deity:</strong> Vak (Goddess Shakti / Universal Energy)<br>
+                <strong>Chandas (Meter):</strong> Trishtubh
+            </p>
+
+            <h3>मंत्र 1</h3>
+
+            <p><strong>Sanskrit:</strong><br>
+                अहं रुद्रेभिर्वसुभिश्चराम्यहमादित्यैरुत विश्वदेवैः।<br>
+                अहं मित्रावरुणोभा बिभर्म्यहमिन्द्राग्नी अहमश्विनोभा॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं रुद्रों और वसुओं के साथ विचरण करती हूँ। मैं आदित्यों और समस्त देवताओं के साथ रहती हूँ।<br>
+                मैं मित्र और वरुण दोनों को धारण करती हूँ। मैं इन्द्र और अग्नि को संभालती हूँ। मैं अश्विनीकुमारों को भी
+                धारण करती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I move with the Rudras and the Vasus, with the Ādityas and all the gods.<br>
+                I uphold Mitra and Varuṇa, I support Indra and Agni, and also the twin Aśvins.</p>
+
+            <h3>मंत्र 2</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं सोममाहनसं बिभर्म्यहं त्वष्टारमुत पूषणं भगम्।<br>
+                अहं दधामि द्रविणं हविष्मते सुप्राव्ये यजमानाय सुन्वते॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं सोम को धारण करती हूँ, त्वष्टा, पूषण और भाग्य देवता को भी।<br>
+                मैं यज्ञ करने वाले को धन प्रदान करती हूँ, और हवन करने वाले यजमान को समृद्धि देती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I sustain Soma, Tvaṣṭṛ, Pūṣan and Bhaga.<br>
+                I grant wealth to the sacrificer, and prosperity to the one who offers oblations.</p>
+
+            <h3>मंत्र 3</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं राष्ट्री संगमनी वसूनां चिकितुषी प्रथमा यज्ञियानाम्।<br>
+                तां मा देवा व्यदधुः पुरुत्रा भूरिस्थात्रां भूर्यावेśayantīm॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं राष्ट्रों की स्वामिनी हूँ, सम्पत्ति की संचालिनी हूँ, बुद्धिमान और यज्ञ में प्रथम पूज्य हूँ।<br>
+                देवताओं ने मुझे अनेक स्थानों पर स्थापित किया है, ताकि मैं सब जगह निवास कर सकूँ।</p>
+            <p><strong>English:</strong><br>
+                I am the sovereign of nations, the gatherer of wealth, the wise, the foremost among those worthy of
+                sacrifice.<br>
+                The gods have established me in many places, to pervade and dwell in many regions.</p>
+
+            <h3>मंत्र 4</h3>
+            <p><strong>Sanskrit:</strong><br>
+                मया सो अन्नमत्ति यो विपश्यति यः प्राणिति य ईं शृणोत्युक्तम्।<br>
+                अमन्तवो मां त उप क्षियन्ति श्रुधि श्रुत श्रद्धिवं ते वदामि॥</p>
+            <p><strong>Hindi:</strong><br>
+                मेरे द्वारा ही वह भोजन करता है जो देखता है; मेरे द्वारा ही प्राण लेता है, मेरे द्वारा ही वह सुनता
+                है।<br>
+                जो मुझे न समझते हैं, वे नष्ट हो जाते हैं। सुनो! मैं तुम्हें सत्य श्रद्धा सहित वचन कहती हूँ।</p>
+            <p><strong>English:</strong><br>
+                Through me one eats food, sees, breathes, and hears what is spoken.<br>
+                Those who do not recognize me perish. Listen! I speak to you words worthy of faith.</p>
+
+            <h3>मंत्र 5</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहमेव स्वयमिदं वदामि जुष्टं देवेभिरुत मानुषेभिः।<br>
+                यं कामये तं-तमुग्रं कृणोमि तं ब्रह्माणं तं ऋषिं तं सुमेधाम्॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं स्वयं यह घोषणा करती हूँ, देवताओं और मनुष्यों द्वारा पूजित होकर।<br>
+                जिसे मैं चाहती हूँ, उसे बलशाली बनाती हूँ; उसे ब्राह्मण, ऋषि और बुद्धिमान बना देती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I myself proclaim this, honored by gods and men.<br>
+                Whom I love, I make mighty; I make him a priest, a seer, or a wise man.</p>
+
+            <h3>मंत्र 6</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं रुद्राय धनुरातनोमि ब्रह्मद्विषे शरवे हन्तवा उ।<br>
+                अहं जनाय समदं कृणोम्यहम् द्यावापृथिवी आविवेश॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं रुद्र के लिए धनुष तानती हूँ, ब्रह्मद्वेषी के विनाश के लिए बाण छोड़ती हूँ।<br>
+                मैं लोगों के लिए संघर्ष रचती हूँ। मैंने ही आकाश और पृथ्वी में प्रवेश किया है।</p>
+            <p><strong>English:</strong><br>
+                I stretch the bow for Rudra, to slay the hater of sacred knowledge.<br>
+                I stir up battle for the people. I pervade both heaven and earth.</p>
+
+            <h3>मंत्र 7</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहं सुवे पितरमस्य मूर्धन् मम योनि-रप्स्वन्तः समुद्रे।<br>
+                ततो वि तिष्ठे भुवनानु विश्वोता मा ध्यामु-द्यं त्रिविष्टम॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं इस जगत के पिता (ब्रह्मा) को उत्पन्न करती हूँ। मेरा गर्भ जल और समुद्र में है।<br>
+                वहाँ से मैं सम्पूर्ण विश्व को व्याप्त करती हूँ और आकाश तथा स्वर्ग तक फैल जाती हूँ।</p>
+            <p><strong>English:</strong><br>
+                I give birth to the Father of this world. My womb is in the waters, in the ocean.<br>
+                From there I extend over all beings and reach up to the heavens.</p>
+
+            <h3>मंत्र 8</h3>
+            <p><strong>Sanskrit:</strong><br>
+                अहमेव वात इव प्र वाम्यारभमाणा भुवनानि विश्वा।<br>
+                परो दिवा पर एना पृथिव्यैतावती महिना सं बभूव॥</p>
+            <p><strong>Hindi:</strong><br>
+                मैं ही वायु की भाँति सबको गति देती हूँ, सभी लोकों को धारण करती हूँ।<br>
+                मैं स्वर्ग से परे, पृथ्वी से परे, अपने महान सामर्थ्य से विस्तृत हूँ।</p>
+            <p><strong>English:</strong><br>
+                I move like the wind, holding together all the worlds.<br>
+                I transcend beyond heaven and beyond earth, such is my greatness.</p>
+
+            <h3>🌟 सारांश:</h3>
+            <ul>
+                <li>यह सूक्त देवी को एक सर्वव्यापी शक्ति (Universal Power) के रूप में दिखाता है।</li>
+                <li>जो सभी देवताओं को बल देती है, सभी जीवों को जीवन देती है, और ब्रह्मांड को चलाती है।</li>
+                <li>यहाँ देवी = वाक् (Divine Word, Cosmic Feminine Energy)।</li>
+            </ul>
+        </div>
+
+        <div class="metadata">
+            <h2>Metadata</h2>
+            <p>ये वैदिक मंत्रों के मेटाडेटा होते हैं:</p>
+
+            <ul>
+                <li><strong>ऋषिका:</strong> वाक् अंबृणी</li>
+                <li><strong>देवता:</strong> वाक् (देवी शक्ति)</li>
+                <li><strong>छन्दस्:</strong> त्रिष्टुप्</li>
+            </ul>
+
+            <h3>1. ऋषि / ऋषिका (Rishi / Rishikā)</h3>
+            <ul>
+                <li>हर वेद मंत्र के साथ एक ऋषि (seer) होता है, जो उस मंत्र को “दृष्टा” (जिसने अनुभव किया) है।</li>
+                <li>ज़्यादातर मंत्र पुरुष ऋषियों के हैं, लेकिन कुछ दुर्लभ मामलों में महिला ऋषिका ने भी मंत्र गाए हैं।
+                </li>
+                <li>यहाँ ऋषिका अंबृणी (Ambhṛṇī Rishikā) एक स्त्री-ऋषि हैं जिन्हें यह सूक्त प्रत्यक्ष हुआ।</li>
+            </ul>
+
+            <h3>2. देवता (Devatā)</h3>
+            <ul>
+                <li>हर मंत्र किसी एक देवता को समर्पित होता है (जैसे अग्नि, इंद्र, वरुण)।</li>
+                <li>लेकिन यहाँ देवता वाक् (वाणी / speech) है — जो एक cosmic feminine power (देवी शक्ति) के रूप में आई
+                    है।</li>
+                <li>इसलिए इस सूक्त को “देवी सूक्त” भी कहते हैं।</li>
+            </ul>
+
+            <h3>3. छन्दस् (Chandas – Metre)</h3>
+            <ul>
+                <li>वैदिक मंत्र एक poetic rhythm (metre) में लिखे गए हैं।</li>
+                <li>जैसे हिंदी–अंग्रेज़ी कविता में “meter” होता है, वैसे ही वेदों में “छन्दस्”।</li>
+                <li>यहाँ त्रिष्टुप् छन्दस् है → जिसमें प्रत्येक पाद (line) में लगभग 11 अक्षर (syllables) होते हैं।</li>
+                <li>ऋग्वेद का लगभग 40% इसी छन्दस् में है।</li>
+            </ul>
+
+            <h3>🌟 सरल समझ</h3>
+            <ul>
+                <li><strong>ऋषिका (seer):</strong> जिसने मंत्र देखा → अंबृणी।</li>
+                <li><strong>देवता (deity):</strong> मंत्र किस तत्व को समर्पित है → वाक् (Divine Speech / देवी शक्ति)।
+                </li>
+                <li><strong>छन्दस् (metre):</strong> मंत्र की काव्य-रूपी लय → त्रिष्टुप्।</li>
+            </ul>
+        </div>
+
+
+        <div class="devi-meaning">
+            <h2>Meaning of Devī</h2>
+            <p><strong>Devī</strong> in Rigveda 10.125 (Devī Sūkta / Vāk Sūkta) का अर्थ थोड़ा गहरा है। यहाँ “Devī” कोई
+                एक अलग पूजा-पात्र रूप (जैसे कि दुर्गा, लक्ष्मी या सरस्वती) नहीं है। यहाँ Devī का अर्थ है:</p>
+
+            <h3>1. वाक् (Speech / Word / Logos)</h3>
+            <ul>
+                <li>यह सूक्त एक ऋषिका स्त्री – अंबृणी (वक्त्री) ने अपने आप को वाक् (speech, वाणी) के रूप में प्रस्तुत
+                    किया है।</li>
+                <li>वाक् यहाँ केवल “बोलने की वाणी” नहीं, बल्कि सृष्टि को जन्म देने वाली दिव्य वाणी है।</li>
+                <li>इस संदर्भ में यह Logos (word-principle) जैसा है जो सब कुछ चलाता है। जैसे बाइबल में “In the beginning
+                    was the Word (Logos)…” लिखा है, उसी तरह वेद कहते हैं: शब्द ही सृष्टि का आधार है।</li>
+                <li> यहाँ वाक् को एक cosmic sound-energy माना गया जो सृष्टि को चलाती है।</li>
+            </ul>
+
+            <h3>2. शक्ति (Cosmic Energy / Universal Power)</h3>
+            <ul>
+                <li>Devī यहाँ एक universal creative power है जो सभी देवताओं को बल देती है।</li>
+                <li>इंद्र, अग्नि, वरुण – सभी को Devī ही शक्ति देती है।</li>
+                <li>यह समझना चाहिए कि वेद का दृष्टिकोण है: Devī ही प्रकृति और शक्ति का मूल है।</li>
+            </ul>
+
+            <h3>3. ब्रह्म में प्रकाश (Self-manifestation of Brahman)</h3>
+            <ul>
+                <li>यह सूक्त कहता है कि “मैं हर जगह हूँ, मैं स्वर्ग और पृथ्वी को सहारा देती हूँ।”</li>
+                <li>यहाँ Devī = ब्रह्म का प्रकट रूप (the manifested aspect of the ultimate reality)।</li>
+                <li>जिसे हम बाद में पुराणों में “महा-माया”, “जगत-जननी” या “दुर्गा” कहने लगे।</li>
+            </ul>
+
+            <h3>4. राजत्व, धन, और ज्ञान का स्रोत (Source of Kingship, Wealth, Knowledge)</h3>
+            <ul>
+                <li>Devī कहती है कि वह जिस व्यक्ति को चाहे, उसे पुरोहित, राजा, कवि, विद्वान बना देती है।</li>
+                <li>मतलब यह शक्ति सभी सामाजिक और धार्मिक क्रम के पीछे का अंतर्निहित तत्व है।</li>
+            </ul>
+
+            <h3>🌟 सरल समझ</h3>
+            <ul>
+                <li>Devī यहाँ = सब में व्याप्त एक आदि-शक्ति (primordial feminine power) जो सबको चलाती है।</li>
+                <li>सृष्टि (creation) की जननी है,</li>
+                <li>सभी देवता और मनुष्य को शक्ति देती है,</li>
+                <li>और जो वाक् (शब्द, ज्ञान, चेतना) के रूप में व्याप्त है।</li>
+                <li>बाद में इसको ही Devī सरस्वती, अंबिका, चंडी, दुर्गा के रूप में स्थापित किया गया।</li>
+            </ul>
+        </div>
+
+
+        <div class="divider">❖ ❖ ❖</div>
+
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>टिप्पणी:</strong> यह लेख विचार और चिंतन के लिए प्रेरित करने के उद्देश्य से लिखा गया है। इसका
+            उद्देश्य बहस करना नहीं है, बल्कि ज्ञान और दृष्टिकोणों के आदान-प्रदान को बढ़ावा देना है।
+        </div>
     </div>
 
-
-    <div class="divider">❖ ❖ ❖</div>
-
-    <div class="note">
-        <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
-        <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not meant for debate, but rather for the exchange of knowledge and perspectives.
     </div>
-</div>
+    <script>
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-hi');
+            const langButtons = document.querySelectorAll('.lang-btn');
 
-   
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
 
-    
-</div>
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                hindiContent.style.display = 'none';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'hi') {
+                englishContent.style.display = 'none';
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
+            }
+        }
+
+        // Check for language parameter in the URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            switchLanguage(lang);
+        });
+    </script>
 </body>
+
 </html>
