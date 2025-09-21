@@ -561,6 +561,8 @@
                 title="Vedic and Post-Vedic Texts"></iframe>
         </div>
 
+        <div id="vedas_en"></div>
+
         <div class="transgender-content">
             <h2>ट्रांसजेंडर संबंध</h2>
 
@@ -815,6 +817,7 @@
             langButtons.forEach(btn => btn.classList.remove('active'));
 
             if (lang === 'en') {
+
                 englishContent.style.display = 'block';
                 hindiContent.style.display = 'none';
                 langButtons[0].classList.add('active');
@@ -823,7 +826,6 @@
                 hindiContent.style.display = 'block';
                 langButtons[1].classList.add('active');
             }
-
         }
 
         // 🔹 THIS IS THE addEventListener PART
