@@ -705,15 +705,17 @@
             </p>
         </div>
 
-        <div id="vedas"></div>
-
-        <script>
-            fetch("vedic_post_vedic_texts_en.html?lang=en")
-                .then(r => r.text())
-                .then(html => {
-                    document.getElementById("vedas").innerHTML = html;
-                });
-        </script>
+        <style>
+            .content {
+                width: 100%;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        </style>
+        
+        <div class="content">
+            <iframe src="vedic_post_vedic_texts_en.html?lang=en" style="width: 100%; height: 2020px; border: none; overflow: hidden;" scrolling="true" title="Vedic and Post-Vedic Texts"></iframe>
+        </div>
 
         <div class="girls-birth-section">
             <h2>Girls’ Birth</h2>
@@ -1543,15 +1545,18 @@
             </p>
         </div>
 
-        <div id="vedas"></div>
+        <style>
+            .content {
+                width: 100%;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+        </style>
+        
+        <div class="content">
+            <iframe src="vedic_post_vedic_texts_en.html?lang=hi" style="width: 100%; height: 2020px; border: none; overflow: hidden;" scrolling="true" title="Vedic and Post-Vedic Texts"></iframe>
+        </div>
 
-        <script>
-            fetch("vedic_post_vedic_texts_en.html?lang=hi")
-                .then(r => r.text())
-                .then(html => {
-                    document.getElementById("vedas").innerHTML = html;
-                });
-        </script>
 
         <div class="girls-birth-section">
             <h2>लड़कियों का जन्म</h2>
@@ -2357,15 +2362,10 @@
                     hindiContent.style.display = 'block';
                     langButtons[1].classList.add('active');
                 }
-            }
 
-            // Check for language parameter in the URL
-            document.addEventListener('DOMContentLoaded', function () {
-                const urlParams = new URLSearchParams(window.location.search);
-                const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
-                switchLanguage(lang);
-            });
-        </script>
+            }
+ 
+ </script>
 </body>
 
 </html>
