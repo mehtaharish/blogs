@@ -243,16 +243,18 @@
             </p>
         </div>
 
-<style>
+        <style>
             .content {
                 width: 100%;
                 padding: 0px;
                 box-sizing: border-box;
             }
         </style>
-        
+
         <div class="content">
-            <iframe src="vedic_post_vedic_texts_en.html?lang=en" style="width: 100%; height: 2020px; border: none; overflow: hidden;" scrolling="true" title="Vedic and Post-Vedic Texts"></iframe>
+            <iframe src="vedic_post_vedic_texts_en.html?lang=en"
+                style="width: 100%; height: 2020px; border: none; overflow: hidden;" scrolling="true"
+                title="Vedic and Post-Vedic Texts"></iframe>
         </div>
 
 
@@ -552,9 +554,11 @@
                 box-sizing: border-box;
             }
         </style>
-        
+
         <div class="content">
-            <iframe src="vedic_post_vedic_texts_en.html?lang=hi" style="width: 100%; height: 2020px; border: none; overflow: hidden;" scrolling="true" title="Vedic and Post-Vedic Texts"></iframe>
+            <iframe src="vedic_post_vedic_texts_en.html?lang=hi"
+                style="width: 100%; height: 2020px; border: none; overflow: hidden;" scrolling="true"
+                title="Vedic and Post-Vedic Texts"></iframe>
         </div>
 
         <div class="transgender-content">
@@ -802,26 +806,33 @@
     </div>
 
     <script>
-            function switchLanguage(lang) {
-                const englishContent = document.getElementById('content-en');
-                const hindiContent = document.getElementById('content-hi');
-                const langButtons = document.querySelectorAll('.lang-btn');
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-hi');
+            const langButtons = document.querySelectorAll('.lang-btn');
 
-                // Remove active class from all buttons
-                langButtons.forEach(btn => btn.classList.remove('active'));
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
 
-                if (lang === 'en') {
-                    englishContent.style.display = 'block';
-                    hindiContent.style.display = 'none';
-                    langButtons[0].classList.add('active');
-                } else if (lang === 'hi') {
-                    englishContent.style.display = 'none';
-                    hindiContent.style.display = 'block';
-                    langButtons[1].classList.add('active');
-                }
-
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                hindiContent.style.display = 'none';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'hi') {
+                englishContent.style.display = 'none';
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
             }
-            </script>
+
+        }
+
+        // 🔹 THIS IS THE addEventListener PART
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default English
+            switchLanguage(lang); // call your function after DOM is ready
+        });
+    </script>
 
 </body>
 
