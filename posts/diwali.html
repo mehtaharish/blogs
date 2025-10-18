@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>History of Vedas and Role of Aryans</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fefefe;
+            color: #333;
+        }
+
+        .language-switcher {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background-color: #28a745;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn:focus {
+            outline: none;
+        }
+
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 3px solid #DAA520;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #B8860B;
+            border-left: 5px solid #DAA520;
+            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #CD853F;
+            margin-top: 25px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fefcf7;
+            border: 1px solid #e8e0d5;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            background-color: #fff8dc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .sanskrit-term {
+            font-style: italic;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .timeline {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #4169E1;
+            margin: 15px 0;
+        }
+
+        .example {
+            background-color: #f5f5dc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .conclusion {
+            background-color: #e6ffe6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #32CD32;
+            margin: 20px 0;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+            color: #DAA520;
+        }
+
+        .introduction {
+            background-color: #FFF8DC;
+            /* Light golden background */
+            padding: 20px;
+            border: 1px solid #DAA520;
+            /* Golden border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .introduction h2 {
+            color: #B8860B;
+            /* Dark golden color */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .introduction h3 {
+            color: #8B4513;
+            /* Saddle brown */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .introduction ol,
+        .introduction ul {
+            margin-left: 20px;
+        }
+
+        .introduction li {
+            margin-bottom: 10px;
+        }
+
+        .introduction p {
+            margin: 10px 0;
+        }
+
+        .celebration-day {
+            background-color: #F0F8FF;
+            /* Light blue background */
+            padding: 20px;
+            border: 1px solid #4682B4;
+            /* Steel blue border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .celebration-day h2 {
+            color: #4169E1;
+            /* Royal blue */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .celebration-day ol,
+        .celebration-day ul {
+            margin-left: 20px;
+        }
+
+        .celebration-day li {
+            margin-bottom: 10px;
+        }
+
+        .celebration-day p {
+            margin: 10px 0;
+        }
+
+        .diwali-stories {
+            background-color: #FFF5EE;
+            /* Light peach background */
+            padding: 20px;
+            border: 1px solid #CD5C5C;
+            /* Indian red border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .diwali-stories h2 {
+            color: #8B0000;
+            /* Dark red */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .diwali-stories h3 {
+            color: #A52A2A;
+            /* Brown */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .diwali-stories ul {
+            margin-left: 20px;
+        }
+
+        .diwali-stories li {
+            margin-bottom: 10px;
+        }
+
+        .diwali-stories p {
+            margin: 10px 0;
+        }
+
+        .relation-to-vedas {
+            background-color: #FAFAD2;
+            /* Light goldenrod yellow background */
+            padding: 20px;
+            border: 1px solid #BDB76B;
+            /* Dark khaki border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .relation-to-vedas h2 {
+            color: #8B8000;
+            /* Dark goldenrod */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .relation-to-vedas h3 {
+            color: #6B8E23;
+            /* Olive drab */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .relation-to-vedas ul {
+            margin-left: 20px;
+        }
+
+        .relation-to-vedas li {
+            margin-bottom: 10px;
+        }
+
+        .relation-to-vedas p {
+            margin: 10px 0;
+        }
+
+        .importance-of-light {
+            background-color: #FFFACD;
+            /* Lemon chiffon background */
+            padding: 20px;
+            border: 1px solid #FFD700;
+            /* Gold border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .importance-of-light h2 {
+            color: #DAA520;
+            /* Goldenrod */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .importance-of-light h3 {
+            color: #B8860B;
+            /* Dark goldenrod */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .importance-of-light ul {
+            margin-left: 20px;
+        }
+
+        .importance-of-light li {
+            margin-bottom: 10px;
+        }
+
+        .importance-of-light p {
+            margin: 10px 0;
+        }
+
+        .history-of-crackers {
+            background-color: #F5F5DC;
+            /* Beige background */
+            padding: 20px;
+            border: 1px solid #8B4513;
+            /* Saddle brown border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .history-of-crackers h2 {
+            color: #8B0000;
+            /* Dark red */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .history-of-crackers h3 {
+            color: #A0522D;
+            /* Sienna */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .history-of-crackers ul {
+            margin-left: 20px;
+        }
+
+        .history-of-crackers li {
+            margin-bottom: 10px;
+        }
+
+        .history-of-crackers p {
+            margin: 10px 0;
+        }
+
+        .invention-of-gunpowder {
+            background-color: #F0FFF0;
+            /* Honeydew background */
+            padding: 20px;
+            border: 1px solid #3CB371;
+            /* Medium sea green border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .invention-of-gunpowder h2 {
+            color: #2E8B57;
+            /* Sea green */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .invention-of-gunpowder h3 {
+            color: #006400;
+            /* Dark green */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .invention-of-gunpowder ul {
+            margin-left: 20px;
+        }
+
+        .invention-of-gunpowder li {
+            margin-bottom: 10px;
+        }
+
+        .invention-of-gunpowder p {
+            margin: 10px 0;
+        }
+
+        .history-of-diyas {
+            background-color: #FFF8E7;
+            /* Light cream background */
+            padding: 20px;
+            border: 1px solid #D2691E;
+            /* Chocolate border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .history-of-diyas h2 {
+            color: #8B4513;
+            /* Saddle brown */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .history-of-diyas h3 {
+            color: #A0522D;
+            /* Sienna */
+            font-size: 1.5em;
+            margin-top: 15px;
+        }
+
+        .history-of-diyas ul {
+            margin-left: 20px;
+        }
+
+        .history-of-diyas li {
+            margin-bottom: 10px;
+        }
+
+        .history-of-diyas p {
+            margin: 10px 0;
+        }
+
+        .conclusion {
+            background-color: #FDF5E6;
+            /* Old lace background */
+            padding: 20px;
+            border: 1px solid #8B4513;
+            /* Saddle brown border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .conclusion h2 {
+            color: #8B0000;
+            /* Dark red */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .conclusion p {
+            margin: 10px 0;
+            color: #4B0082;
+            /* Indigo text color */
+        }
+
+        .diwali-overview {
+            background-color: #FFF8DC;
+            /* Cornsilk background */
+            padding: 20px;
+            border: 1px solid #DAA520;
+            /* Goldenrod border */
+            border-radius: 8px;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        .diwali-overview h2 {
+            color: #B8860B;
+            /* Dark goldenrod */
+            font-size: 1.8em;
+            margin-bottom: 10px;
+        }
+
+        .diwali-overview ul {
+            margin-left: 20px;
+        }
+
+        .diwali-overview li {
+            margin-bottom: 10px;
+        }
+
+        .diwali-overview p {
+            margin: 10px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
+    </div>
+
+    <div id="content-en">
+        <h1>Diwali</h1>
+
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for
+            debate, but for thoughtful exchange of perspectives.
+        </div>
+
+        <div class="introduction">
+            <h2>Introduction</h2>
+
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/diwali-edi-blog-1024x576.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+
+            <p>Diwali, also known as Deepavali, is one of the most important and widely celebrated festivals in India
+                and
+                among Hindu communities worldwide. The name “Deepavali” literally means “row of lamps”, referring to the
+                tradition of lighting oil lamps (diyas) during the festival. Diwali is multi-religious: in Hinduism it’s
+                about light, wealth, and victory of good, in Jainism it’s about spiritual liberation, and in Sikhism
+                it’s
+                about freedom and justice.</p>
+
+            <h3>Here’s a clear breakdown:</h3>
+            <ol>
+                <li><strong>Significance</strong>
+                    <ul>
+                        <li><strong>Spiritual:</strong> Diwali symbolizes the victory of light over darkness, knowledge
+                            over
+                            ignorance, and good over evil.</li>
+                        <li><strong>Cultural:</strong> It is a time for family gatherings, exchanging gifts, and
+                            performing
+                            religious rituals.</li>
+                        <li><strong>Mythological:</strong> The stories behind Diwali vary regionally:
+                            <ul>
+                                <li><strong>North India:</strong> Celebrates Lord Rama’s return to Ayodhya after 14
+                                    years of
+                                    exile and defeating Ravana. People lit lamps to welcome him.</li>
+                                <li><strong>West India:</strong> Linked to the worship of Goddess Lakshmi, the goddess
+                                    of
+                                    wealth and prosperity.</li>
+                                <li><strong>Other legends:</strong> Includes stories of Lord Krishna defeating the demon
+                                    Narakasura and King Mahabali being welcomed by Lord Vishnu in Kerala (Onam overlaps
+                                    with
+                                    Diwali season for some regions).</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>Duration</strong>
+                    <p>Diwali is a five-day festival, with each day having its own significance:</p>
+                    <ol>
+                        <li><strong>Dhanteras:</strong> Buying gold, silver, and new utensils for prosperity.</li>
+                        <li><strong>Naraka Chaturdashi / Choti Diwali:</strong> Symbolizes the victory over evil.</li>
+                        <li><strong>Diwali / Lakshmi Puja:</strong> Main day; houses decorated with lamps, prayers to
+                            Goddess Lakshmi.</li>
+                        <li><strong>Govardhan Puja / Annakut:</strong> Celebrates Lord Krishna lifting Govardhan Hill.
+                        </li>
+                        <li><strong>Bhai Dooj:</strong> Celebrates the bond between brothers and sisters.</li>
+                    </ol>
+                </li>
+                <li><strong>Customs and Traditions</strong>
+                    <ul>
+                        <li>Lighting diyas and candles around homes.</li>
+                        <li>Fireworks and crackers.</li>
+                        <li>Decorating homes with rangoli (colorful floor designs).</li>
+                        <li>Offering sweets and gifts to family and friends.</li>
+                        <li>Performing puja (prayers), especially to Goddess Lakshmi for wealth and prosperity.</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>In short, Diwali is a festival of joy, light, and family bonding, celebrated with a mix of spirituality,
+                mythology, and festive cheer.</p>
+        </div>
+
+        <div class="celebration-day">
+            <h2>Celebration Day</h2>
+            <p>Diwali has a direct relation to the moon because it is based on the Hindu lunar calendar. Here’s how:</p>
+            <ol>
+                <li><strong>New Moon Night (Amavasya):</strong>
+                    <ul>
+                        <li>The main day of Diwali, Lakshmi Puja, falls on Amavasya, the darkest night of the lunar
+                            month of Kartik.</li>
+                        <li>This is why Diwali is sometimes called the “festival of lights on the new moon night”.</li>
+                    </ul>
+                </li>
+                <li><strong>Lunar Calendar Influence:</strong>
+                    <ul>
+                        <li>Hindu months follow the moon’s cycles.</li>
+                        <li>The waxing and waning of the moon determine the dates of other festival days as well, such
+                            as Dhanteras, Naraka Chaturdashi, and Bhai Dooj.</li>
+                    </ul>
+                </li>
+                <li><strong>Symbolic Meaning:</strong>
+                    <ul>
+                        <li>The dark new moon night represents ignorance or darkness, and lighting lamps symbolizes
+                            knowledge and positivity overcoming darkness.</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+
+        <div class="diwali-stories">
+            <h2>Diwali Stories</h2>
+            <p>Diwali has different stories in Hinduism, Jainism, and Sikhism. Let’s go through them clearly:</p>
+
+            <h3>1. Hindu Stories of Diwali</h3>
+            <ul>
+                <li><strong>Lord Rama and Ravana (North India)</strong>
+                    <ul>
+                        <li>Rama returned to Ayodhya after defeating Ravana.</li>
+                        <li>People lit diyas to welcome him.</li>
+                        <li>Symbolizes victory of good over evil.</li>
+                    </ul>
+                </li>
+                <li><strong>Lord Krishna and Narakasura (South & West India)</strong>
+                    <ul>
+                        <li>Krishna killed the demon Narakasura, freeing people.</li>
+                        <li>Choti Diwali (day before main Diwali) celebrates this.</li>
+                        <li>Symbolizes divine triumph over evil.</li>
+                    </ul>
+                </li>
+                <li><strong>Goddess Lakshmi</strong>
+                    <ul>
+                        <li>Worshiped during Lakshmi Puja on the main Diwali night.</li>
+                        <li>Believed to bring wealth and prosperity into clean, well-lit homes.</li>
+                    </ul>
+                </li>
+                <li><strong>King Bali and Vamana (Kerala & South India)</strong>
+                    <ul>
+                        <li>Vamana humbled the generous king Bali, sending him to Patala (netherworld).</li>
+                        <li>Diwali marks Bali’s annual return in some regions.</li>
+                    </ul>
+                </li>
+                <li><strong>Pandavas’ Return (Mahabharata)</strong>
+                    <ul>
+                        <li>Pandavas returned home after exile; people lit lamps to celebrate.</li>
+                        <li>Symbolizes dharma and triumph of righteousness.</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>2. Jainism</h3>
+            <ul>
+                <li><strong>Story:</strong> Marks the day when Lord Mahavira, the 24th Tirthankara, attained nirvana
+                    (liberation).</li>
+                <li><strong>Significance:</strong> A spiritual festival celebrating enlightenment and liberation.</li>
+                <li><strong>Tradition:</strong> Jain communities light lamps to honor knowledge and truth rather than
+                    wealth.</li>
+            </ul>
+
+            <h3>3. Sikhism</h3>
+            <ul>
+                <li><strong>Story:</strong> Diwali coincides with the release of Guru Hargobind Ji, the 6th Sikh Guru,
+                    from Gwalior Fort prison in 1619.</li>
+                <li><strong>Significance:</strong> Sikhs celebrate it as Bandi Chhor Divas (“Day of Liberation of
+                    Prisoners”), marking freedom and justice.</li>
+                <li><strong>Tradition:</strong> Gurdwaras are illuminated, and the Golden Temple in Amritsar is
+                    beautifully lit, often more spectacularly than typical Diwali decorations.</li>
+            </ul>
+        </div>
+
+        <div class="relation-to-vedas">
+            <h2>Relation to Vedas/Puranas</h2>
+            <p>Interestingly, Diwali is not mentioned in the Vedas, which are the oldest Hindu scriptures. It also
+                doesn’t appear in early Puranas as a major festival. Its origins are more cultural and regional, later
+                tied to various mythological stories. Here’s a breakdown:</p>
+
+            <h3>1. Vedas <a href="vedas.html" class="read-more">Read More</a> </h3>
+
+            
+
+            <ul>
+                <li>No reference to Diwali as a festival.</li>
+                <li>Vedas mostly describe rituals, hymns, and seasonal ceremonies, but not Diwali specifically.</li>
+            </ul>
+
+            <h3>2. Puranas & Epics</h3>
+            <ul>
+                <li>Some later texts associate Diwali with mythological events:
+                    <ul>
+                        <li><strong>Ramayana:</strong> Lord Rama returning to Ayodhya after defeating Ravana.</li>
+                        <li><strong>Padma Purana / Skanda Purana (later versions):</strong> Mention the festival in the
+                            context of Lakshmi Puja and prosperity rituals.</li>
+                    </ul>
+                </li>
+                <li>These references appear in medieval texts, not ancient ones.</li>
+            </ul>
+        </div>
+
+        <div class="importance-of-light">
+            <h2>Importance of Light, Diyas, and Crackers</h2>
+            <p>The light, diyas, and crackers in Diwali aren’t just for decoration—they have symbolic and cultural
+                significance. Let’s break it down:</p>
+
+            <h3>1. Importance of Light and Diyas</h3>
+            <ul>
+                <li><strong>Symbol of Knowledge:</strong> Light represents knowledge and wisdom, driving away darkness
+                    and ignorance.</li>
+                <li><strong>Victory of Good over Evil:</strong> Lighting lamps reminds people of Rama’s return to
+                    Ayodhya, Krishna’s victory over Narakasura, and the general triumph of good over evil.</li>
+                <li><strong>Welcoming Prosperity:</strong> Especially during Lakshmi Puja, houses are illuminated to
+                    invite Goddess Lakshmi, the goddess of wealth and prosperity.</li>
+                <li><strong>Spiritual Significance:</strong> The small flame of a diya is a metaphor for the inner self
+                    and soul, guiding one towards positivity and righteousness.</li>
+                <li><strong>Cultural Practice:</strong> Families clean and decorate homes with rows of diyas (Deepavali
+                    literally means “row of lights”) to show joy and celebration.</li>
+            </ul>
+
+            <h3>2. Significance of Firecrackers</h3>
+            <ul>
+                <li><strong>Driving Away Evil:</strong> Traditionally, the loud sounds of crackers were believed to
+                    scare away evil spirits.</li>
+                <li><strong>Celebration & Joy:</strong> Fireworks express happiness, victory, and community spirit.
+                    People gather to celebrate together.</li>
+                <li><strong>Visual Spectacle:</strong> The bright flashes in the night sky complement the lamps,
+                    creating an atmosphere of festivity and triumph over darkness.</li>
+            </ul>
+        </div>
+
+        <div class="history-of-crackers">
+            <h2>History of Crackers</h2>
+            <p>Interestingly, firecrackers are not mentioned in the ancient Vedas or early Puranas as part of Diwali.
+                The use of crackers is a later cultural addition, not originally a religious prescription. Here’s the
+                breakdown:</p>
+
+            <h3>1. Ancient Texts (Vedas & Early Puranas)</h3>
+            <ul>
+                <li><strong>Vedas:</strong> No mention of Diwali or fireworks. They mainly describe rituals, hymns, and
+                    seasonal ceremonies.</li>
+                <li><strong>Early Puranas:</strong> Focus on stories of Rama, Krishna, Lakshmi, and Bali, but do not
+                    describe bursting crackers.</li>
+            </ul>
+
+            <h3>2. Later Texts / Folk Traditions</h3>
+            <ul>
+                <li>Some medieval regional texts and commentaries mention lighting lamps and creating noise to celebrate
+                    victories, but it’s more of a folk custom than a formal religious ritual.</li>
+                <li>The idea of firecrackers came much later, likely with the invention of gunpowder in India/China and
+                    festive celebrations evolving over centuries.</li>
+            </ul>
+
+            <h3>3. Symbolism in Culture</h3>
+            <ul>
+                <li>Even though not in texts, crackers were adopted to symbolically ward off evil spirits, as loud noise
+                    and bright lights were believed to drive away negativity.</li>
+                <li>Over time, it became a common part of Diwali celebrations, especially in North India.</li>
+            </ul>
+        </div>
+
+        <div class="invention-of-gunpowder">
+            <h2>Invention of Gunpowder</h2>
+            <p>The invention of gunpowder has a clear historical timeline, mostly associated with China, and it spread
+                to India later. Here’s the detailed breakdown:</p>
+
+            <h3>1. Gunpowder in China</h3>
+            <ul>
+                <li><strong>Origin:</strong> Around the 9th century CE (during the Tang dynasty).</li>
+                <li><strong>Purpose:</strong> Initially invented by alchemists seeking an elixir for immortality, but it
+                    was soon used for military purposes and fireworks.</li>
+                <li><strong>Use in Fireworks:</strong> By the 10th–11th century, Chinese were using gunpowder for
+                    firecrackers, rockets, and celebratory fireworks.</li>
+            </ul>
+
+            <h3>2. Spread to India</h3>
+            <ul>
+                <li><strong>Introduction to India:</strong> Likely by the 13th century via Mongol invasions or trade
+                    routes from Central Asia.</li>
+                <li><strong>Military Use:</strong> Initially adopted for cannons and firearms by Indian kingdoms and the
+                    Mughal empire.</li>
+                <li><strong>Fireworks in Festivals:</strong> The use of firecrackers for celebrations probably became
+                    common in India by the 16th–17th century, coinciding with regional Diwali festivities.</li>
+            </ul>
+
+            <h3>✅ Summary</h3>
+            <ul>
+                <li><strong>China:</strong> Gunpowder invented in 9th century CE → used for fireworks by 10th–11th
+                    century.</li>
+                <li><strong>India:</strong> Introduced by 13th century, became common in festivals by 16th–17th century.
+                </li>
+                <li><strong>Connection to Diwali:</strong> Firecrackers were incorporated into Diwali much later,
+                    centuries after the festival’s origin, as a cultural adaptation inspired by Chinese technology.</li>
+            </ul>
+        </div>
+
+        <div class="history-of-diyas">
+            <h2>History of Diyas (Oil Lamps)</h2>
+            <p>Diyas (oil lamps) are much older than firecrackers, and their origin is tied to ancient human use of fire
+                for light and ritual. Here’s a clear explanation:</p>
+
+            <h3>1. Origin of Diyas (Oil Lamps)</h3>
+            <ul>
+                <li><strong>Prehistoric Use of Fire:</strong> Humans have been using fire for light, warmth, and
+                    protection since around 400,000–1,000,000 years ago.</li>
+                <li><strong>Earliest Lamps:</strong> Archaeological evidence shows earliest oil lamps date back to
+                    around 4500–3500 BCE in Mesopotamia and the Indus Valley Civilization. These were clay lamps filled
+                    with oil and a wick.</li>
+                <li><strong>In India:</strong> Clay diyas have been used since the Indus Valley Civilization (c.
+                    3300–1300 BCE).
+                    <ul>
+                        <li>Made from clay or metal.</li>
+                        <li>Burned ghee (clarified butter) or sesame oil.</li>
+                    </ul>
+                </li>
+                <li><strong>Vedic Period (1500–500 BCE):</strong> Lamps were mentioned in rituals and yajnas for
+                    offering light to deities.</li>
+            </ul>
+
+            <h3>2. Symbolic Use</h3>
+            <ul>
+                <li><strong>Religious Significance:</strong> Light represents knowledge, purity, and divinity.</li>
+                <li><strong>Cultural Practice:</strong> Diyas were traditionally lit in homes, temples, and during
+                    festivals like Diwali to symbolize prosperity and victory over darkness.</li>
+            </ul>
+
+            <h3>✅ Summary</h3>
+            <ul>
+                <li><strong>Fire itself:</strong> Prehistoric (hundreds of thousands of years ago).</li>
+                <li><strong>Oil lamps (diyas):</strong> Around 4500–3500 BCE, widely used in ancient civilizations,
+                    including India.</li>
+                <li><strong>Vedic references:</strong> 1500–500 BCE, used in rituals.</li>
+                <li><strong>Diwali connection:</strong> Lighting diyas is an ancient cultural practice, much older than
+                    firecrackers, tied to spiritual and symbolic meanings.</li>
+            </ul>
+        </div>
+
+        <div class="conclusion">
+            <h2>Conclusion</h2>
+            <p>• Diwali / Deepavali is the festival of lights, symbolizing the victory of good over evil, knowledge over
+                ignorance, and light over darkness.</p>
+            <p>• Celebrated over five days, with significance varying across religions:</p>
+            <ul>
+                <li><strong>Hinduism:</strong> Rama’s return, Krishna defeating Narakasura, Lakshmi Puja, Pandavas’
+                    return, and Bali’s story.</li>
+                <li><strong>Jainism:</strong> Marks Lord Mahavira attaining nirvana.</li>
+                <li><strong>Sikhism:</strong> Commemorates Guru Hargobind Ji’s release from prison (Bandi Chhor Divas).
+                </li>
+            </ul>
+            <p>• <strong>Vedic references:</strong> Diwali is not mentioned in the Vedas.</p>
+            <p>• <strong>Puranic references:</strong> Stories like Samudra Manthan, Dhanvantari, and Lakshmi Puja appear
+                in later Puranas.</p>
+            <p>• <strong>Firecrackers:</strong> A later addition, introduced centuries after gunpowder was invented in
+                China and spread to India, used mainly for celebration and warding off evil.</p>
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not
+            meant
+            for debate, but rather for the exchange of knowledge and perspectives.
+        </div>
+    </div>
+
+    <div id="content-hi" style="display: none;">
+        <h1>दिवाली</h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>नोट:</strong> यह लेख विचार और चिंतन के लिए है। यह बहस के लिए नहीं, बल्कि ज्ञान और दृष्टिकोण के
+            आदान-प्रदान के लिए है।
+        </div>
+
+        <div class="introduction">
+            <h2>परिचय</h2>
+            <p>दिवाली, जिसे दीपावली भी कहा जाता है, भारत और दुनिया भर में हिंदू समुदायों के बीच सबसे महत्वपूर्ण और
+                व्यापक रूप से मनाए जाने वाले त्योहारों में से एक है। "दीपावली" का शाब्दिक अर्थ है "दीयों की पंक्ति", जो
+                त्योहार के दौरान तेल के दीयों (दीयों) को जलाने की परंपरा को दर्शाता है। दिवाली बहु-धार्मिक है: हिंदू
+                धर्म में यह प्रकाश, धन और अच्छाई की विजय के बारे में है, जैन धर्म में यह आध्यात्मिक मुक्ति के बारे में
+                है, और सिख धर्म में यह स्वतंत्रता और न्याय के बारे में है।</p>
+
+            <h3>यहां एक स्पष्ट विवरण दिया गया है:</h3>
+            <ol>
+                <li><strong>महत्व</strong>
+                    <ul>
+                        <li><strong>आध्यात्मिक:</strong> दिवाली अंधकार पर प्रकाश, अज्ञान पर ज्ञान, और बुराई पर अच्छाई की
+                            विजय का प्रतीक है।</li>
+                        <li><strong>सांस्कृतिक:</strong> यह परिवार के साथ मिलने-जुलने, उपहारों का आदान-प्रदान करने और
+                            धार्मिक अनुष्ठान करने का समय है।</li>
+                        <li><strong>पौराणिक:</strong> दिवाली की कहानियां क्षेत्रीय रूप से भिन्न होती हैं:
+                            <ul>
+                                <li><strong>उत्तर भारत:</strong> भगवान राम के 14 वर्षों के वनवास और रावण को हराने के बाद
+                                    अयोध्या लौटने का उत्सव। लोगों ने उनका स्वागत करने के लिए दीये जलाए।</li>
+                                <li><strong>पश्चिम भारत:</strong> देवी लक्ष्मी, धन और समृद्धि की देवी, की पूजा से जुड़ा
+                                    हुआ।</li>
+                                <li><strong>अन्य कथाएं:</strong> भगवान कृष्ण द्वारा राक्षस नरकासुर को हराने और केरल में
+                                    राजा महाबली का भगवान विष्णु द्वारा स्वागत करने की कहानियां (कुछ क्षेत्रों में ओणम
+                                    दिवाली के मौसम के साथ मेल खाता है)।</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><strong>अवधि</strong>
+                    <p>दिवाली पांच दिनों का त्योहार है, जिसमें प्रत्येक दिन का अपना महत्व है:</p>
+                    <ol>
+                        <li><strong>धनतेरस:</strong> समृद्धि के लिए सोना, चांदी और नए बर्तन खरीदना।</li>
+                        <li><strong>नरक चतुर्दशी / छोटी दिवाली:</strong> बुराई पर विजय का प्रतीक।</li>
+                        <li><strong>दिवाली / लक्ष्मी पूजा:</strong> मुख्य दिन; घरों को दीयों से सजाया जाता है, देवी
+                            लक्ष्मी की पूजा की जाती है।</li>
+                        <li><strong>गोवर्धन पूजा / अन्नकूट:</strong> भगवान कृष्ण द्वारा गोवर्धन पर्वत उठाने का उत्सव।
+                        </li>
+                        <li><strong>भाई दूज:</strong> भाइयों और बहनों के बीच के बंधन का उत्सव।</li>
+                    </ol>
+                </li>
+                <li><strong>रीति-रिवाज और परंपराएं</strong>
+                    <ul>
+                        <li>घरों के चारों ओर दीये और मोमबत्तियां जलाना।</li>
+                        <li>पटाखे और आतिशबाजी।</li>
+                        <li>रंगोली (रंगीन फर्श की डिज़ाइन) से घरों को सजाना।</li>
+                        <li>परिवार और दोस्तों को मिठाई और उपहार देना।</li>
+                        <li>पूजा (प्रार्थना) करना, विशेष रूप से धन और समृद्धि के लिए देवी लक्ष्मी की पूजा।</li>
+                    </ul>
+                </li>
+            </ol>
+            <p>संक्षेप में, दिवाली खुशी, प्रकाश और पारिवारिक बंधन का त्योहार है, जिसे आध्यात्मिकता, पौराणिक कथाओं और
+                उत्सव की खुशी के मिश्रण के साथ मनाया जाता है।</p>
+        </div>
+
+        <div class="celebration-day">
+            <h2>उत्सव का दिन</h2>
+            <p>दिवाली का चंद्रमा से सीधा संबंध है क्योंकि यह हिंदू चंद्र कैलेंडर पर आधारित है। यहां बताया गया है:</p>
+            <ol>
+                <li><strong>अमावस्या की रात:</strong>
+                    <ul>
+                        <li>दिवाली का मुख्य दिन, लक्ष्मी पूजा, अमावस्या पर पड़ता है, जो कार्तिक महीने की सबसे अंधेरी रात
+                            होती है।</li>
+                        <li>इसीलिए दिवाली को कभी-कभी "अमावस्या की रात का रोशनी का त्योहार" कहा जाता है।</li>
+                    </ul>
+                </li>
+                <li><strong>चंद्र कैलेंडर का प्रभाव:</strong>
+                    <ul>
+                        <li>हिंदू महीने चंद्रमा के चक्रों का पालन करते हैं।</li>
+                        <li>चंद्रमा के घटने और बढ़ने से धनतेरस, नरक चतुर्दशी और भाई दूज जैसे अन्य त्योहारों की तिथियां
+                            निर्धारित होती हैं।</li>
+                    </ul>
+                </li>
+                <li><strong>प्रतीकात्मक अर्थ:</strong>
+                    <ul>
+                        <li>अमावस्या की अंधेरी रात अज्ञानता या अंधकार का प्रतिनिधित्व करती है, और दीप जलाना ज्ञान और
+                            सकारात्मकता की अंधकार पर विजय का प्रतीक है।</li>
+                    </ul>
+                </li>
+            </ol>
+        </div>
+
+        <div class="diwali-stories">
+            <h2>दिवाली की कहानियां</h2>
+            <p>दिवाली की कहानियां हिंदू धर्म, जैन धर्म और सिख धर्म में अलग-अलग हैं। आइए इन्हें स्पष्ट रूप से समझते हैं:
+            </p>
+
+            <h3>1. दिवाली की हिंदू कहानियां</h3>
+            <ul>
+                <li><strong>भगवान राम और रावण (उत्तर भारत)</strong>
+                    <ul>
+                        <li>राम ने रावण को हराने के बाद अयोध्या लौटे।</li>
+                        <li>लोगों ने उनका स्वागत करने के लिए दीये जलाए।</li>
+                        <li>अच्छाई की बुराई पर विजय का प्रतीक।</li>
+                    </ul>
+                </li>
+                <li><strong>भगवान कृष्ण और नरकासुर (दक्षिण और पश्चिम भारत)</strong>
+                    <ul>
+                        <li>कृष्ण ने राक्षस नरकासुर को मारा और लोगों को मुक्त किया।</li>
+                        <li>छोटी दिवाली (मुख्य दिवाली से एक दिन पहले) इसे मनाती है।</li>
+                        <li>दिव्य विजय का प्रतीक।</li>
+                    </ul>
+                </li>
+                <li><strong>देवी लक्ष्मी</strong>
+                    <ul>
+                        <li>मुख्य दिवाली की रात लक्ष्मी पूजा के दौरान पूजा की जाती है।</li>
+                        <li>माना जाता है कि साफ-सुथरे और रोशन घरों में धन और समृद्धि लाती हैं।</li>
+                    </ul>
+                </li>
+                <li><strong>राजा बली और वामन (केरल और दक्षिण भारत)</strong>
+                    <ul>
+                        <li>वामन ने उदार राजा बली को पाताल (नरक लोक) भेजकर उन्हें विनम्र बनाया।</li>
+                        <li>दिवाली कुछ क्षेत्रों में बली की वार्षिक वापसी को चिह्नित करती है।</li>
+                    </ul>
+                </li>
+                <li><strong>पांडवों की वापसी (महाभारत)</strong>
+                    <ul>
+                        <li>पांडव निर्वासन के बाद घर लौटे; लोगों ने जश्न मनाने के लिए दीप जलाए।</li>
+                        <li>धर्म और धार्मिकता की विजय का प्रतीक।</li>
+                    </ul>
+                </li>
+            </ul>
+
+            <h3>2. जैन धर्म</h3>
+            <ul>
+                <li><strong>कहानी:</strong> यह दिन भगवान महावीर, 24वें तीर्थंकर, के निर्वाण (मोक्ष) प्राप्त करने का
+                    प्रतीक है।</li>
+                <li><strong>महत्व:</strong> ज्ञान और मुक्ति का जश्न मनाने वाला एक आध्यात्मिक त्योहार।</li>
+                <li><strong>परंपरा:</strong> जैन समुदाय ज्ञान और सत्य का सम्मान करने के लिए दीप जलाते हैं, न कि धन का।
+                </li>
+            </ul>
+
+            <h3>3. सिख धर्म</h3>
+            <ul>
+                <li><strong>कहानी:</strong> दिवाली गुरु हरगोबिंद जी, छठे सिख गुरु, की 1619 में ग्वालियर किले की जेल से
+                    रिहाई के साथ मेल खाती है।</li>
+                <li><strong>महत्व:</strong> सिख इसे बंदी छोड़ दिवस ("कैदियों की मुक्ति का दिन") के रूप में मनाते हैं, जो
+                    स्वतंत्रता और न्याय का प्रतीक है।</li>
+                <li><strong>परंपरा:</strong> गुरुद्वारों को रोशन किया जाता है, और अमृतसर का स्वर्ण मंदिर खूबसूरती से
+                    सजाया जाता है, जो अक्सर सामान्य दिवाली सजावट से अधिक भव्य होता है।</li>
+            </ul>
+        </div>
+
+        <div class="relation-to-vedas">
+            <h2>वेदों/पुराणों से संबंध</h2>
+            <p>दिलचस्प बात यह है कि दिवाली का उल्लेख वेदों में नहीं मिलता है, जो कि सबसे प्राचीन हिंदू ग्रंथ हैं। यह
+                प्रारंभिक पुराणों में भी एक प्रमुख त्योहार के रूप में प्रकट नहीं होती। इसकी उत्पत्ति अधिक सांस्कृतिक और
+                क्षेत्रीय है, जो बाद में विभिन्न पौराणिक कहानियों से जुड़ी। यहां इसका विवरण दिया गया है:</p>
+
+            <h3>1. वेद</h3>
+            <ul>
+                <li>दिवाली का त्योहार के रूप में कोई उल्लेख नहीं है।</li>
+                <li>वेद मुख्य रूप से अनुष्ठानों, भजनों और मौसमी समारोहों का वर्णन करते हैं, लेकिन दिवाली का विशेष रूप से
+                    उल्लेख नहीं करते।</li>
+            </ul>
+
+            <h3>2. पुराण और महाकाव्य</h3>
+            <ul>
+                <li>कुछ बाद के ग्रंथ दिवाली को पौराणिक घटनाओं से जोड़ते हैं:
+                    <ul>
+                        <li><strong>रामायण:</strong> भगवान राम का रावण को हराने के बाद अयोध्या लौटना।</li>
+                        <li><strong>पद्म पुराण / स्कंद पुराण (बाद के संस्करण):</strong> लक्ष्मी पूजा और समृद्धि
+                            अनुष्ठानों के संदर्भ में इस त्योहार का उल्लेख करते हैं।</li>
+                    </ul>
+                </li>
+                <li>ये संदर्भ प्राचीन ग्रंथों में नहीं, बल्कि मध्यकालीन ग्रंथों में प्रकट होते हैं।</li>
+            </ul>
+        </div>
+        <div class="importance-of-light">
+            <h2>प्रकाश, दीयों और पटाखों का महत्व</h2>
+            <p>दिवाली में प्रकाश, दीये और पटाखे केवल सजावट के लिए नहीं होते—इनका प्रतीकात्मक और सांस्कृतिक महत्व भी है।
+                आइए इसे विस्तार से समझते हैं:</p>
+
+            <h3>1. प्रकाश और दीयों का महत्व</h3>
+            <ul>
+                <li><strong>ज्ञान का प्रतीक:</strong> प्रकाश ज्ञान और बुद्धि का प्रतिनिधित्व करता है, जो अंधकार और
+                    अज्ञान को दूर करता है।</li>
+                <li><strong>अच्छाई की बुराई पर विजय:</strong> दीप जलाना लोगों को राम की अयोध्या वापसी, कृष्ण की नरकासुर
+                    पर विजय, और अच्छाई की बुराई पर सामान्य जीत की याद दिलाता है।</li>
+                <li><strong>समृद्धि का स्वागत:</strong> विशेष रूप से लक्ष्मी पूजा के दौरान, घरों को रोशन किया जाता है
+                    ताकि धन और समृद्धि की देवी लक्ष्मी का स्वागत किया जा सके।</li>
+                <li><strong>आध्यात्मिक महत्व:</strong> दीये की छोटी लौ आत्मा और आंतरिक स्व का प्रतीक है, जो व्यक्ति को
+                    सकारात्मकता और धर्म की ओर मार्गदर्शन करती है।</li>
+                <li><strong>सांस्कृतिक प्रथा:</strong> परिवार घरों को साफ करते हैं और दीयों की पंक्तियों (दीपावली का
+                    शाब्दिक अर्थ “प्रकाश की पंक्ति” है) से सजाते हैं, जो खुशी और उत्सव को दर्शाता है।</li>
+            </ul>
+
+            <h3>2. पटाखों का महत्व</h3>
+            <ul>
+                <li><strong>बुराई को दूर करना:</strong> पारंपरिक रूप से, पटाखों की तेज आवाज को बुरी आत्माओं को डराने
+                    वाला माना जाता था।</li>
+                <li><strong>उत्सव और खुशी:</strong> आतिशबाजी खुशी, विजय और सामुदायिक भावना को व्यक्त करती है। लोग एकत्र
+                    होकर इसे मनाते हैं।</li>
+                <li><strong>दृश्य आकर्षण:</strong> रात के आकाश में चमकीली रोशनी दीयों के साथ मेल खाती है, जो उत्सव और
+                    अंधकार पर विजय का माहौल बनाती है।</li>
+            </ul>
+        </div>
+
+        <div class="history-of-crackers">
+            <h2>पटाखों का इतिहास</h2>
+            <p>दिलचस्प बात यह है कि प्राचीन वेदों या प्रारंभिक पुराणों में दिवाली के हिस्से के रूप में पटाखों का उल्लेख
+                नहीं मिलता है। पटाखों का उपयोग बाद में जोड़ी गई एक सांस्कृतिक परंपरा है, जो मूल रूप से धार्मिक
+                अनिवार्यता नहीं थी। यहां इसका विवरण दिया गया है:</p>
+
+            <h3>1. प्राचीन ग्रंथ (वेद और प्रारंभिक पुराण)</h3>
+            <ul>
+                <li><strong>वेद:</strong> दिवाली या आतिशबाजी का कोई उल्लेख नहीं। वे मुख्य रूप से अनुष्ठानों, भजनों और
+                    मौसमी समारोहों का वर्णन करते हैं।</li>
+                <li><strong>प्रारंभिक पुराण:</strong> राम, कृष्ण, लक्ष्मी और बली की कहानियों पर ध्यान केंद्रित करते हैं,
+                    लेकिन पटाखे फोड़ने का वर्णन नहीं करते।</li>
+            </ul>
+
+            <h3>2. बाद के ग्रंथ / लोक परंपराएं</h3>
+            <ul>
+                <li>कुछ मध्यकालीन क्षेत्रीय ग्रंथ और टिप्पणियां विजय का जश्न मनाने के लिए दीप जलाने और शोर करने का
+                    उल्लेख करती हैं, लेकिन यह एक औपचारिक धार्मिक अनुष्ठान के बजाय एक लोक प्रथा थी।</li>
+                <li>पटाखों का विचार बहुत बाद में आया, संभवतः भारत/चीन में बारूद के आविष्कार और त्योहारों के उत्सवों के
+                    विकास के साथ।</li>
+            </ul>
+
+            <h3>3. संस्कृति में प्रतीकात्मकता</h3>
+            <ul>
+                <li>हालांकि ग्रंथों में नहीं, पटाखों को प्रतीकात्मक रूप से बुरी आत्माओं को भगाने के लिए अपनाया गया,
+                    क्योंकि तेज शोर और चमकीली रोशनी को नकारात्मकता दूर करने वाला माना जाता था।</li>
+                <li>समय के साथ, यह दिवाली समारोहों का एक सामान्य हिस्सा बन गया, विशेष रूप से उत्तर भारत में।</li>
+            </ul>
+        </div>
+
+        <div class="invention-of-gunpowder">
+            <h2>बारूद का आविष्कार</h2>
+            <p>बारूद के आविष्कार का एक स्पष्ट ऐतिहासिक समयरेखा है, जो मुख्य रूप से चीन से जुड़ा हुआ है, और बाद में यह
+                भारत में फैला। यहां इसका विस्तृत विवरण दिया गया है:</p>
+
+            <h3>1. चीन में बारूद</h3>
+            <ul>
+                <li><strong>उत्पत्ति:</strong> लगभग 9वीं शताब्दी ईस्वी (तांग राजवंश के दौरान)।</li>
+                <li><strong>उद्देश्य:</strong> शुरुआत में इसे अमरता के लिए एक अमृत की खोज करने वाले रसायनविदों द्वारा
+                    आविष्कार किया गया था, लेकिन जल्द ही इसका उपयोग सैन्य उद्देश्यों और आतिशबाजी के लिए किया जाने लगा।
+                </li>
+                <li><strong>आतिशबाजी में उपयोग:</strong> 10वीं–11वीं शताब्दी तक, चीनी लोग बारूद का उपयोग पटाखों, रॉकेटों
+                    और उत्सव की आतिशबाजी के लिए कर रहे थे।</li>
+            </ul>
+
+            <h3>2. भारत में प्रसार</h3>
+            <ul>
+                <li><strong>भारत में परिचय:</strong> संभवतः 13वीं शताब्दी में मंगोल आक्रमणों या मध्य एशिया से व्यापार
+                    मार्गों के माध्यम से।</li>
+                <li><strong>सैन्य उपयोग:</strong> शुरुआत में भारतीय राज्यों और मुगल साम्राज्य द्वारा तोपों और
+                    आग्नेयास्त्रों के लिए अपनाया गया।</li>
+                <li><strong>त्योहारों में आतिशबाजी:</strong> उत्सवों के लिए पटाखों का उपयोग संभवतः 16वीं–17वीं शताब्दी
+                    तक भारत में आम हो गया, जो क्षेत्रीय दिवाली उत्सवों के साथ मेल खाता है।</li>
+            </ul>
+
+            <h3>✅ सारांश</h3>
+            <ul>
+                <li><strong>चीन:</strong> बारूद का आविष्कार 9वीं शताब्दी ईस्वी में हुआ → 10वीं–11वीं शताब्दी तक आतिशबाजी
+                    में उपयोग किया गया।</li>
+                <li><strong>भारत:</strong> 13वीं शताब्दी में परिचय हुआ, और 16वीं–17वीं शताब्दी तक त्योहारों में आम हो
+                    गया।</li>
+                <li><strong>दिवाली से संबंध:</strong> पटाखों को दिवाली में बहुत बाद में शामिल किया गया, त्योहार की
+                    उत्पत्ति के सदियों बाद, जो चीनी तकनीक से प्रेरित एक सांस्कृतिक अनुकूलन था।</li>
+            </ul>
+        </div>
+
+        <div class="history-of-diyas">
+            <h2>दीयों (तेल के दीपकों) का इतिहास</h2>
+            <p>दीये (तेल के दीपक) पटाखों से कहीं अधिक पुराने हैं, और उनकी उत्पत्ति प्राचीन मानव द्वारा प्रकाश और
+                अनुष्ठान के लिए आग के उपयोग से जुड़ी हुई है। यहां एक स्पष्ट व्याख्या दी गई है:</p>
+
+            <h3>1. दीयों (तेल के दीपकों) की उत्पत्ति</h3>
+            <ul>
+                <li><strong>आग का प्रागैतिहासिक उपयोग:</strong> मनुष्य लगभग 400,000–1,000,000 साल पहले से प्रकाश, गर्मी
+                    और सुरक्षा के लिए आग का उपयोग कर रहे हैं।</li>
+                <li><strong>प्रारंभिक दीपक:</strong> पुरातात्विक साक्ष्य बताते हैं कि सबसे प्रारंभिक तेल के दीपक लगभग
+                    4500–3500 ईसा पूर्व में मेसोपोटामिया और सिंधु घाटी सभ्यता में पाए गए। ये मिट्टी के दीपक थे, जिनमें
+                    तेल और बाती भरी जाती थी।</li>
+                <li><strong>भारत में:</strong> मिट्टी के दीये सिंधु घाटी सभ्यता (लगभग 3300–1300 ईसा पूर्व) से उपयोग में
+                    हैं।
+                    <ul>
+                        <li>मिट्टी या धातु से बने होते थे।</li>
+                        <li>घी (शुद्ध मक्खन) या तिल के तेल से जलाए जाते थे।</li>
+                    </ul>
+                </li>
+                <li><strong>वैदिक काल (1500–500 ईसा पूर्व):</strong> दीपकों का उल्लेख अनुष्ठानों और यज्ञों में देवताओं
+                    को प्रकाश अर्पित करने के लिए किया गया है।</li>
+            </ul>
+
+            <h3>2. प्रतीकात्मक उपयोग</h3>
+            <ul>
+                <li><strong>धार्मिक महत्व:</strong> प्रकाश ज्ञान, पवित्रता और दिव्यता का प्रतीक है।</li>
+                <li><strong>सांस्कृतिक प्रथा:</strong> दीये पारंपरिक रूप से घरों, मंदिरों और त्योहारों जैसे दिवाली के
+                    दौरान जलाए जाते थे, जो समृद्धि और अंधकार पर विजय का प्रतीक है।</li>
+            </ul>
+
+            <h3>✅ सारांश</h3>
+            <ul>
+                <li><strong>आग स्वयं:</strong> प्रागैतिहासिक (सैकड़ों हजारों साल पहले)।</li>
+                <li><strong>तेल के दीपक (दीये):</strong> लगभग 4500–3500 ईसा पूर्व, प्राचीन सभ्यताओं, जिसमें भारत भी
+                    शामिल है, में व्यापक रूप से उपयोग किए गए।</li>
+                <li><strong>वैदिक संदर्भ:</strong> 1500–500 ईसा पूर्व, अनुष्ठानों में उपयोग किए गए।</li>
+                <li><strong>दिवाली संबंध:</strong> दीये जलाना एक प्राचीन सांस्कृतिक प्रथा है, जो पटाखों से कहीं अधिक
+                    पुरानी है और आध्यात्मिक और प्रतीकात्मक अर्थों से जुड़ी हुई है।</li>
+            </ul>
+        </div>
+
+        <div class="conclusion">
+            <h2>निष्कर्ष</h2>
+            <p>• दिवाली / दीपावली रोशनी का त्योहार है, जो बुराई पर अच्छाई, अज्ञान पर ज्ञान, और अंधकार पर प्रकाश की विजय
+                का प्रतीक है।</p>
+            <p>• इसे पांच दिनों तक मनाया जाता है, और इसका महत्व विभिन्न धर्मों में भिन्न होता है:</p>
+            <ul>
+                <li><strong>हिंदू धर्म:</strong> राम की वापसी, कृष्ण द्वारा नरकासुर का वध, लक्ष्मी पूजा, पांडवों की
+                    वापसी, और बली की कहानी।</li>
+                <li><strong>जैन धर्म:</strong> भगवान महावीर के निर्वाण प्राप्ति का प्रतीक।</li>
+                <li><strong>सिख धर्म:</strong> गुरु हरगोबिंद जी की जेल से रिहाई (बंदी छोड़ दिवस) का स्मरण।</li>
+            </ul>
+            <p>• <strong>वैदिक संदर्भ:</strong> वैदिक ग्रंथों में दिवाली का उल्लेख नहीं है।</p>
+            <p>• <strong>पुराणिक संदर्भ:</strong> समुद्र मंथन, धन्वंतरि, और लक्ष्मी पूजा जैसी कहानियां बाद के पुराणों
+                में मिलती हैं।</p>
+            <p>• <strong>पटाखे:</strong> एक बाद में जोड़ी गई परंपरा, जो चीन में बारूद के आविष्कार और भारत में इसके
+                प्रसार के सदियों बाद शुरू हुई, मुख्य रूप से उत्सव और बुरी आत्माओं को भगाने के लिए उपयोग की जाती है।</p>
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>टिप्पणी:</strong> यह लेख विचार और चिंतन के लिए प्रेरित करने के उद्देश्य से लिखा गया है। इसका
+            उद्देश्य बहस करना नहीं है, बल्कि ज्ञान और दृष्टिकोणों के आदान-प्रदान को बढ़ावा देना है।
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-hi');
+            const langButtons = document.querySelectorAll('.lang-btn');
+
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                hindiContent.style.display = 'none';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'hi') {
+                englishContent.style.display = 'none';
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
+            }
+        }
+
+        // Check for language parameter in the URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            switchLanguage(lang);
+        });
+    </script>
+</body>
+
+</html>
