@@ -3,7 +3,21 @@
 2. Meat Consumption
 3. Lunor cycle - months and pakshas, duration, angles, speed etc 
 4. Women Periods and it's explanation in scriptures (Veda, Puranas, SGGS, Bible, Quran etc)
-5. 
+5. Add audio control to listen the text 
+
+<p id="content">Namaste! Welcome to my Vedic philosophy blog. aap kaise ho?</p>
+
+<button onclick="speakText()">🔊 Read Aloud</button>
+
+<script>
+  function speakText() {
+    const text = document.getElementById("content").innerText;
+    const utterance = new SpeechSynthesisUtterance(text);
+    utterance.lang = "hi-IN"; // or "hi-IN" for Hindi voice
+    speechSynthesis.speak(utterance);
+  }
+</script>
+
 
 
 
