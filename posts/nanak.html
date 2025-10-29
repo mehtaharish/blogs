@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fefefe;
+            color: #333;
+        }
+
+        .language-switcher {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background-color: #28a745;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn:focus {
+            outline: none;
+        }
+
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 3px solid #DAA520;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #B8860B;
+            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #CD853F;
+            margin-top: 25px;
+        }
+
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fefcf7;
+            border: 1px solid #e8e0d5;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            background-color: #fff8dc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .sanskrit-term {
+            font-style: italic;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .timeline {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #4169E1;
+            margin: 15px 0;
+        }
+
+        .example {
+            background-color: #f5f5dc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .conclusion {
+            background-color: #e6ffe6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #32CD32;
+            margin: 20px 0;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+            color: #DAA520;
+        }
+
+        .introduction-guru-nanak {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-left: 5px solid #4682B4;
+            /* Steel blue for a calm, spiritual tone */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .introduction-guru-nanak h2 {
+            color: #4682B4;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .introduction-guru-nanak p {
+            margin-bottom: 15px;
+        }
+
+        .birth-and-family {
+            background-color: #fffaf0;
+            /* Light golden background for warmth */
+            padding: 20px;
+            border-left: 5px solid #FFD700;
+            /* Gold for significance */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .birth-and-family h2 {
+            color: #FFD700;
+            /* Gold for the heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .birth-and-family ul {
+            padding-left: 25px;
+            margin-bottom: 0;
+        }
+
+        .birth-and-family ul li {
+            margin-bottom: 10px;
+        }
+
+        .rejection-of-rituals {
+            background-color: #f0f8ff;
+            /* Alice blue for a calm and reflective tone */
+            padding: 20px;
+            border-left: 5px solid #4682B4;
+            /* Steel blue for emphasis */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .rejection-of-rituals h2 {
+            color: #4682B4;
+            /* Steel blue for the heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .rejection-of-rituals p {
+            margin-bottom: 15px;
+        }
+
+        .rejection-of-rituals ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .rejection-of-rituals ol li {
+            margin-bottom: 10px;
+        }
+
+        .travels-and-experiences {
+            background-color: #f5f5ff;
+            /* Light lavender for a peaceful and spiritual tone */
+            padding: 20px;
+            border-left: 5px solid #9370DB;
+            /* Medium purple for significance */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .travels-and-experiences h2 {
+            color: #9370DB;
+            /* Medium purple for the heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .travels-and-experiences ul {
+            padding-left: 25px;
+            margin-bottom: 0;
+        }
+
+        .travels-and-experiences ul li {
+            margin-bottom: 10px;
+        }
+
+        .mool-mantar {
+            background-color: #f0fff0;
+            /* Light green for a serene and spiritual tone */
+            padding: 20px;
+            border-left: 5px solid #32CD32;
+            /* Lime green for emphasis */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .mool-mantar h2 {
+            color: #32CD32;
+            /* Lime green for the heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .mool-mantar h3 {
+            color: #228B22;
+            /* Forest green for subheadings */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .mool-mantar p {
+            margin-bottom: 15px;
+        }
+
+        .mool-mantar .gurmukhi {
+            font-family: 'GurbaniAkhar', serif;
+            /* Use a Gurmukhi font if available */
+            font-size: 1.2em;
+            color: #006400;
+            /* Dark green for the Gurmukhi text */
+            margin-bottom: 15px;
+        }
+
+        .teachings {
+            background-color: #fffaf0;
+            /* Light golden background for warmth */
+            padding: 20px;
+            border-left: 5px solid #FF8C00;
+            /* Dark orange for emphasis */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .teachings h2 {
+            color: #FF8C00;
+            /* Dark orange for the heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .teachings p {
+            margin-bottom: 15px;
+        }
+
+        .teachings ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .teachings ol li {
+            margin-bottom: 10px;
+        }
+
+        .final-years {
+            background-color: #f8f8ff;
+            /* Ghost white for a calm and reflective tone */
+            padding: 20px;
+            border-left: 5px solid #708090;
+            /* Slate gray for a neutral and balanced tone */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .final-years h2 {
+            color: #708090;
+            /* Slate gray for the heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .final-years ul {
+            padding-left: 25px;
+            margin-bottom: 0;
+        }
+
+        .final-years ul li {
+            margin-bottom: 10px;
+        }
+
+        .stories {
+            background-color: #fefefe;
+            /* White for a clean and neutral tone */
+            padding: 20px;
+            border-left: 5px solid #8B0000;
+            /* Dark red for emphasis */
+            border-radius: 8px;
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.8;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .stories h2 {
+            color: #8B0000;
+            /* Dark red for the main heading */
+            font-size: 1.8em;
+            margin-bottom: 15px;
+        }
+
+        .stories h3 {
+            color: #A52A2A;
+            /* Brown for subheadings */
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .stories h4 {
+            color: #A52A2A;
+            /* Brown for subheadings */
+            font-size: 1.2em;
+            margin-bottom: 10px;
+        }
+
+        .stories p {
+            margin-bottom: 15px;
+        }
+
+        .stories blockquote {
+            margin: 15px 0;
+            padding: 10px 20px;
+            background-color: #f9f9f9;
+            /* Light gray for emphasis */
+            border-left: 5px solid #8B0000;
+            /* Dark red for the blockquote */
+            font-style: italic;
+            color: #555;
+        }
+
+        .stories ol {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .stories ol li {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
+    </div>
+
+    <div id="content-en">
+        <h1>Guru Nanak Dev Ji: Life, Teachings, and Legacy</h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for
+            debate, but for thoughtful exchange of perspectives.
+        </div>
+
+        <div class="introduction-guru-nanak">
+            <h2>Introduction</h2>
+            <p>Guru Nanak Dev Ji (1469–1539) was the founder of Sikhism and the first of the ten Sikh Gurus. He is
+                remembered not just as a spiritual leader but as a social reformer who challenged blind rituals, caste
+                discrimination, and inequality. His teachings emphasize devotion to one God, honest living, selfless
+                service, and equality of all human beings. Notably, his core teachings are aligned with the spiritual
+                principles of the Vedas — such as truth, righteousness, and devotion — but he opposed the later
+                mechanical or superstitious rituals that had developed in Puranas and other traditions. He was a
+                visionary who challenged societal norms, promoted equality, and emphasized devotion over ritual. His
+                life is a reminder that spirituality is lived through action, compassion, and love for all beings, and
+                that the essence of Vedic wisdom lies in inner devotion, not in mechanical or superstitious rituals.</p>
+        </div>
+
+        <div class="birth-and-family">
+            <h2>Birth and Family</h2>
+            <ul>
+                <li>Guru Nanak Dev Ji was born on 15 April 1469 in Rai Bhoi di Talwandi (now Nankana Sahib, Pakistan).
+                </li>
+                <li><strong>Father:</strong> Mehta Kalu — an accountant in the local administration.</li>
+                <li><strong>Mother:</strong> Mata Tripta Ji — known for her deep spiritual inclination.</li>
+                <li><strong>Sister:</strong> Bebe Nanki Ji — his elder sister and first follower.</li>
+                <li><strong>Marriage:</strong> In 1487, Guru Nanak married Mata Sulakhni Ji.</li>
+                <li><strong>Children:</strong> Two sons, Sri Chand Ji (who later founded the Udasi sect) and Lakhmi Das
+                    Ji (who lived a householder life).</li>
+            </ul>
+        </div>
+
+
+
+        <div class="rejection-of-rituals">
+            <h2>Rejection of Blind Rituals</h2>
+            <p>Guru Nanak strongly opposed ritual practices that were mechanical, superstitious, or discriminatory:</p>
+            <ol>
+                <li><strong>Caste-based restrictions:</strong> He rejected untouchability and emphasized equality of
+                    all.</li>
+                <li><strong>Fasting, pilgrimages, and self-mortification:</strong> True devotion, he said, comes from
+                    honest living and service, not bodily punishment.</li>
+                <li><strong>Idol worship (Moorti Puja):</strong> God is formless; worship should come from the heart.
+                </li>
+                <li><strong>Animal sacrifices:</strong> Compassion and devotion are superior to killing animals.</li>
+                <li><strong>Ritual purity laws for women (including menstruation):</strong> Women are equal in spiritual
+                    capacity and must not be excluded from religious life.</li>
+                <li><strong>Funeral rituals:</strong> Death is natural; remembrance of God and righteous living matters
+                    more than elaborate ceremonies.</li>
+            </ol>
+            <p><strong>Core principle:</strong> External rituals are meaningless without truth, devotion, and ethical
+                action. These ideas reflect the original spiritual wisdom of the Vedas, while he rejected the later
+                rigid, ritualistic practices that had become common in society.</p>
+        </div>
+
+
+        <div class="travels-and-experiences">
+            <h2>Travels and Spiritual Experiences (Udasis)</h2>
+            <ul>
+                <li>Around age 30, Guru Nanak had a divine revelation while bathing in the Vei River. He disappeared for
+                    three days, after which he declared:<strong>“There is no Hindu, there is no Muslim; all are children
+                        of one God.”</strong></li>
+                <li>He then embarked on long journeys across India, Tibet, Arabia, and Persia to spread his message of
+                    oneness, equality, and devotion.</li>
+                <li>He was often accompanied by Bhai Mardana Ji, a Muslim musician, highlighting interfaith harmony.
+                </li>
+            </ul>
+        </div>
+
+        <div class="mool-mantar">
+            <h2>Mool Mantar</h2>
+            <p>The Mool Mantar is the root verse of Sikhism, revealed by Guru Nanak Dev Ji, and forms the foundation of
+                all Sikh teachings in the Guru Granth Sahib Ji. It describes the nature of God and the way to realize
+                the Divine.</p>
+            <h3>Punjabi (Gurmukhi):</h3>
+            <p class="gurmukhi">ੴ ਸਤਿਨਾਮੁ ਕਰਤਾਪੁਰਖੁ ਨਿਰਭਉ ਨਿਰਵੈਰੁ ਅਕਾਲਮੂਰਤਿ ਅਜੂਨੀ ਸੈਭੰ ਗੁਰਪਰਸਾਦਿ</p>
+            <h3>English Translation / Description:</h3>
+            <p>“There is One Eternal Creator, whose Name is Truth; the Creator is fearless and without enmity, timeless,
+                unborn, self-existent, and can be realized only through the Guru’s grace.”</p>
+        </div>
+
+        <div class="teachings">
+            <h2>Teachings</h2>
+            <p>Guru Nanak’s core teachings include:</p>
+            <ol>
+                <li><strong>Ik Onkar:</strong> Belief in one God.</li>
+                <li><strong>Naam Japna:</strong> Remember God through meditation and prayer.</li>
+                <li><strong>Kirat Karni:</strong> Honest living and hard work.</li>
+                <li><strong>Vand Chakna:</strong> Sharing with others and selfless service (seva).</li>
+                <li><strong>Equality:</strong> All humans are equal, regardless of caste, gender, or religion.</li>
+            </ol>
+            <p>Guru Nanak Dev Ji teaches that true purity is not in outer rituals but in the inner state of one’s mind
+                and heart. A life of meaning begins with <em>daya</em> (compassion), <em>santokh</em> (contentment), and
+                <em>sat</em> (truthfulness). The real test of spirituality is not how we appear, but how we act —
+                whether our thoughts, words, and deeds bring peace or pain to others. The Gurus remind us that ignorance
+                lies in judging others, while wisdom lies in self-reflection and humility. We are called to live
+                consciously — seeing the same Divine Light in all beings, and serving creation with love, honesty, and
+                gratitude. When our actions arise from compassion instead of ego, the entire world becomes sacred, and
+                every moment becomes a prayer.
+            </p>
+        </div>
+
+        <div class="final-years">
+            <h2>Final Years and Death</h2>
+            <ul>
+                <li>Guru Nanak settled in Kartarpur Sahib, Pakistan, where he established the first Sikh commune,
+                    practicing community living, prayer, and service.</li>
+                <li>He passed away on 22 September 1539.</li>
+                <li>Both Hindus and Muslims wanted to perform his funeral rites, symbolizing his universal appeal. The
+                    story of his clothes being divided between the two communities illustrates his message of unity and
+                    equality.</li>
+            </ul>
+        </div>
+
+        <div class="stories">
+            <h2>Stories</h2>
+            <h3>1. The Mecca Feet Story and Modern Rituals</h3>
+            <p>During his spiritual travels, Guru Nanak Dev Ji visited Mecca, the holiest city in Islam. While resting
+                there, he naturally lay down with his feet pointing toward the Kaaba, which, according to local custom,
+                was considered disrespectful. The caretakers asked him to turn his feet away. Guru Nanak replied:</p>
+            <blockquote>“Show me a direction where God is not.”</blockquote>
+            <p>As the story goes, when they tried to move his feet, the Kaaba itself moved to align with his feet,
+                symbolizing that God is omnipresent.</p>
+            <p><strong>The spiritual lesson:</strong> True devotion is not about outward postures, strict rules, or
+                mechanical rituals. God is everywhere, and sincere remembrance of the Divine from the heart is what
+                truly matters.</p>
+            <h4>Modern Rituals vs. Guru Nanak’s Teachings</h4>
+            <p>Many gurdwaras today enforce rules like not showing one’s back to the Guru Granth Sahib, or restrictions
+                on attire. While intended to maintain respect, these rigid practices often:</p>
+            <ol>
+                <li><strong>Prioritize form over essence:</strong> They focus more on appearances, gestures, and
+                    clothing than on humility, devotion, and ethical living.</li>
+                <li><strong>Can exclude sincere devotees:</strong> Children, visitors, or those unaware of the rules may
+                    feel unwelcome, even though their heart is in the right place.</li>
+                <li><strong>Contradict Guru Nanak’s core teaching:</strong> Guru Nanak repeatedly emphasized that God
+                    sees the heart, not posture, dress, or ritual compliance.</li>
+            </ol>
+            <p><strong>Conclusion:</strong> Many modern rules, when applied rigidly, do not align with Guru Nanak’s
+                message of universal, inclusive, and heart-centered devotion. True spirituality lies in love, humility,
+                compassion, and remembrance of God, not in mechanical adherence to outward forms.</p>
+
+            <h3>2. 🌾 Sacha Sauda — The True Bargain and Its Forgotten Spirit</h3>
+            <p>When Guru Nanak Dev Ji was a young man, his father gave him twenty rupees to do business — hoping to
+                teach him how to earn profit. On his way to the market, Guru Nanak met a group of hungry saints who had
+                not eaten for days. Seeing their suffering, he decided that the most valuable business was to serve
+                those in need.</p>
+            <p>He used all the money to buy food and fed the saints with love and humility. When his father asked what
+                he had done, Nanak replied,</p>
+            <blockquote>“I have made the Sacha Sauda — the True Bargain — by serving humanity.”</blockquote>
+            <p>This simple act became a timeless lesson that service, compassion, and equality are the highest forms of
+                devotion. True profit is not measured in coins, but in kindness.</p>
+
+            <h4>🕊️ The Contrast in Modern Times</h4>
+            <p>Today, the spirit of Sacha Sauda continues through the Langar — a sacred tradition where everyone, rich
+                or poor, sits together and eats the same food. The langar was meant to erase boundaries of caste,
+                wealth, and pride. It embodies Guru Nanak’s vision of equality:</p>
+            <blockquote>“No one is high or low; all are children of the same Creator.”</blockquote>
+            <p>Yet, in practice, this spirit is not always upheld. At some gurdwaras — even the most revered ones — poor
+                or homeless visitors are sometimes turned away from entering the main premises or from the langar area.
+                They may be stopped because of their appearance, their clothing, or because they come frequently for
+                food or shelter.</p>
+            <p>When this happens, the place that was built to welcome all — the house of the Guru — becomes selective,
+                guided by human judgment rather than divine compassion.</p>
+
+            <h4>🌼 The Deeper Message</h4>
+            <p>Guru Nanak Dev Ji opposed all forms of ritualism, discrimination, and spiritual pride.<br>He taught that
+                God resides in every being, not in wealth or social position.<br>His teachings remind us that feeding
+                the hungry, helping the poor, and embracing the forgotten are not acts of charity — they are acts of
+                worship.</p>
+            <p>If a poor person is turned away from a gurdwara, it is not that person who is impure — it is the
+                institution that has forgotten the essence of its own founder’s message.</p>
+            <p>The Sacha Sauda teaches us that the true trade is one of love, humility, and service.<br>Whenever we
+                close our doors to those in need, we lose that true bargain — the bargain that Guru Nanak once made with
+                twenty rupees, but which carried infinite spiritual wealth.</p>
+
+                <h3>3. 🌟 The Story of Gagan Mein Thaal, Chand Deepak</h3>
+                <p>The aarti “Gagan Mein Thaal, Chand Deepak” is a composition of Guru Nanak Dev Ji that presents a cosmic vision of worship. It’s a poetic and spiritual way of showing that true devotion does not need idols, lamps, or ritual objects.</p>
+                <h4>Key Lines & Meaning:</h4>
+                <ul>
+                    <li><strong>“The sky is my plate, the sun and moon are my lamps; the stars are pearls.”</strong><br>
+                    Guru Nanak emphasized that the entire universe is God’s temple, and everything in it — sun, moon, stars, clouds, wind, flowers — can be part of divine worship.</li>
+                    <li><strong>“Fragrance of sandalwood is incense; the wind is the fan; the trees and flowers are offerings.”</strong><br>
+                    He replaced ritual items with elements of nature, teaching that God is worshipped through recognition of His presence everywhere.</li>
+                    <li><strong>“The Unstruck Sound (Anhad Shabad) is the vibration of true devotion.”</strong><br>
+                    Worship is meditation, service, and inner connection, not lighting lamps or following ceremonies blindly.</li>
+                </ul>
+                <h4>Guru Nanak’s Message at that Time:</h4>
+                <ul>
+                    <li>God is formless (Nirankar) and omnipresent.</li>
+                    <li>Human-made idols or images are unnecessary.</li>
+                    <li>True aarti (worship) comes from humility, selfless service (seva), and remembrance of God.</li>
+                    <li>He rejected rituals that give the illusion of devotion without inner sincerity.</li>
+                </ul>
+                <h4>🔍 What We Do Now in Some Gurdwaras</h4>
+                <ul>
+                    <li>Many gurdwaras hang photos of the Sikh Gurus as a way of teaching history and showing reverence — that in itself is fine if used for inspiration and remembrance.</li>
+                    <li>However, in several gurdwaras today, photos of Bhindranwale or other contemporary figures are also displayed alongside Guru images.</li>
+                    <li>Sometimes rituals like bowing or garlanding are done toward these photos.</li>
+                </ul>
+                <h4>⚖️ Why This Contradicts Guru Nanak’s Teachings</h4>
+                <ul>
+                    <li><strong>Idol-like veneration:</strong> Guru Nanak specifically rejected ritualistic worship of human forms.</li>
+                    <li><strong>Focus shifts from God to humans:</strong> Devotion should remain on God, service, and moral principles, not on any human, however heroic.</li>
+                    <li><strong>Potential for division:</strong> Elevating specific human figures can introduce political or communal biases, contrary to Nanak’s message of equality and universality.</li>
+                </ul>
+                <h4>🌿 In Essence</h4>
+                <ul>
+                    <li>Guru Nanak’s “Gagan Mein Thaal” reminds us:</li>
+                    <li>“Look at the universe — sun, moon, stars, and all life — as your temple. Serve, meditate, and remember God. Do not get lost in images or rituals.”</li>
+                    <li>Modern practices of hanging human photos, performing rituals toward them is the opposite of this teaching. While the intention may be respect or remembrance, it risks turning devotion toward humans rather than the Formless Divine, which Guru Nanak explicitly warned against.</li>
+                </ul>
+                
+        </div>
+
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not
+            meant for debate, but rather for the exchange of knowledge and perspectives.
+        </div>
+    </div>
+
+    <div id="content-hi" style="display: none;">
+        <h1>-------- Main Header --------- </h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>नोट:</strong> यह लेख विचार और चिंतन के लिए है। यह बहस के लिए नहीं, बल्कि ज्ञान और दृष्टिकोण के
+            आदान-प्रदान के लिए है।
+        </div>
+
+        <div class="section">
+            <h2>📚 ग्रंथ सूची</h2>
+
+
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>टिप्पणी:</strong> यह लेख विचार और चिंतन के लिए प्रेरित करने के उद्देश्य से लिखा गया है। इसका
+            उद्देश्य बहस करना नहीं है, बल्कि ज्ञान और दृष्टिकोणों के आदान-प्रदान को बढ़ावा देना है।
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-hi');
+            const langButtons = document.querySelectorAll('.lang-btn');
+
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                hindiContent.style.display = 'none';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'hi') {
+                englishContent.style.display = 'none';
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
+            }
+        }
+
+        // Check for language parameter in the URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            switchLanguage(lang);
+        });
+    </script>
+</body>
+
+</html>
