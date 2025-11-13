@@ -28,6 +28,7 @@ Prompts:
     const text = document.getElementById("content").innerText;
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "hi-IN"; // or "hi-IN" for Hindi voice
+    utterance.lang = 0.8;
     speechSynthesis.speak(utterance);
   }
 </script>
