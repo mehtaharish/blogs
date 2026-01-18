@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fefefe;
+            color: #333;
+        }
+
+        .language-switcher {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background-color: #28a745;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn:focus {
+            outline: none;
+        }
+
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 3px solid #DAA520;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #B8860B;
+            border-left: 5px solid #DAA520;
+            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #CD853F;
+            margin-top: 25px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fefcf7;
+            border: 1px solid #e8e0d5;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            background-color: #fff8dc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .sanskrit-term {
+            font-style: italic;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .timeline {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #4169E1;
+            margin: 15px 0;
+        }
+
+        .example {
+            background-color: #f5f5dc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .conclusion {
+            background-color: #e6ffe6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #32CD32;
+            margin: 20px 0;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+            color: #DAA520;
+        }
+
+        .pv-decision {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 18px 22px;
+            background: #ffffff;
+            border: 1px solid #e5e7eb;
+            border-radius: 12px;
+            box-shadow: 0 8px 20px rgba(2, 6, 23, 0.06);
+            color: #0f172a;
+        }
+
+        .pv-decision h2 {
+            margin: 0 0 12px;
+            color: #111827;
+            font-weight: 700;
+        }
+
+        .pv-decision h3 {
+            margin: 16px 0 8px;
+            color: #0ea5a3;
+            font-weight: 700;
+        }
+
+        .pv-decision h4 {
+            margin: 12px 0 6px;
+            color: #64748b;
+            font-weight: 700;
+        }
+
+        .pv-decision p {
+            margin: 6px 0;
+        }
+
+        /* Grouping for Technical setup points */
+        .pv-decision .tech-points {
+            margin: 8px 0;
+            padding: 10px 12px;
+            border-left: 4px solid #0ea5a3;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        /* Generic grouping for points under any h4 */
+        .pv-decision .points {
+            margin: 8px 0;
+            padding: 10px 12px;
+            border-left: 4px solid #0ea5a3;
+            background: #f9fafb;
+            border: 1px solid #e5e7eb;
+            border-radius: 8px;
+        }
+
+        /* Bullet list styling for grouped points */
+        .pv-decision .points-list {
+            margin: 8px 0;
+            padding-left: 20px;
+            list-style: disc;
+        }
+
+        .pv-decision .points-list li {
+            margin: 6px 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="content-en">
+        <h1>📊 PV Installation Project - Powered by EON</h1>
+
+        <div class="pv-decision">
+
+            <h3>1️⃣ Project Overview</h3>
+            <h4>🔧 Technical setup</h4>
+            <div class="tech-points">
+                <ul class="points-list">
+                    <li>PV production: 4415 kWh / year</li>
+                    <li>Household consumption: 3000 kWh / year</li>
+                    <li>Self-consumption: 2342 kWh</li>
+                    <li>Grid feed-in: 2072 kWh</li>
+                    <li>Grid purchase: 658 kWh</li>
+                    <li>Autarky degree: 78,1%</li>
+                    <li>Hybrid inverter: Sungrow SH5.0RT (3-phase)</li>
+                    <li>Battery storage: included</li>
+                    <li>Battery and inverter are planned to be installed in the attic (Spitzboden), which experiences
+                        cold winters and hot summers.</li>
+                </ul>
+            </div>
+
+            <h3>2️⃣ Financial Setup</h3>
+            <h4>💶 Investment & financing</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Total project cost: 13467,71 €</li>
+                    <li>Battery cost (included): ~3000 €</li>
+                    <li>Loan:</li>
+                    <li>Interest: 3% p.a.</li>
+                    <li>Duration: 10 years</li>
+                    <li>Total interest paid: ~2330 €</li>
+                </ul>
+            </div>
+
+            <h3>3️⃣ Electricity Prices & Assumptions</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Current electricity price: 29 ct/kWh (variable tariff)</li>
+                    <li>Historical reference:</li>
+                    <li>24 ct → 29 ct over ~10 years</li>
+                    <li>Equivalent to ~1,9% p.a. increase</li>
+                    <li>Assumed price increase in calculation: 2% p.a.</li>
+                    <li>👉 Conclusion:</li>
+                    <li>2% is realistic as a long-term average, but prices are volatile and not guaranteed to rise
+                        steadily.</li>
+                </ul>
+            </div>
+
+            <h3>4️⃣ Yearly Financial Effect (Year 1)</h3>
+            <h4>🔌 Savings from self-consumption</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>2,342 kWh × 0,29 € ≈ 665 €</li>
+                </ul>
+            </div>
+            <h4>⚡ Feed-in revenue (EEG)</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>2,072 kWh × 0,0786 € ≈ 163 €</li>
+                </ul>
+            </div>
+            <h4>✅ Total yearly benefit (Year 1)</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>➡️ ~828 €</li>
+                    <li>This calculation is based on a savings vs. expenses approach:</li>
+                    <li>Without PV → you buy 3000 kWh</li>
+                    <li>With PV → you buy only 658 kWh</li>
+                    <li>The reduced grid purchase is implicitly included in the savings.</li>
+                </ul>
+            </div>
+
+            <h3>5️⃣ Component Lifetime Reality</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Although panels have 25-year performance guarantees, key components do not last that long.</li>
+                    <strong>Component Lifetime</strong>
+                    <li>Battery 10–12 years</li>
+                    <li>Hybrid inverter 10–12 years</li>
+                    <li>Panels 25+ years</li>
+                    <li>⚠️ The attic installation accelerates aging, especially due to heat (capacitors, electronics).
+                    </li>
+                    <strong>Expected replacement costs (today’s money):</strong>
+                    <li>Battery replacement: ~3000 €</li>
+                    <li>Inverter replacement: ~2500 €</li>
+                    <strong>Total replacements: ~5500 € (around year 10–12)</strong>
+                </ul>
+            </div>
+
+            <h3>6️⃣ Total Lifetime Cost (Realistic View)</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <strong>All unavoidable costs:</strong>
+                    <li>System price 13467 €</li>
+                    <li>Loan interest 2330 €</li>
+                    <li>Battery replacement 3000 €</li>
+                    <li>Inverter replacement 2500 €</li>
+                    <li>Repairs / labor (estimate) 1000 €</li>
+                    <strong>Total lifetime cost ~22300 €</strong>
+                </ul>
+            </div>
+
+            <h3>7️⃣ Break-even & Profitability</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Average yearly benefit (over time, incl. price increase): ~1050 € / year</li>
+                    <li>Resulting break-even: ~21–23 years</li>
+                    <li>This leaves only 2–4 potential “profit years” within a 25-year panel lifetime — assuming no
+                        additional failures.</li>
+                </ul>
+            </div>
+
+            <h3>8️⃣ Risk Assessment</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <strong>Key risks identified:</strong>
+                    <li>Variable electricity price (can fall or stagnate)</li>
+                    <li>Guaranteed battery and inverter replacement</li>
+                    <li>Faster aging due to attic installation</li>
+                    <li>Long break-even very close to system end-of-life</li>
+                    <strong>In financial terms:</strong>
+                    <li>Internal Rate of Return. ~1–2%</li>
+                    <li>Comparable to a savings account, but with much higher technical risk</li>
+                </ul>
+            </div>
+
+            <h3>9️⃣ Final Decision Conclusion</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <strong>❌ Financial perspective</strong>
+                    <li>This project is not an attractive financial investment.</li>
+                    <li>The battery + hybrid inverter combination pushes the break-even too far into the future.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="divider">❖ ❖ ❖</div>
+    </div>
+
+    <div id="content-de" style="display: none;">
+        <h1>📊 PV-Installationsprojekt – betrieben von EON</h1>
+
+        <div class="pv-decision">
+
+            <h3>1️⃣ Projektübersicht</h3>
+            <h4>🔧 Technische Einrichtung</h4>
+            <div class="tech-points">
+                <ul class="points-list">
+                    <li>PV‑Erzeugung: 4415 kWh/Jahr</li>
+                    <li>Haushaltsverbrauch: 3000 kWh/Jahr</li>
+                    <li>Eigenverbrauch: 2342 kWh</li>
+                    <li>Netzeinspeisung: 2072 kWh</li>
+                    <li>Netzbezug: 658 kWh</li>
+                    <li>Autarkiegrad: 78,1 %</li>
+                    <li>Hybrid‑Wechselrichter: Sungrow SH5.0RT (3‑phasig)</li>
+                    <li>Batteriespeicher: enthalten</li>
+                    <li>Batterie und Wechselrichter sollen im Spitzboden installiert werden, der kalte Winter und heiße Sommer aufweist.</li>
+                </ul>
+            </div>
+
+            <h3>2️⃣ Finanzsetup</h3>
+            <h4>💶 Investition & Finanzierung</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Gesamtprojektkosten: 13467,71 €</li>
+                    <li>Batteriekosten (enthalten): ~3000 €</li>
+                    <li>Kredit:</li>
+                    <li>Zinsen: 3 % p. a.</li>
+                    <li>Laufzeit: 10 Jahre</li>
+                    <li>Gesamte Zinszahlungen: ~2330 €</li>
+                </ul>
+            </div>
+
+            <h3>3️⃣ Strompreise & Annahmen</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Aktueller Strompreis: 29 ct/kWh (variabler Tarif)</li>
+                    <li>Historische Referenz:</li>
+                    <li>24 ct → 29 ct über ~10 Jahre</li>
+                    <li>Entspricht ~1,9 % p. a. Anstieg</li>
+                    <li>Für die Berechnung angenommener Preisanstieg: 2 % p. a.</li>
+                    <li>👉 Fazit:</li>
+                    <li>2 % sind als langfristiger Durchschnitt realistisch, aber Preise sind volatil und steigen nicht garantiert stetig.</li>
+                </ul>
+            </div>
+
+            <h3>4️⃣ Jährlicher finanzieller Effekt (Jahr 1)</h3>
+            <h4>🔌 Einsparungen durch Eigenverbrauch</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>2.342 kWh × 0,29 € ≈ 665 €</li>
+                </ul>
+            </div>
+            <h4>⚡ Einspeisevergütung (EEG)</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>2.072 kWh × 0,0786 € ≈ 163 €</li>
+                </ul>
+            </div>
+            <h4>✅ Gesamtnutzen pro Jahr (Jahr 1)</h4>
+            <div class="points">
+                <ul class="points-list">
+                    <li>➡️ ~828 €</li>
+                    <li>Diese Berechnung beruht auf einem Vergleich von Einsparungen und Ausgaben:</li>
+                    <li>Ohne PV → kaufst du 3000 kWh</li>
+                    <li>Mit PV → kaufst du nur 658 kWh</li>
+                    <li>Der reduzierte Netzbezug ist implizit in den Einsparungen enthalten.</li>
+                </ul>
+            </div>
+
+            <h3>5️⃣ Lebensdauer der Komponenten (Realität)</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Obwohl Module 25‑jährige Leistungsgarantien haben, halten zentrale Komponenten nicht so lange.</li>
+                    <strong>Komponenten – Lebensdauer</strong>
+                    <li>Batterie 10–12 Jahre</li>
+                    <li>Hybrid‑Wechselrichter 10–12 Jahre</li>
+                    <li>Module 25+ Jahre</li>
+                    <li>⚠️ Die Installation im Spitzboden beschleunigt die Alterung, insbesondere durch Hitze (Kondensatoren, Elektronik).</li>
+                    <strong>Erwartete Ersatzkosten (heutige Preise):</strong>
+                    <li>Batteriewechsel: ~3000 €</li>
+                    <li>Wechselrichtertausch: ~2500 €</li>
+                    <strong>Gesamte Ersatzkosten: ~5500 € (um Jahr 10–12)</strong>
+                </ul>
+            </div>
+
+            <h3>6️⃣ Gesamtkosten über die Lebensdauer (realistische Sicht)</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <strong>Alle unvermeidbaren Kosten:</strong>
+                    <li>Systempreis 13467 €</li>
+                    <li>Kreditzinsen 2330 €</li>
+                    <li>Batterietausch 3000 €</li>
+                    <li>Wechselrichtertausch 2500 €</li>
+                    <li>Reparaturen/Arbeitskosten (Schätzung) 1000 €</li>
+                    <strong>Gesamtkosten über die Lebensdauer ~22300 €</strong>
+                </ul>
+            </div>
+
+            <h3>7️⃣ Break‑even & Rentabilität</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <li>Durchschnittlicher jährlicher Nutzen (über die Zeit, inkl. Preissteigerung): ~1050 €/Jahr</li>
+                    <li>Ergibt Break‑even: ~21–23 Jahre</li>
+                    <li>Damit bleiben nur 2–4 mögliche „Profitjahre“ innerhalb einer 25‑jährigen Modul‑Lebensdauer — bei Annahme keiner zusätzlichen Ausfälle.</li>
+                </ul>
+            </div>
+
+            <h3>8️⃣ Risikobewertung</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <strong>Zentrale Risiken:</strong>
+                    <li>Variabler Strompreis (kann fallen oder stagnieren)</li>
+                    <li>Garantierter Batterie‑ und Wechselrichtertausch</li>
+                    <li>Schnellere Alterung durch Installation im Spitzboden</li>
+                    <li>Langer Break‑even nahe am Ende der Systemlebensdauer</li>
+                    <strong>In finanzieller Hinsicht:</strong>
+                    <li>Interner Zinsfuß (IRR): ~1–2 %</li>
+                    <li>Vergleichbar mit einem Sparkonto, jedoch mit deutlich höherem technischen Risiko</li>
+                </ul>
+            </div>
+
+            <h3>9️⃣ Abschließendes Urteil</h3>
+            <div class="points">
+                <ul class="points-list">
+                    <strong>❌ Finanzielle Perspektive</strong>
+                    <li>Dieses Projekt ist finanziell nicht attraktiv.</li>
+                    <li>Die Kombination aus Batterie und Hybrid‑Wechselrichter verschiebt den Break‑even zu weit in die Zukunft.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-de');
+            const langButtons = document.querySelectorAll('.lang-btn');
+
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                hindiContent.style.display = 'none';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'de') {
+                englishContent.style.display = 'none';
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
+            }
+        }
+
+        // Check for language parameter in the URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            switchLanguage(lang);
+        });
+    </script>
+</body>
+
+</html>
