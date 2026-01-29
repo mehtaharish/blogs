@@ -1,56 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<body>
+
+  <div id="content-en">
+
+    <p>Prompts:</p>
+    <p>1. create a new class with ID with the content above. Do not skip any text. Also generate style for this class.
+    </p>
+    <p>2. Append into the existing class "stories". Generate only the new content. Do not skip any text here.</p>
+    <p>3. ...</p>
+
+    <p>Tasks:</p>
+
+    <p>- Casts, Varnas - check youtube from Acharaya Prashant - https://www.youtube.com/watch?v=b_CpRVL-Vyo </p>
+    <p>- Rebirth (reincarnation) </p>
+    <p>Karamkand and philosophical teachings in Vedas -> check file in Ethik folder - Karmakāṇḍa vs philosophical
+      teachings in Vedas.rtf - to be worked further with this file </p>
+      <p>advita </p>
+
+    <p>- Quran and its relation to other stuff like - Surah Al-Baqarah (2:256), Shariya law, Hadiths, Teen Talakhs etc
+    </p>
+    <p>- Lunor cycle - months and pakshas, duration, angles, speed etc </p>
+    <p>- Women Periods and it's explanation in scriptures (Veda, Puranas, SGGS, Bible, Quran etc)</p>
+    <p>- Meat conumption and it impact on environment and human health</p>
+    <p>- Mirza Ghalib - Death - 15 February 1869 (aged 71)</p>
 
 
-Prompts:
-<p>1. create a new class with ID with the content above. Do not skip any text. Also generate style for this class. </p>
-<p>2. Append into the existing class "stories". Generate only the new content. Do not skip any text here.</p>
-<p>3. ...</p>
-
-<p>Tasks:</p>
-
-<p>- Casts, Varnas </p>
-<p>- Rebirth (reincarnation) </p>
-<p>Karamkand and philosophical teachings in Vedas -> check file in Ethik folder - Karmakāṇḍa vs philosophical teachings in Vedas.rtf </p>
-
-<p>- Quran and its relation to other stuff like - Surah Al-Baqarah (2:256), Shariya law, Hadiths, Teen Talakhs etc </p>
-<p>- Lunor cycle - months and pakshas, duration, angles, speed etc </p>
-<p>- Women Periods and it's explanation in scriptures (Veda, Puranas, SGGS, Bible, Quran etc)</p>
-<p>- Meat conumption and it impact on environment and human health</p>
-<p>- Mirza Ghalib - Death - 15 February 1869 (aged 71)</p>
+    <p>- Add audio control to listen the text</p>
 
 
-<p>- Add audio control to listen the text</p>
+    <p>Sample Bootstrap Blog Template</p>
+    <p>https://startbootstrap.github.io/startbootstrap-clean-blog/
+      https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/README.md</p>
 
- 
-
-
-
-<p id="content">Namaste! Welcome to my Vedic philosophy blog. aap kaise ho? गुरु नानक देव जी का जन्म 15 अप्रैल 1469 को राय भोई दी तलवंडी (अब ननकाना साहिब, पाकिस्तान) में हुआ
-  था। लगभग 30 वर्ष की आयु में, गुरु नानक को वेई नदी में स्नान करते समय एक दिव्य प्रकाश का अनुभव हुआ। वे
-  तीन दिनों के लिए लापता हो गए, जिसके बाद उन्होंने घोषणा की: <strong>“न कोई हिंदू है, न कोई मुसलमान;
-      सभी एक ही ईश्वर की संतान हैं।”</p>
-
-<button onclick="speakText()">🔊 Read Aloud</button>
-
-<script>
-  function speakText() {
-    const text = document.getElementById("content").innerText;
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = "hi-IN"; // or "hi-IN" for Hindi voice
-    utterance.lang = 0.8;
-    speechSynthesis.speak(utterance);
-  }
-</script>
-
-<p id="blog-text">नमस्ते! यह वेदों पर मेरा ब्लॉग है।</p>
-<button onclick="responsiveVoice.speak(document.getElementById('blog-text').innerText, 'Hindi Female');">
-  🎧 सुनिए
-</button>
-
-<script src="https://code.responsivevoice.org/responsivevoice.js?key=YOUR_KEY"></script>
+  </div>
 
 
-Sample Bootstrap Blog Template
-https://startbootstrap.github.io/startbootstrap-clean-blog/
-https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/README.md
+  <script>
+    function switchLanguage(lang) {
+      const englishContent = document.getElementById('content-en');
+      const hindiContent = document.getElementById('content-hi');
+      const langButtons = document.querySelectorAll('.lang-btn');
 
+      // Remove active class from all buttons
+      langButtons.forEach(btn => btn.classList.remove('active'));
 
+      if (lang === 'en') {
+        englishContent.style.display = 'block';
+        hindiContent.style.display = 'none';
+        langButtons[0].classList.add('active');
+      } else if (lang === 'hi') {
+        englishContent.style.display = 'none';
+        hindiContent.style.display = 'block';
+        langButtons[1].classList.add('active');
+      }
+    }
+
+    // Enhanced: Hide everything if display param is not 'true'
+    // language is set via parameter 'lang' (default 'en') in addition
+    document.addEventListener('DOMContentLoaded', function () {
+      const urlParams = new URLSearchParams(window.location.search);
+      const lang = urlParams.get('lang') || 'en';
+      const display = urlParams.get('display');
+      const englishContent = document.getElementById('content-en');
+      const hindiContent = document.getElementById('content-hi');
+      const languageSwitcher = document.querySelector('.language-switcher');
+
+      if (display === 'true') {
+        if (languageSwitcher) languageSwitcher.style.display = 'block';
+        switchLanguage(lang);
+      } else {
+        if (languageSwitcher) languageSwitcher.style.display = 'none';
+        if (englishContent) englishContent.style.display = 'none';
+        if (hindiContent) hindiContent.style.display = 'none';
+      }
+    });
+
+  </script>
+
+</body>
+
+</html>

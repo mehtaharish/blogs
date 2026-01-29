@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fefefe;
+            color: #333;
+        }
+
+        .language-switcher {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background-color: #28a745;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn:focus {
+            outline: none;
+        }
+
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 3px solid #DAA520;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #B8860B;
+            border-left: 5px solid #DAA520;
+            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #CD853F;
+            margin-top: 25px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fefcf7;
+            border: 1px solid #e8e0d5;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            background-color: #fff8dc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .sanskrit-term {
+            font-style: italic;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .timeline {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #4169E1;
+            margin: 15px 0;
+        }
+
+        .example {
+            background-color: #f5f5dc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .conclusion {
+            background-color: #e6ffe6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #32CD32;
+            margin: 20px 0;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+            color: #DAA520;
+        }
+
+
+        .sher {
+            margin: 24px 0;
+            padding: 22px 26px;
+            background: linear-gradient(120deg, #fff5f7 0%, #fffbe6 100%);
+            border: 1px solid #f2e2d8;
+            border-left: 8px solid #e76f51;
+            border-radius: 14px;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.95;
+            color: #3b2f2f;
+            font-family: "Noto Serif Devanagari", "Noto Nastaliq Urdu", Georgia, "Times New Roman", serif;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sher::before,
+        .sher::after {
+            content: "❝";
+            position: absolute;
+            font-size: 32px;
+            color: rgba(231, 111, 81, 0.15);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .sher::before {
+            top: -8px;
+            left: 10px;
+        }
+
+        .sher::after {
+            content: "❞";
+            bottom: -18px;
+            right: 12px;
+        }
+
+        .sher .verse {
+            display: block;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        .sher .verse:nth-of-type(1) {
+            color: #a23e48;
+        }
+
+        .sher .verse:nth-of-type(2) {
+            color: #6a4c93;
+        }
+
+        .sher .author {
+            margin-top: 12px;
+            font-style: normal;
+            font-weight: 700;
+            color: #0f766e;
+            letter-spacing: 0.3px;
+        }
+
+        /* Dairy intro block */
+        .dairy-intro {
+            margin: 24px 0 32px 0;
+            padding: 24px 26px;
+            background: #fffdf7;
+            border: 1px solid #e8e0d5;
+            border-left: 6px solid #B8860B;
+            border-radius: 12px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+            color: #2f2f2f;
+            font-size: 1.05em;
+            line-height: 1.9;
+        }
+
+        .dairy-intro h2 {
+            margin-top: 0;
+            margin-bottom: 14px;
+            color: #8B4513;
+            border: none;
+            padding-left: 0;
+        }
+
+        /* Dairy content section */
+        .dairy-section {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #fffefe;
+            border: 1px solid #eadfc9;
+            border-left: 6px solid #DAA520;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+            color: #2f2f2f;
+            font-size: 1.03em;
+            line-height: 1.9;
+        }
+
+        .dairy-section h2 {
+            margin: 0 0 10px 0;
+            color: #8B4513;
+            border: none;
+            padding-left: 0;
+        }
+
+        .dairy-section h3 {
+            margin: 4px 0 12px 0;
+            color: #B8860B;
+        }
+
+        .dairy-section p {
+            margin: 0 0 10px 0;
+            text-align: justify;
+        }
+
+        /* Dairy biology section */
+        .dairy-bio {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #fffdfc;
+            border: 1px solid #e7dcc6;
+            border-left: 6px solid #8B4513; /* deeper accent for biology */
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+            color: #2f2f2f;
+            font-size: 1.03em;
+            line-height: 1.9;
+        }
+
+        .dairy-bio h2 {
+            margin: 0 0 10px 0;
+            color: #8B4513;
+            border: none;
+            padding-left: 0;
+        }
+
+        .dairy-bio h3 {
+            margin: 4px 0 12px 0;
+            color: #6a4c93; /* complementary subheading */
+        }
+
+        .dairy-bio p {
+            margin: 0 0 10px 0;
+            text-align: justify;
+        }
+
+        /* Generic dairy topic section */
+        .dairy-topic {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #fffefe;
+            border: 1px solid #eadfc9;
+            border-left: 6px solid #B8860B;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+            color: #2f2f2f;
+            font-size: 1.03em;
+            line-height: 1.9;
+        }
+
+        .dairy-topic h2 {
+            margin: 0 0 10px 0;
+            color: #8B4513;
+            border: none;
+            padding-left: 0;
+        }
+
+        .dairy-topic h3 {
+            margin: 4px 0 12px 0;
+            color: #6a4c93;
+        }
+
+        .dairy-topic p {
+            margin: 0 0 10px 0;
+            text-align: justify;
+        }
+
+        /* 5. Fate of Male Calves */
+        .dairy-male-calves {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #fff5f5;
+            border: 1px solid #f0d6d6;
+            border-left: 6px solid #c0392b;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        .dairy-male-calves h2 { margin: 0 0 10px; color: #a93226; border: none; padding-left: 0; }
+        .dairy-male-calves h3 { margin: 4px 0 12px; color: #c0392b; }
+        .dairy-male-calves p  { margin: 0 0 10px; text-align: justify; }
+
+        /* 6. Health Impact on Dairy Cows */
+        .dairy-health-impact {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #fff9f2;
+            border: 1px solid #f1e1cc;
+            border-left: 6px solid #e67e22;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        .dairy-health-impact h2 { margin: 0 0 10px; color: #b35f19; border: none; padding-left: 0; }
+        .dairy-health-impact h3 { margin: 4px 0 12px; color: #e67e22; }
+        .dairy-health-impact p  { margin: 0 0 10px; text-align: justify; }
+
+        /* 7. Natural Lifespan vs Dairy Lifespan */
+        .dairy-lifespan {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #f0f8ff;
+            border: 1px solid #d6e6fb;
+            border-left: 6px solid #4169E1;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        .dairy-lifespan h2 { margin: 0 0 10px; color: #2f54c8; border: none; padding-left: 0; }
+        .dairy-lifespan h3 { margin: 4px 0 12px; color: #4169E1; }
+        .dairy-lifespan p  { margin: 0 0 10px; text-align: justify; }
+
+        /* 8. “What Will Happen to Millions of Cows?” */
+        .dairy-population {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #f8fff2;
+            border: 1px solid #e0edcf;
+            border-left: 6px solid #556b2f;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        .dairy-population h2 { margin: 0 0 10px; color: #3f5220; border: none; padding-left: 0; }
+        .dairy-population h3 { margin: 4px 0 12px; color: #556b2f; }
+        .dairy-population p  { margin: 0 0 10px; text-align: justify; }
+
+        /* 9. Sanctuaries and Non-Exploitation */
+        .dairy-sanctuary {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #eaffea;
+            border: 1px solid #d6efd6;
+            border-left: 6px solid #2e7d32;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        .dairy-sanctuary h2 { margin: 0 0 10px; color: #256628; border: none; padding-left: 0; }
+        .dairy-sanctuary h3 { margin: 4px 0 12px; color: #2e7d32; }
+        .dairy-sanctuary p  { margin: 0 0 10px; text-align: justify; }
+
+        /* 10. Is Milk Nutritionally Necessary? */
+        .dairy-nutrition {
+            margin: 22px 0 30px 0;
+            padding: 22px 24px;
+            background: #f7f3ff;
+            border: 1px solid #e5dcfb;
+            border-left: 6px solid #6a4c93;
+            border-radius: 12px;
+            box-shadow: 0 6px 16px rgba(0, 0, 0, 0.05);
+        }
+        .dairy-nutrition h2 { margin: 0 0 10px; color: #5a407f; border: none; padding-left: 0; }
+        .dairy-nutrition h3 { margin: 4px 0 12px; color: #6a4c93; }
+        .dairy-nutrition p  { margin: 0 0 10px; text-align: justify; }
+
+        /* 11. Conclusion: Informed Choices */
+        .dairy-conclusion {
+            margin: 26px 0 36px 0;
+            padding: 24px 26px;
+            background: #fffdf7;
+            border: 1px solid #e8e0d5;
+            border-left: 8px solid #DAA520;
+            border-radius: 14px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+        }
+        .dairy-conclusion h2 { margin: 0 0 12px; color: #8B4513; border: none; padding-left: 0; }
+        .dairy-conclusion h3 { margin: 4px 0 12px; color: #B8860B; }
+        .dairy-conclusion p  { margin: 0 0 10px; text-align: justify; }
+    </style>
+</head>
+
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
+    </div>
+
+    <div id="content-en">
+        <h1>Main Header </h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for
+            debate, but for thoughtful exchange of perspectives.
+        </div>
+
+        <div class="dairy-intro">
+            <h2>Introduction</h2>
+            <p>Milk and dairy products are widely perceived as natural and ethically acceptable components of a vegetarian diet. Many people assume that consuming milk does not cause harm to animals, as it does not involve the direct killing of an animal in the same way that meat consumption does. As a result, dairy is often regarded as a humane alternative within discussions about animal welfare.</p>
+            <p>However, modern dairy production is a highly managed biological and industrial process that is closely linked to animal exploitation, physiological stress, and premature death. Milk production in cows depends on repeated pregnancies, early separation of calves from their mothers, and intensive extraction of milk far beyond natural levels. These practices are not always visible to consumers and are rarely discussed in everyday conversations about food choices.</p>
+            <p>This article aims to examine the dairy industry from a factual and scientific perspective. By breaking the process into distinct topics, it highlights the biological requirements of milk production, standard industry practices, and their consequences for cows and calves. The goal is not to assign blame, but to provide transparent information that enables informed and conscious decision-making regarding dairy consumption.</p>
+        </div>
+
+        <div class="dairy-section">
+            <h2>1. The Common Assumption About Milk</h2>
+            <h3>What many people believe</h3>
+            <p>Many vegetarians assume that consuming milk does not harm animals because no animal is directly killed to obtain it.</p>
+            <p>Milk is often viewed as a natural by-product of cows rather than the result of controlled reproduction and industrial management.</p>
+            <p>This assumption forms the basis of dairy consumption in vegetarian diets.</p>
+        </div>
+
+        <div class="dairy-bio">
+            <h2>2. Milk Production Is Tied to Pregnancy</h2>
+            <h3>How milk is biologically produced</h3>
+            <p>Cows, like all mammals, produce milk only after giving birth. In dairy farming, cows are repeatedly impregnated—usually once every year—to maintain continuous milk production.</p>
+            <p>Without pregnancy, lactation naturally ceases.</p>
+        </div>
+
+        <div class="dairy-topic">
+            <h2>3. Separation of Calf and Mother</h2>
+            <h3>Early-life disruption</h3>
+            <p>In commercial dairy systems, calves are typically separated from their mothers within hours or days after birth. This allows milk to be diverted for human consumption.</p>
+            <p>Scientific studies show that early separation causes stress and behavioral distress in both cows and calves.</p>
+        </div>
+
+        <div class="dairy-topic">
+            <h2>4. The Myth of “Excess” Milk</h2>
+            <h3>Why milk is not naturally surplus</h3>
+            <p>Milk is often described as surplus that would be wasted if humans did not consume it. In reality, milk exists only because cows are forced into repeated pregnancies.</p>
+            <p>Without human demand, milk production would not occur on an industrial scale.</p>
+        </div>
+
+        <div class="dairy-male-calves">
+            <h2>5. Fate of Male Calves</h2>
+            <h3>An overlooked consequence</h3>
+            <p>Male calves cannot produce milk and are therefore considered economically unviable. Many are slaughtered shortly after birth or sent to the meat industry, often for veal.</p>
+            <p>This makes dairy production directly connected to animal killing.</p>
+        </div>
+
+        <div class="dairy-health-impact">
+            <h2>6. Health Impact on Dairy Cows</h2>
+            <h3>Physical cost of high milk yield</h3>
+            <p>Selective breeding has increased milk production far beyond natural levels. This leads to high rates of mastitis, lameness, metabolic disorders, and reproductive stress.</p>
+            <p>As a result, dairy cows are often slaughtered at 5–7 years of age.</p>
+        </div>
+
+        <div class="dairy-lifespan">
+            <h2>7. Natural Lifespan vs Dairy Lifespan</h2>
+            <h3>Shortened lives</h3>
+            <p>Cows can naturally live 20–25 years. In the dairy industry, they are typically killed once milk production declines.</p>
+            <p>This shortened lifespan reflects the long-term physical strain imposed by continuous exploitation.</p>
+        </div>
+
+        <div class="dairy-population">
+            <h2>8. “What Will Happen to Millions of Cows?”</h2>
+            <h3>Understanding population dynamics</h3>
+            <p>Dairy cows exist in large numbers because humans continuously breed them. Reducing milk consumption would not create abandoned animals but would lead to fewer forced pregnancies and fewer calves born into the system over time.</p>
+        </div>
+
+        <div class="dairy-sanctuary">
+            <h2>9. Sanctuaries and Non-Exploitation</h2>
+            <h3>Evidence from alternative systems</h3>
+            <p>Animal sanctuaries show that cows do not need to be milked to survive. When not impregnated, cows naturally stop producing milk and can live healthy lives without human exploitation.</p>
+        </div>
+
+        <div class="dairy-nutrition">
+            <h2>10. Is Milk Nutritionally Necessary?</h2>
+            <h3>Human dietary perspective</h3>
+            <p>Milk consumption is not biologically essential for humans. Lactose intolerance is common globally, and plant-based alternatives can provide necessary nutrients without involving animal suffering or reproduction.</p>
+        </div>
+
+        <div class="dairy-conclusion">
+            <h2>11. Conclusion: Informed Choices</h2>
+            <h3>Linking science and ethics</h3>
+            <p>Scientific evidence shows that milk production involves systematic practices that result in animal suffering, shortened lifespans, and routine killing.</p>
+            <p>Understanding these processes allows individuals to make informed dietary decisions aligned with animal welfare and sustainability.</p>
+        </div>
+
+        
+        <div class="section">
+            <h2>📚 Bibliography</h2>
+        </div>
+
+        <div class="sher">
+            <div class="verse">It is only a heart, not stone and brick — why shouldn’t it fill with pain?</div>
+            <div class="verse">We will weep a thousand times — why should anyone torment us?</div>
+            <div class="author">✍️ Mirza Ghalib</div>
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not
+            meant for debate, but rather for the exchange of knowledge and perspectives.
+        </div>
+    </div>
+
+    <div id="content-hi" style="display: none;">
+        <h1>Hindi - Main Header </h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>नोट:</strong> यह लेख विचार और चिंतन के लिए है। यह बहस के लिए नहीं, बल्कि ज्ञान और दृष्टिकोण के
+            आदान-प्रदान के लिए है।
+        </div>
+
+        <div class="section">
+            <h2>📚 ग्रंथ सूची</h2>
+
+
+        </div>
+
+        <div class="sher">
+            <div class="verse">दिल ही तो है न संग-ओ-ख़िश्त, दर्द से भर न आए क्यों</div>
+            <div class="verse">रोएँगे हम हज़ार बार, कोई हमें सताए क्यों</div>
+            <div class="author">🌸 मिर्ज़ा ग़ालिब</div>
+        </div>
+
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>टिप्पणी:</strong> यह लेख विचार और चिंतन के लिए प्रेरित करने के उद्देश्य से लिखा गया है। इसका
+            उद्देश्य बहस करना नहीं है, बल्कि ज्ञान और दृष्टिकोणों के आदान-प्रदान को बढ़ावा देना है।
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-hi');
+            const langButtons = document.querySelectorAll('.lang-btn');
+
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                hindiContent.style.display = 'none';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'hi') {
+                englishContent.style.display = 'none';
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
+            }
+        }
+
+        // Check for language parameter in the URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            switchLanguage(lang);
+        });
+    </script>
+</body>
+
+</html>
