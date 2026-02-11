@@ -674,9 +674,12 @@
             }
         }
 
-        // Initialize with English content
+        // Initialize based on URL parameter `lang` (default: 'en')
         document.addEventListener('DOMContentLoaded', function() {
-            switchLanguage('en');
+            const params = new URLSearchParams(window.location.search);
+            const langParam = (params.get('lang') || 'en').toLowerCase();
+            const initialLang = langParam === 'hi' ? 'hi' : 'en';
+            switchLanguage(initialLang);
         });
     </script>
 </body>
