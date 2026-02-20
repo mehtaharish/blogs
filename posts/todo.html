@@ -12,8 +12,7 @@
     <p>3. ...</p>
 
     <p>Tasks:</p>
-
-    <p>- Casts, Varnas - check youtube from Acharaya Prashant - https://www.youtube.com/watch?v=b_CpRVL-Vyo </p>
+    <p>Do plants feel pain - Check ChatGPT </p>
     <p>- Rebirth (reincarnation) </p>
     <p>Karamkand and philosophical teachings in Vedas -> check file in Ethik folder - Karmakāṇḍa vs philosophical
       teachings in Vedas.rtf - to be worked further with this file </p>
@@ -27,68 +26,28 @@
     <p>- Mirza Ghalib - Death - 15 February 1869 (aged 71)</p>
     <p> Sufism vs Upnishads/Advaita </p>
     <p> Anthropomorphism - To give human qualities, emotions, or behaviors to non-human things</p>
-    <p>Do plants feel pain - Check ChatGPT </p>
 
 
     <p>- Add audio control to listen the text</p>
+    <p>1. Convert text to audio WAV file via google cloud
+      https://console.cloud.google.com/vertex-ai/studio/media/speech?project=blogtext2audio
+    </p>
 
+    <p>2. convert AVI to mp3 via https://cloudconvert.com/wav-to-mp3 </p>
 
-       <div class="audio-container">
-      <h3>Listen to the Audio Version</h3>
-      <audio controls>
-        <source src="audio/one.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+    <p>3. attach the mp3 via follwing code in html</p>
+
+    <audio controls>
+      <source src="audio/Purush_sukta.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
 
     <p>Sample Bootstrap Blog Template</p>
     <p>https://startbootstrap.github.io/startbootstrap-clean-blog/
       https://github.com/StartBootstrap/startbootstrap-clean-blog/blob/master/README.md</p>
 
   </div>
-
-
-  <script>
-    function switchLanguage(lang) {
-      const englishContent = document.getElementById('content-en');
-      const hindiContent = document.getElementById('content-hi');
-      const langButtons = document.querySelectorAll('.lang-btn');
-
-      // Remove active class from all buttons
-      langButtons.forEach(btn => btn.classList.remove('active'));
-
-      if (lang === 'en') {
-        englishContent.style.display = 'block';
-        hindiContent.style.display = 'none';
-        langButtons[0].classList.add('active');
-      } else if (lang === 'hi') {
-        englishContent.style.display = 'none';
-        hindiContent.style.display = 'block';
-        langButtons[1].classList.add('active');
-      }
-    }
-
-    // Enhanced: Hide everything if display param is not 'true'
-    // language is set via parameter 'lang' (default 'en') in addition
-    document.addEventListener('DOMContentLoaded', function () {
-      const urlParams = new URLSearchParams(window.location.search);
-      const lang = urlParams.get('lang') || 'en';
-      const display = urlParams.get('display');
-      const englishContent = document.getElementById('content-en');
-      const hindiContent = document.getElementById('content-hi');
-      const languageSwitcher = document.querySelector('.language-switcher');
-
-      if (display === 'true') {
-        if (languageSwitcher) languageSwitcher.style.display = 'block';
-        switchLanguage(lang);
-      } else {
-        if (languageSwitcher) languageSwitcher.style.display = 'none';
-        if (englishContent) englishContent.style.display = 'none';
-        if (hindiContent) hindiContent.style.display = 'none';
-      }
-    });
-
-  </script>
 
 </body>
 
