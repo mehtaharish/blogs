@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
+    <title>When Two Trees Become One</title>
     <style>
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
@@ -50,44 +50,93 @@
         }
 
         h1 {
-            color: #8B4513;
+            color: #5c3317;
             text-align: center;
-            border-bottom: 3px solid #DAA520;
+            border-bottom: 3px solid #d4900a;
             padding-bottom: 10px;
             margin-bottom: 30px;
         }
 
         h2 {
-            color: #B8860B;
-            border-left: 5px solid #DAA520;
+            border-left: 5px solid #d4900a;
             padding-left: 15px;
             margin-top: 30px;
             margin-bottom: 15px;
         }
 
         h3 {
-            color: #CD853F;
+            color: #8b5030;
             margin-top: 25px;
         }
 
+        /* Base section */
         .section {
             margin-bottom: 40px;
             padding: 20px;
-            background-color: #fefcf7;
-            border: 1px solid #e8e0d5;
+            background-color: #fdf8ee;
+            border: 1px solid #e8d8b8;
             border-radius: 8px;
+        }
+
+        /* Section theme: teal — The Process */
+        .section-teal {
+            background-color: #eef7f5;
+            border-color: #8ecec4;
+        }
+
+        .section-teal h2 {
+            color: #1a6b5a;
+            border-left-color: #2a9b84;
+        }
+
+        /* Section theme: forest — Why Does This Happen */
+        .section-forest {
+            background-color: #eef5ee;
+            border-color: #9ccc90;
+        }
+
+        .section-forest h2 {
+            color: #2d6b20;
+            border-left-color: #52a040;
+        }
+
+        /* Section theme: terracotta — Competition & Cooperation */
+        .section-terracotta {
+            background-color: #fdf1eb;
+            border-color: #e8a880;
+        }
+
+        .section-terracotta h2 {
+            color: #9b3c10;
+            border-left-color: #d45a20;
+        }
+
+        /* Section theme: purple — Communication */
+        .section-purple {
+            background-color: #f4eef8;
+            border-color: #c4a0dc;
+        }
+
+        .section-purple h2 {
+            color: #5c2880;
+            border-left-color: #9050c0;
+        }
+
+        /* Section theme: saffron — Vedic View */
+        .section-saffron {
+            background-color: #fdf5e0;
+            border-color: #e8cc6a;
+        }
+
+        .section-saffron h2 {
+            color: #7a5000;
+            border-left-color: #d4a00a;
         }
 
         .highlight {
             background-color: #fff8dc;
             padding: 2px 4px;
             border-radius: 3px;
-        }
-
-        .sanskrit-term {
-            font-style: italic;
-            color: #8B0000;
-            font-weight: bold;
         }
 
         .timeline {
@@ -114,10 +163,10 @@
         }
 
         .conclusion {
-            background-color: #e6ffe6;
+            background-color: #fef3d8;
             padding: 15px;
             border-radius: 8px;
-            border-left: 5px solid #32CD32;
+            border-left: 5px solid #d4900a;
             margin: 20px 0;
         }
 
@@ -131,9 +180,68 @@
             text-align: center;
             margin: 30px 0;
             font-size: 1.5em;
-            color: #DAA520;
+            color: #d4900a;
         }
 
+        .quote-block {
+            margin: 24px 0;
+            padding: 22px 26px;
+            background: linear-gradient(120deg, #f4eef8 0%, #fdf5e0 100%);
+            border: 1px solid #c4a0dc;
+            border-left: 8px solid #7c4ab0;
+            border-radius: 14px;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.95;
+            color: #3b2a4a;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
+        }
+
+        .upanishad-verse {
+            margin: 20px 0;
+            padding: 20px 24px;
+            background: linear-gradient(135deg, #fdf5e0 0%, #fef9f0 100%);
+            border: 1px solid #e8cc6a;
+            border-left: 8px solid #d4a00a;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.07);
+        }
+
+        .upanishad-verse .sanskrit {
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #7a5000;
+            font-style: italic;
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        .upanishad-verse .devanagari {
+            font-size: 1.15em;
+            color: #9b3c10;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 6px;
+            font-family: "Noto Serif Devanagari", Georgia, serif;
+        }
+
+        .upanishad-verse .source {
+            font-size: 0.88em;
+            color: #888;
+            display: block;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .upanishad-verse .translation {
+            font-style: italic;
+            color: #3b2a4a;
+            font-size: 1.05em;
+            border-top: 1px solid #e8cc6a;
+            padding-top: 12px;
+            display: block;
+        }
 
         .sher {
             margin: 24px 0;
@@ -202,91 +310,548 @@
         <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
         <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
         <button class="lang-btn" onclick="switchLanguage('de')">Deutsch</button>
-
     </div>
 
+    <!-- ENGLISH -->
     <div id="content-en">
-        <h1>Main Header </h1>
+        <h1>🌳 When Two Trees Become One</h1>
+        <p style="text-align:center; font-style:italic; color:#7a4a10;">What My Mirabelle and Zwetschge Taught Me About
+            Nature</p>
 
         <div class="note">
-            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
-            <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for
+            <span style="font-size: 1.5em; color: #d4900a;">🌿</span>
+            <strong>Note:</strong> This article is intended for reflection and sharing knowledge. It is not written for
             debate, but for thoughtful exchange of perspectives.
         </div>
 
         <div class="section">
-            <h2>📚 Bibliography</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_3.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+
+            <p>
+                In my garden, something unusual happened over many years without any human intervention.
+                I originally planted a Zwetschge tree. Later, somehow, a Mirabelle appeared beside it — probably from a
+                seed carried by birds, animals, or simply by chance. Instead of competing completely separately, both
+                trees grew so closely together that their trunks slowly fused into one intertwined structure.
+            </p>
+            <p>
+                At first glance, it looks like a single tree with multiple stems. But in reality, it is the result of a
+                fascinating natural process called <strong>inosculation</strong> — the natural fusion of trees.
+            </p>
         </div>
 
-        <div class="sher">
-            <div class="verse">It is only a heart, not stone and brick — why shouldn’t it fill with pain?</div>
-            <div class="verse">We will weep a thousand times — why should anyone torment us?</div>
-            <div class="author">✍️ Mirza Ghalib</div>
+        <div class="section section-teal">
+            <h2>🔬 The Process: How Trees Merge</h2>
+            <p>
+                Trees contain a living layer beneath their bark called the <strong>cambium</strong>. This layer is
+                responsible for growth and transport of water and nutrients.
+            </p>
+            <p>
+                When two young trunks grow extremely close together, wind and movement can cause their bark to rub
+                against each other. Over time, parts of the bark wear away and the cambium layers become exposed.
+            </p>
+            <p>
+                Instead of rejecting each other, the trees begin healing the contact area. New tissue grows across the
+                gap, and eventually both trunks become biologically connected. The wood, vascular tissue, and outer bark
+                slowly merge.
+            </p>
+            <div class="quote-block">
+                Nature performs its own form of grafting.<br>
+                In orchards, humans intentionally graft related fruit trees together.<br>
+                In my garden, nature did it on its own.
+            </div>
+        </div>
+
+        <div class="section section-forest">
+            <h2>🌱 Why Does This Happen?</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_1.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                At first, this phenomenon may seem strange. Why would trees merge instead of simply pushing each other
+                away?
+            </p>
+            <p>The answer lies in <strong>survival and efficiency</strong>. Trees are living systems optimized for:</p>
+            <ul>
+                <li>stability,</li>
+                <li>energy transport,</li>
+                <li>healing,</li>
+                <li>and adaptation.</li>
+            </ul>
+            <p>
+                When fusion improves structural support or resource transport, evolution does not prevent it. In some
+                situations, fusion may even increase the chance of survival.
+            </p>
+            <p>
+                In forests, trees can also connect underground through root grafts and fungal networks. Scientists have
+                observed nutrient sharing between neighboring trees, including support for damaged or weakened trees.
+                This challenges the old idea that nature is only based on pure competition.
+            </p>
+        </div>
+
+        <div class="section section-terracotta">
+            <h2>⚖️ Survival of the Fittest — But Not Only Through Competition</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_2.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+
+            <p>My tree also tells another story.</p>
+            <p>
+                Originally, the Zwetschge was dominant. But over time, the Mirabelle became stronger, larger, and more
+                vigorous. Today, around 90% of the tree appears to be Mirabelle, while only a smaller part of the
+                Zwetschge remains.
+            </p>
+            <p>
+                This reflects the principle of <em>"survival of the fittest."</em> The stronger tree captured more
+                sunlight, produced more energy, and gradually dominated the shared structure. But interestingly, the
+                weaker tree did not disappear completely.
+            </p>
+            <p>
+                Because of the fusion, the smaller Zwetschge may have survived longer than it otherwise would have. The
+                larger Mirabelle likely provided structural support and possibly even indirect nutrient transport
+                through
+                the shared vascular connection.
+            </p>
+            <div class="conclusion">
+                Nature therefore shows two forces at the same time: <strong>competition</strong> and
+                <strong>cooperation</strong>.
+            </div>
+        </div>
+
+        <div class="section section-purple">
+            <h2>🍄 Communication and Social Behavior in Trees</h2>
+            <p>Modern research increasingly suggests that trees are not isolated organisms. Through roots and fungal
+                networks, trees can:</p>
+            <ul>
+                <li>exchange nutrients,</li>
+                <li>send chemical warning signals,</li>
+                <li>react to insect attacks,</li>
+                <li>and influence neighboring plants.</li>
+            </ul>
+            <p>
+                Some scientists even describe forests as <strong>interconnected communities</strong> rather than
+                collections of individual trees.
+            </p>
+            <p>
+                My fused Mirabelle and Zwetschge are a visible example of this interconnectedness. They began as
+                separate organisms. Over time, they adapted to each other, physically merged, and now exist as a
+                partially shared system.
+            </p>
+            <div class="quote-block">
+                The tree almost resembles a natural metaphor for society itself:<br>
+                individuality still exists, but survival becomes stronger through connection.
+            </div>
+        </div>
+
+        <div class="section section-saffron">
+            <h2>🕉️ Nature, Interconnectedness, and the Vedic View</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_4.png" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                Looking at the fused Mirabelle and Zwetschge in my garden, I was reminded of an idea deeply rooted in
+                the Vedic worldview: <strong>nature itself is sacred</strong>.
+            </p>
+            <p>
+                In many ancient Indian traditions, divinity is not limited to temples or rituals. The natural world
+                itself is treated as worthy of reverence. Rivers, mountains, forests, animals, and trees are seen as
+                part of a larger interconnected existence.
+            </p>
+            <p>At the heart of this worldview lies a famous Sanskrit phrase from the Isha Upanishad:</p>
+            <div class="upanishad-verse">
+                <span class="sanskrit">Īśāvāsyam idaṁ sarvam</span>
+                <span class="devanagari">ईशावास्यमिदं सर्वम्</span>
+                <span class="source">— Isha Upanishad (Yajurveda)</span>
+                <span class="translation">"All this universe is pervaded by the Divine."</span>
+            </div>
+            <p>
+                The Isha Upanishad is an ancient Sanskrit philosophical text that forms part of the Yajurveda and is
+                considered one of the principal Upanishads.
+            </p>
+            <p>
+                The phrase expresses the idea that divinity is not separate from nature or existence, but present
+                throughout all life and the universe itself.
+            </p>
+            <p>
+                In this perspective, rivers, forests, mountains, animals, and trees are not merely resources for human
+                use, but part of a larger interconnected reality worthy of reverence and respect.
+            </p>
+            <p>
+                Modern science describes how trees exchange nutrients, chemically signal danger, and even support
+                neighboring organisms through underground networks. My own tree seems to reflect this
+                interconnectedness physically: two separate trees gradually adapting, merging, competing, and at the
+                same time coexisting.
+            </p>
+            <p>
+                One tree became dominant. The other survived within the shared structure. Competition and cooperation
+                existed simultaneously.
+            </p>
+            <p>
+                Perhaps this is why many ancient traditions viewed nature with such respect. Not because trees are
+                "gods" in a literal simplistic sense, but because nature reflects an extraordinary complexity, balance,
+                and interconnectedness that humans are still trying to fully understand.
+            </p>
+            <p>
+                Human existence itself is only possible because of nature. Every breath we take, every fruit we eat,
+                every source of water, energy, and life ultimately comes from the natural world. Humanity does not stand
+                outside nature or above it — we exist entirely within its system.
+            </p>
+            <div class="conclusion">
+                The fused tree in my garden became more than a botanical curiosity for me. It became a reminder that
+                life often survives not only through strength alone, but also through connection — and that nature
+                itself is far more powerful, interconnected, and intelligent than we often realize.
+            </div>
         </div>
 
         <div class="divider">❖ ❖ ❖</div>
 
         <div class="note">
-            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
-            <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not
+            <span style="font-size: 1.5em; color: #d4900a;">🌿</span>
+            <strong>Footnote:</strong> This article is intended to provide food for thought and reflection. It is not
             meant for debate, but rather for the exchange of knowledge and perspectives.
         </div>
     </div>
 
+    <!-- HINDI -->
     <div id="content-hi" style="display: none;">
-        <h1>Hindi - Main Header </h1>
+        <h1>🌳 जब दो पेड़ एक हो जाते हैं</h1>
+        <p style="text-align:center; font-style:italic; color:#7a4a10;">मेरे मिराबेल और ज़्वेट्शगे ने मुझे प्रकृति के
+            बारे में क्या सिखाया</p>
 
         <div class="note">
-            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <span style="font-size: 1.5em; color: #d4900a;">🌿</span>
             <strong>नोट:</strong> यह लेख विचार और चिंतन के लिए है। यह बहस के लिए नहीं, बल्कि ज्ञान और दृष्टिकोण के
             आदान-प्रदान के लिए है।
         </div>
 
         <div class="section">
-            <h2>📚 ग्रंथ सूची</h2>
-
-
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_3.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                मेरे बगीचे में, बिना किसी मानवीय हस्तक्षेप के, कई वर्षों में कुछ असाधारण हुआ।
+                मैंने मूल रूप से एक ज़्वेट्शगे पेड़ लगाया था। बाद में, किसी तरह, उसके पास एक मिराबेल उग आई — शायद
+                पक्षियों,
+                जानवरों द्वारा लाए गए बीज से, या केवल संयोग से। अलग-अलग प्रतिस्पर्धा करने के बजाय, दोनों पेड़ इतने करीब
+                बढ़े
+                कि उनके तने धीरे-धीरे एक जटिल संरचना में मिल गए।
+            </p>
+            <p>
+                पहली नज़र में, यह कई तनों वाला एक ही पेड़ लगता है। लेकिन वास्तव में, यह <strong>इनोस्क्युलेशन</strong>
+                नामक एक
+                आकर्षक प्राकृतिक प्रक्रिया का परिणाम है — पेड़ों का प्राकृतिक संलयन।
+            </p>
         </div>
 
-        <div class="sher">
-            <div class="verse">दिल ही तो है न संग-ओ-ख़िश्त, दर्द से भर न आए क्यों</div>
-            <div class="verse">रोएँगे हम हज़ार बार, कोई हमें सताए क्यों</div>
-            <div class="author">🌸 मिर्ज़ा ग़ालिब</div>
+        <div class="section section-teal">
+            <h2>🔬 प्रक्रिया: पेड़ कैसे मिलते हैं</h2>
+            <p>
+                पेड़ों की छाल के नीचे एक जीवित परत होती है जिसे <strong>कैम्बियम</strong> कहते हैं। यह परत वृद्धि और
+                पानी व
+                पोषक तत्वों के परिवहन के लिए जिम्मेदार होती है।
+            </p>
+            <p>
+                जब दो युवा तने बहुत करीब बढ़ते हैं, तो हवा और हलचल के कारण उनकी छाल आपस में रगड़ सकती है। समय के साथ,
+                छाल
+                के हिस्से घिस जाते हैं और कैम्बियम परतें उजागर हो जाती हैं। एक-दूसरे को अस्वीकार करने के बजाय, पेड़
+                संपर्क
+                क्षेत्र को ठीक करना शुरू कर देते हैं और अंततः दोनों तने जैविक रूप से जुड़ जाते हैं।
+            </p>
+            <div class="quote-block">
+                प्रकृति अपना स्वयं का कलम-बंधन करती है।<br>
+                बागों में मनुष्य जानबूझकर संबंधित फल पेड़ों को एक साथ जोड़ता है।<br>
+                मेरे बगीचे में, प्रकृति ने यह अपने आप किया।
+            </div>
         </div>
 
+        <div class="section section-forest">
+            <h2>🌱 यह क्यों होता है?</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_1.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                इसका उत्तर <strong>अस्तित्व और दक्षता</strong> में निहित है। पेड़ जीवित तंत्र हैं जो इनके लिए अनुकूलित
+                हैं:
+            </p>
+            <ul>
+                <li>स्थिरता,</li>
+                <li>ऊर्जा परिवहन,</li>
+                <li>उपचार,</li>
+                <li>और अनुकूलन।</li>
+            </ul>
+            <p>
+                जंगलों में, पेड़ जड़ों और कवक नेटवर्क के माध्यम से भूमिगत भी जुड़ सकते हैं। वैज्ञानिकों ने पड़ोसी पेड़ों
+                के बीच पोषक तत्वों के आदान-प्रदान को देखा है। यह पुरानी धारणा को चुनौती देता है कि प्रकृति केवल शुद्ध
+                प्रतिस्पर्धा पर आधारित है।
+            </p>
+        </div>
+
+        <div class="section section-terracotta">
+            <h2>⚖️ योग्यतम की उत्तरजीविता — लेकिन केवल प्रतिस्पर्धा से नहीं</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_2.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                मूल रूप से ज़्वेट्शगे प्रभावशाली थी। लेकिन समय के साथ, मिराबेल अधिक मजबूत और जोरदार हो गई। आज, पेड़ का
+                लगभग 90% मिराबेल प्रतीत होता है, जबकि ज़्वेट्शगे का केवल एक छोटा हिस्सा बचा है।
+            </p>
+            <p>
+                मजबूत पेड़ ने अधिक धूप पकड़ी, अधिक ऊर्जा उत्पन्न की, और धीरे-धीरे साझा संरचना पर हावी हो गया। लेकिन
+                दिलचस्प बात यह है कि कमजोर पेड़ पूरी तरह से गायब नहीं हुआ।
+            </p>
+            <div class="conclusion">
+                प्रकृति इसलिए एक साथ दो शक्तियाँ दिखाती है: <strong>प्रतिस्पर्धा</strong> और <strong>सहयोग</strong>।
+            </div>
+        </div>
+
+        <div class="section section-purple">
+            <h2>🍄 पेड़ों में संचार और सामाजिक व्यवहार</h2>
+            <p>आधुनिक शोध तेजी से सुझाव देते हैं कि पेड़ अलग-थलग जीव नहीं हैं। जड़ों और कवक नेटवर्क के माध्यम से, पेड़
+                कर सकते हैं:</p>
+            <ul>
+                <li>पोषक तत्वों का आदान-प्रदान,</li>
+                <li>रासायनिक चेतावनी संकेत भेजना,</li>
+                <li>कीट हमलों पर प्रतिक्रिया करना,</li>
+                <li>और पड़ोसी पौधों को प्रभावित करना।</li>
+            </ul>
+            <div class="quote-block">
+                पेड़ लगभग समाज के लिए एक प्राकृतिक रूपक जैसा दिखता है:<br>
+                व्यक्तित्व अभी भी मौजूद है, लेकिन संबंध के माध्यम से अस्तित्व मजबूत होता है।
+            </div>
+        </div>
+
+        <div class="section section-saffron">
+            <h2>🕉️ प्रकृति, परस्पर संबंध और वैदिक दृष्टिकोण</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_4.png" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                अपने बगीचे में मिले हुए मिराबेल और ज़्वेट्शगे को देखते हुए, मुझे वैदिक विश्वदृष्टि में गहराई से निहित एक
+                विचार याद आया: <strong>प्रकृति स्वयं पवित्र है</strong>।
+            </p>
+            <p>
+                कई प्राचीन भारतीय परंपराओं में, दिव्यता मंदिरों या अनुष्ठानों तक सीमित नहीं है। प्राकृतिक जगत को स्वयं
+                श्रद्धा के योग्य माना जाता है। नदियाँ, पहाड़, वन, जानवर और पेड़ एक बड़े परस्पर जुड़े अस्तित्व का हिस्सा हैं।
+            </p>
+            <p>इस विश्वदृष्टि के केंद्र में ईशा उपनिषद का एक प्रसिद्ध संस्कृत वाक्यांश है:</p>
+            <div class="upanishad-verse">
+                <span class="sanskrit">Īśāvāsyam idaṁ sarvam</span>
+                <span class="devanagari">ईशावास्यमिदं सर्वम्</span>
+                <span class="source">— ईशा उपनिषद (यजुर्वेद)</span>
+                <span class="translation">"यह समस्त ब्रह्मांड दिव्य सत्ता से व्याप्त है।"</span>
+            </div>
+            <p>
+                ईशा उपनिषद एक प्राचीन संस्कृत दार्शनिक ग्रंथ है जो यजुर्वेद का भाग है और इसे प्रमुख उपनिषदों में से एक
+                माना जाता है।
+            </p>
+            <p>
+                यह वाक्यांश इस विचार को व्यक्त करता है कि दिव्यता प्रकृति या अस्तित्व से अलग नहीं है, बल्कि समस्त जीवन
+                और ब्रह्मांड में व्याप्त है।
+            </p>
+            <p>
+                इस दृष्टिकोण में, नदियाँ, वन, पहाड़, जानवर और पेड़ केवल मानव उपयोग के संसाधन नहीं हैं, बल्कि एक बड़ी
+                परस्पर जुड़ी वास्तविकता का हिस्सा हैं जो श्रद्धा और सम्मान के योग्य है।
+            </p>
+            <p>
+                आधुनिक विज्ञान बताता है कि पेड़ कैसे पोषक तत्वों का आदान-प्रदान करते हैं, रासायनिक संकेत भेजते हैं, और
+                भूमिगत नेटवर्क के माध्यम से पड़ोसी जीवों की सहायता करते हैं। मेरा अपना पेड़ इस परस्पर संबंध को भौतिक रूप
+                से दर्शाता है: दो अलग पेड़ धीरे-धीरे अनुकूलित हुए, मिले, प्रतिस्पर्धा की, और एक साथ सहअस्तित्व में रहे।
+            </p>
+            <p>
+                एक पेड़ प्रभावशाली हो गया। दूसरा साझा संरचना के भीतर जीवित रहा। प्रतिस्पर्धा और सहयोग एक साथ विद्यमान रहे।
+            </p>
+            <p>
+                मानव अस्तित्व केवल प्रकृति के कारण ही संभव है। हमारी हर सांस, हर फल, जीवन का हर स्रोत अंततः प्राकृतिक
+                दुनिया से आता है। मानवता प्रकृति के बाहर या उससे ऊपर नहीं है — हम पूरी तरह से उसके तंत्र में विद्यमान हैं।
+            </p>
+            <div class="conclusion">
+                मेरे बगीचे में मिला हुआ पेड़ मेरे लिए एक वनस्पति जिज्ञासा से अधिक बन गया। यह एक स्मरण बन गया कि जीवन
+                अक्सर केवल शक्ति से नहीं, बल्कि संबंध के माध्यम से भी जीवित रहता है — और प्रकृति स्वयं कहीं अधिक
+                शक्तिशाली, परस्पर जुड़ी और बुद्धिमान है जितना हम अक्सर महसूस करते हैं।
+            </div>
+        </div>
 
         <div class="divider">❖ ❖ ❖</div>
 
         <div class="note">
-            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <span style="font-size: 1.5em; color: #d4900a;">🌿</span>
             <strong>टिप्पणी:</strong> यह लेख विचार और चिंतन के लिए प्रेरित करने के उद्देश्य से लिखा गया है। इसका
             उद्देश्य बहस करना नहीं है, बल्कि ज्ञान और दृष्टिकोणों के आदान-प्रदान को बढ़ावा देना है।
         </div>
     </div>
 
+    <!-- GERMAN -->
     <div id="content-de" style="display: none;">
-        <h1>Deutsch – Hauptüberschrift</h1>
+        <h1>🌳 Wenn zwei Bäume eins werden</h1>
+        <p style="text-align:center; font-style:italic; color:#7a4a10;">Was mir meine Mirabelle und Zwetschge über die
+            Natur gelehrt haben</p>
 
         <div class="note">
-            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
-            <strong>Hinweis:</strong> Dieser Artikel ist zum Nachdenken und zum Austausch von Wissen gedacht. Er ist nicht für Debatten bestimmt, sondern für einen nachdenklichen Austausch von Perspektiven.
+            <span style="font-size: 1.5em; color: #d4900a;">🌿</span>
+            <strong>Hinweis:</strong> Dieser Artikel ist zum Nachdenken und zum Austausch von Wissen gedacht. Er ist
+            nicht für Debatten bestimmt, sondern für einen nachdenklichen Austausch von Perspektiven.
         </div>
 
         <div class="section">
-            <h2>📚 Literaturverzeichnis</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_3.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                In meinem Garten geschah über viele Jahre hinweg etwas Ungewöhnliches — ohne jegliches menschliches
+                Eingreifen. Ursprünglich hatte ich einen Zwetschgenbaum gepflanzt. Später tauchte irgendwie eine
+                Mirabelle daneben auf — wahrscheinlich aus einem Samen, den Vögel, Tiere oder einfach der Zufall
+                gebracht hatten. Anstatt vollständig getrennt zu konkurrieren, wuchsen beide Bäume so eng zusammen,
+                dass ihre Stämme sich langsam zu einer verflochtenen Struktur vereinten.
+            </p>
+            <p>
+                Auf den ersten Blick sieht es wie ein einzelner Baum mit mehreren Stämmen aus. In Wirklichkeit ist es
+                jedoch das Ergebnis eines faszinierenden natürlichen Prozesses namens <strong>Inoskulation</strong> —
+                die natürliche Verschmelzung von Bäumen.
+            </p>
         </div>
 
-        <div class="sher">
-            <div class="verse">Es ist nur ein Herz, kein Stein und Ziegel – warum sollte es sich nicht mit Schmerz füllen?</div>
-            <div class="verse">Wir werden tausendmal weinen – warum sollte uns jemand quälen?</div>
-            <div class="author">✍️ Mirza Ghalib</div>
+        <div class="section section-teal">
+            <h2>🔬 Der Prozess: Wie Bäume verschmelzen</h2>
+            <p>
+                Bäume enthalten eine lebende Schicht unter ihrer Rinde, die als <strong>Kambium</strong> bezeichnet
+                wird. Diese Schicht ist für das Wachstum und den Transport von Wasser und Nährstoffen verantwortlich.
+            </p>
+            <p>
+                Wenn zwei junge Stämme extrem nah beieinander wachsen, können Wind und Bewegung dazu führen, dass ihre
+                Rinde aneinanderreibt. Mit der Zeit nutzt sich die Rinde ab und die Kambiumschichten werden freigelegt.
+                Anstatt sich gegenseitig abzustoßen, beginnen die Bäume, den Berührungsbereich zu heilen, und
+                schließlich werden beide Stämme biologisch verbunden.
+            </p>
+            <div class="quote-block">
+                Die Natur führt ihr eigenes Pfropfen durch.<br>
+                In Obstgärten pfropfen Menschen verwandte Obstbäume absichtlich zusammen.<br>
+                In meinem Garten hat die Natur es von selbst getan.
+            </div>
+        </div>
+
+        <div class="section section-forest">
+            <h2>🌱 Warum geschieht das?</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_1.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                Die Antwort liegt in <strong>Überleben und Effizienz</strong>. Bäume sind lebende Systeme, die
+                optimiert sind für: Stabilität, Energietransport, Heilung und Anpassung.
+            </p>
+            <p>
+                In Wäldern können sich Bäume auch unterirdisch durch Wurzelverbindungen und Pilznetzwerke verbinden.
+                Wissenschaftler haben den Nährstoffaustausch zwischen benachbarten Bäumen beobachtet — darunter auch
+                die Unterstützung beschädigter oder geschwächter Bäume. Dies stellt die alte Idee in Frage, dass die
+                Natur nur auf reinem Wettbewerb basiert.
+            </p>
+        </div>
+
+        <div class="section section-terracotta">
+            <h2>⚖️ Überleben des Stärkeren — aber nicht nur durch Wettbewerb</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_2.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                Ursprünglich war die Zwetschge dominant. Aber mit der Zeit wurde die Mirabelle stärker, größer und
+                kräftiger. Heute scheinen etwa 90 % des Baumes Mirabelle zu sein, während nur ein kleinerer Teil der
+                Zwetschge übrig bleibt.
+            </p>
+            <p>
+                Dies spiegelt das Prinzip des <em>"Überleben des Stärkeren"</em> wider. Der stärkere Baum fing mehr
+                Sonnenlicht ein, produzierte mehr Energie und dominierte allmählich die gemeinsame Struktur.
+                Interessanterweise verschwand der schwächere Baum jedoch nicht vollständig.
+            </p>
+            <div class="conclusion">
+                Die Natur zeigt daher zwei Kräfte gleichzeitig: <strong>Wettbewerb</strong> und
+                <strong>Zusammenarbeit</strong>.
+            </div>
+        </div>
+
+        <div class="section section-purple">
+            <h2>🍄 Kommunikation und soziales Verhalten bei Bäumen</h2>
+            <p>Moderne Forschungen legen zunehmend nahe, dass Bäume keine isolierten Organismen sind. Über Wurzeln und
+                Pilznetzwerke können Bäume:</p>
+            <ul>
+                <li>Nährstoffe austauschen,</li>
+                <li>chemische Warnsignale senden,</li>
+                <li>auf Insektenangriffe reagieren,</li>
+                <li>und benachbarte Pflanzen beeinflussen.</li>
+            </ul>
+            <p>
+                Einige Wissenschaftler beschreiben Wälder sogar als <strong>vernetzte Gemeinschaften</strong> und nicht
+                als Ansammlungen einzelner Bäume.
+            </p>
+            <div class="quote-block">
+                Der Baum ähnelt fast einer natürlichen Metapher für die Gesellschaft selbst:<br>
+                Individualität existiert noch, aber das Überleben wird durch Verbindung stärker.
+            </div>
+        </div>
+
+        <div class="section section-saffron">
+            <h2>🕉️ Natur, Vernetzung und die vedische Sichtweise</h2>
+            <div style="text-align: center; margin-top: 20px;">
+                <img src="images/inosculation_4.png" alt="Timeline" style="max-width: 100%; height: auto;">
+            </div>
+            <p>
+                Beim Betrachten der zusammengewachsenen Mirabelle und Zwetschge in meinem Garten wurde mir ein
+                Gedanke bewusst, der tief in der vedischen Weltanschauung verwurzelt ist:
+                <strong>Die Natur selbst ist heilig</strong>.
+            </p>
+            <p>
+                In vielen altindischen Traditionen ist die Göttlichkeit nicht auf Tempel oder Rituale beschränkt. Die
+                natürliche Welt selbst wird als verehrungswürdig betrachtet. Flüsse, Berge, Wälder, Tiere und Bäume
+                werden als Teil einer größeren, miteinander verbundenen Existenz gesehen.
+            </p>
+            <p>Im Mittelpunkt dieser Weltanschauung steht ein berühmter Sanskrit-Satz aus der Isha Upanishad:</p>
+            <div class="upanishad-verse">
+                <span class="sanskrit">Īśāvāsyam idaṁ sarvam</span>
+                <span class="devanagari">ईशावास्यमिदं सर्वम्</span>
+                <span class="source">— Isha Upanishad (Yajurveda)</span>
+                <span class="translation">„Dieses gesamte Universum ist von der Göttlichkeit durchdrungen."</span>
+            </div>
+            <p>
+                Die Isha Upanishad ist ein alter Sanskrit-Philosophietext, der Teil des Yajurveda ist und als eine der
+                wichtigsten Upanishaden gilt.
+            </p>
+            <p>
+                Der Satz drückt die Idee aus, dass die Göttlichkeit nicht von der Natur oder der Existenz getrennt
+                ist, sondern durch alles Leben und das Universum selbst gegenwärtig ist.
+            </p>
+            <p>
+                In dieser Perspektive sind Flüsse, Wälder, Berge, Tiere und Bäume nicht nur Ressourcen für den
+                menschlichen Gebrauch, sondern Teil einer größeren vernetzten Wirklichkeit, die Ehrfurcht und Respekt
+                verdient.
+            </p>
+            <p>
+                Moderne Wissenschaft beschreibt, wie Bäume Nährstoffe austauschen, chemisch Gefahren signalisieren
+                und benachbarte Organismen über unterirdische Netzwerke unterstützen. Mein eigener Baum scheint diese
+                Vernetzung physisch widerzuspiegeln: zwei getrennte Bäume, die sich langsam anpassten, verschmolzen,
+                konkurrierten und gleichzeitig koexistierten.
+            </p>
+            <p>
+                Ein Baum wurde dominant. Der andere überlebte innerhalb der gemeinsamen Struktur. Wettbewerb und
+                Zusammenarbeit existierten gleichzeitig.
+            </p>
+            <p>
+                Die menschliche Existenz ist nur dank der Natur möglich. Jeder Atemzug, jede Frucht, jede Quelle des
+                Lebens kommt letztlich aus der natürlichen Welt. Die Menschheit steht nicht außerhalb oder über der
+                Natur — wir existieren vollständig in ihrem System.
+            </p>
+            <div class="conclusion">
+                Der zusammengewachsene Baum in meinem Garten wurde für mich mehr als eine botanische Kuriosität. Er
+                wurde zu einer Erinnerung daran, dass das Leben oft nicht nur durch Stärke, sondern auch durch
+                Verbindung überlebt — und dass die Natur selbst weit mächtiger, vernetzter und intelligenter ist,
+                als wir oft erkennen.
+            </div>
         </div>
 
         <div class="divider">❖ ❖ ❖</div>
 
         <div class="note">
-            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
-            <strong>Anmerkung:</strong> Dieser Artikel soll zum Nachdenken und zur Reflexion anregen. Er ist nicht für Debatten gedacht, sondern für den Austausch von Wissen und Perspektiven.
+            <span style="font-size: 1.5em; color: #d4900a;">🌿</span>
+            <strong>Anmerkung:</strong> Dieser Artikel soll zum Nachdenken und zur Reflexion anregen. Er ist nicht für
+            Debatten gedacht, sondern für den Austausch von Wissen und Perspektiven.
         </div>
     </div>
 
@@ -297,10 +862,8 @@
             const germanContent = document.getElementById('content-de');
             const langButtons = document.querySelectorAll('.lang-btn');
 
-            // Remove active class from all buttons
             langButtons.forEach(btn => btn.classList.remove('active'));
 
-            // Hide all language sections first
             englishContent.style.display = 'none';
             hindiContent.style.display = 'none';
             if (germanContent) germanContent.style.display = 'none';
@@ -317,10 +880,9 @@
             }
         }
 
-        // Check for language parameter in the URL
         document.addEventListener('DOMContentLoaded', function () {
             const urlParams = new URLSearchParams(window.location.search);
-            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            const lang = urlParams.get('lang') || 'en';
             switchLanguage(lang);
         });
     </script>
