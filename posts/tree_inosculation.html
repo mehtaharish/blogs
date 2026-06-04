@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+    <style>
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fefefe;
+            color: #333;
+        }
+
+        .language-switcher {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .lang-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            background-color: #007BFF;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .lang-btn.active {
+            background-color: #28a745;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .lang-btn:focus {
+            outline: none;
+        }
+
+        h1 {
+            color: #8B4513;
+            text-align: center;
+            border-bottom: 3px solid #DAA520;
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            color: #B8860B;
+            border-left: 5px solid #DAA520;
+            padding-left: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+
+        h3 {
+            color: #CD853F;
+            margin-top: 25px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+            padding: 20px;
+            background-color: #fefcf7;
+            border: 1px solid #e8e0d5;
+            border-radius: 8px;
+        }
+
+        .highlight {
+            background-color: #fff8dc;
+            padding: 2px 4px;
+            border-radius: 3px;
+        }
+
+        .sanskrit-term {
+            font-style: italic;
+            color: #8B0000;
+            font-weight: bold;
+        }
+
+        .timeline {
+            background-color: #f0f8ff;
+            padding: 15px;
+            border-left: 4px solid #4169E1;
+            margin: 15px 0;
+        }
+
+        .example {
+            background-color: #f5f5dc;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 10px 0;
+            font-style: italic;
+        }
+
+        ul {
+            padding-left: 25px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .conclusion {
+            background-color: #e6ffe6;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 5px solid #32CD32;
+            margin: 20px 0;
+        }
+
+        .note {
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+
+        .divider {
+            text-align: center;
+            margin: 30px 0;
+            font-size: 1.5em;
+            color: #DAA520;
+        }
+
+
+        .sher {
+            margin: 24px 0;
+            padding: 22px 26px;
+            background: linear-gradient(120deg, #fff5f7 0%, #fffbe6 100%);
+            border: 1px solid #f2e2d8;
+            border-left: 8px solid #e76f51;
+            border-radius: 14px;
+            font-style: italic;
+            text-align: center;
+            line-height: 1.95;
+            color: #3b2f2f;
+            font-family: "Noto Serif Devanagari", "Noto Nastaliq Urdu", Georgia, "Times New Roman", serif;
+            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .sher::before,
+        .sher::after {
+            content: "❝";
+            position: absolute;
+            font-size: 32px;
+            color: rgba(231, 111, 81, 0.15);
+            line-height: 1;
+            pointer-events: none;
+        }
+
+        .sher::before {
+            top: -8px;
+            left: 10px;
+        }
+
+        .sher::after {
+            content: "❞";
+            bottom: -18px;
+            right: 12px;
+        }
+
+        .sher .verse {
+            display: block;
+            font-weight: 600;
+            letter-spacing: 0.2px;
+        }
+
+        .sher .verse:nth-of-type(1) {
+            color: #a23e48;
+        }
+
+        .sher .verse:nth-of-type(2) {
+            color: #6a4c93;
+        }
+
+        .sher .author {
+            margin-top: 12px;
+            font-style: normal;
+            font-weight: 700;
+            color: #0f766e;
+            letter-spacing: 0.3px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-switcher">
+        <button class="lang-btn active" onclick="switchLanguage('en')">English</button>
+        <button class="lang-btn" onclick="switchLanguage('hi')">हिंदी</button>
+        <button class="lang-btn" onclick="switchLanguage('de')">Deutsch</button>
+
+    </div>
+
+    <div id="content-en">
+        <h1>Main Header </h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Note: </strong>This article is intended for reflection and sharing knowledge. It is not written for
+            debate, but for thoughtful exchange of perspectives.
+        </div>
+
+        <div class="section">
+            <h2>📚 Bibliography</h2>
+        </div>
+
+        <div class="sher">
+            <div class="verse">It is only a heart, not stone and brick — why shouldn’t it fill with pain?</div>
+            <div class="verse">We will weep a thousand times — why should anyone torment us?</div>
+            <div class="author">✍️ Mirza Ghalib</div>
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Footnote: </strong>This article is intended to provide food for thought and reflection. It is not
+            meant for debate, but rather for the exchange of knowledge and perspectives.
+        </div>
+    </div>
+
+    <div id="content-hi" style="display: none;">
+        <h1>Hindi - Main Header </h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>नोट:</strong> यह लेख विचार और चिंतन के लिए है। यह बहस के लिए नहीं, बल्कि ज्ञान और दृष्टिकोण के
+            आदान-प्रदान के लिए है।
+        </div>
+
+        <div class="section">
+            <h2>📚 ग्रंथ सूची</h2>
+
+
+        </div>
+
+        <div class="sher">
+            <div class="verse">दिल ही तो है न संग-ओ-ख़िश्त, दर्द से भर न आए क्यों</div>
+            <div class="verse">रोएँगे हम हज़ार बार, कोई हमें सताए क्यों</div>
+            <div class="author">🌸 मिर्ज़ा ग़ालिब</div>
+        </div>
+
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>टिप्पणी:</strong> यह लेख विचार और चिंतन के लिए प्रेरित करने के उद्देश्य से लिखा गया है। इसका
+            उद्देश्य बहस करना नहीं है, बल्कि ज्ञान और दृष्टिकोणों के आदान-प्रदान को बढ़ावा देना है।
+        </div>
+    </div>
+
+    <div id="content-de" style="display: none;">
+        <h1>Deutsch – Hauptüberschrift</h1>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Hinweis:</strong> Dieser Artikel ist zum Nachdenken und zum Austausch von Wissen gedacht. Er ist nicht für Debatten bestimmt, sondern für einen nachdenklichen Austausch von Perspektiven.
+        </div>
+
+        <div class="section">
+            <h2>📚 Literaturverzeichnis</h2>
+        </div>
+
+        <div class="sher">
+            <div class="verse">Es ist nur ein Herz, kein Stein und Ziegel – warum sollte es sich nicht mit Schmerz füllen?</div>
+            <div class="verse">Wir werden tausendmal weinen – warum sollte uns jemand quälen?</div>
+            <div class="author">✍️ Mirza Ghalib</div>
+        </div>
+
+        <div class="divider">❖ ❖ ❖</div>
+
+        <div class="note">
+            <span style="font-size: 1.5em; color: #007BFF;">&#x1F4D6;</span> <!-- Book icon -->
+            <strong>Anmerkung:</strong> Dieser Artikel soll zum Nachdenken und zur Reflexion anregen. Er ist nicht für Debatten gedacht, sondern für den Austausch von Wissen und Perspektiven.
+        </div>
+    </div>
+
+    <script>
+        function switchLanguage(lang) {
+            const englishContent = document.getElementById('content-en');
+            const hindiContent = document.getElementById('content-hi');
+            const germanContent = document.getElementById('content-de');
+            const langButtons = document.querySelectorAll('.lang-btn');
+
+            // Remove active class from all buttons
+            langButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Hide all language sections first
+            englishContent.style.display = 'none';
+            hindiContent.style.display = 'none';
+            if (germanContent) germanContent.style.display = 'none';
+
+            if (lang === 'en') {
+                englishContent.style.display = 'block';
+                langButtons[0].classList.add('active');
+            } else if (lang === 'hi') {
+                hindiContent.style.display = 'block';
+                langButtons[1].classList.add('active');
+            } else if (lang === 'de') {
+                if (germanContent) germanContent.style.display = 'block';
+                langButtons[2].classList.add('active');
+            }
+        }
+
+        // Check for language parameter in the URL
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang') || 'en'; // Default to English if no parameter is provided
+            switchLanguage(lang);
+        });
+    </script>
+</body>
+
+</html>
