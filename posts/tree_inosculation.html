@@ -197,6 +197,45 @@
             box-shadow: 0 10px 28px rgba(0, 0, 0, 0.06);
         }
 
+        .audio-card {
+            margin: 16px 0 20px;
+            padding: 16px 20px;
+            background: linear-gradient(135deg, #f8f4ff 0%, #fff8ee 100%);
+            border: 1px solid #c4a0dc;
+            border-left: 6px solid #7c4ab0;
+            border-radius: 12px;
+            box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+        }
+
+        .audio-card-header {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            margin-bottom: 4px;
+        }
+
+        .audio-card-icon {
+            font-size: 1.4em;
+        }
+
+        .audio-card-title {
+            font-weight: bold;
+            font-size: 1.05em;
+            color: #5c2880;
+        }
+
+        .audio-card-subtitle {
+            font-size: 0.88em;
+            color: #888;
+            font-style: italic;
+            margin-bottom: 10px;
+            padding-left: 34px;
+        }
+
+        .audio-card audio {
+            width: 100%;
+        }
+
         .upanishad-verse {
             margin: 20px 0;
             padding: 20px 24px;
@@ -325,6 +364,17 @@
         </div>
 
         <div class="section">
+            <div class="audio-card">
+                <div class="audio-card-header">
+                    <span class="audio-card-icon">🎧</span>
+                    <span class="audio-card-title">Listen to this article</span>
+                </div>
+                <div class="audio-card-subtitle">Narrated reading · English</div>
+                <audio controls>
+                    <source src="audio/tree_en.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+
             <div style="text-align: center; margin-top: 20px;">
                 <img src="images/inosculation_3.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
             </div>
@@ -526,6 +576,16 @@
         </div>
 
         <div class="section">
+            <div class="audio-card">
+                <div class="audio-card-header">
+                    <span class="audio-card-icon">🎧</span>
+                    <span class="audio-card-title">इस लेख को सुनें</span>
+                </div>
+                <div class="audio-card-subtitle">वाचन · हिंदी</div>
+                <audio controls>
+                    <source src="audio/tree_hi.mp3" type="audio/mpeg">
+                </audio>
+            </div>
             <div style="text-align: center; margin-top: 20px;">
                 <img src="images/inosculation_3.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
             </div>
@@ -632,7 +692,8 @@
             </p>
             <p>
                 कई प्राचीन भारतीय परंपराओं में, दिव्यता मंदिरों या अनुष्ठानों तक सीमित नहीं है। प्राकृतिक जगत को स्वयं
-                श्रद्धा के योग्य माना जाता है। नदियाँ, पहाड़, वन, जानवर और पेड़ एक बड़े परस्पर जुड़े अस्तित्व का हिस्सा हैं।
+                श्रद्धा के योग्य माना जाता है। नदियाँ, पहाड़, वन, जानवर और पेड़ एक बड़े परस्पर जुड़े अस्तित्व का हिस्सा
+                हैं।
             </p>
             <p>इस विश्वदृष्टि के केंद्र में ईशा उपनिषद का एक प्रसिद्ध संस्कृत वाक्यांश है:</p>
             <div class="upanishad-verse">
@@ -659,11 +720,13 @@
                 से दर्शाता है: दो अलग पेड़ धीरे-धीरे अनुकूलित हुए, मिले, प्रतिस्पर्धा की, और एक साथ सहअस्तित्व में रहे।
             </p>
             <p>
-                एक पेड़ प्रभावशाली हो गया। दूसरा साझा संरचना के भीतर जीवित रहा। प्रतिस्पर्धा और सहयोग एक साथ विद्यमान रहे।
+                एक पेड़ प्रभावशाली हो गया। दूसरा साझा संरचना के भीतर जीवित रहा। प्रतिस्पर्धा और सहयोग एक साथ विद्यमान
+                रहे।
             </p>
             <p>
                 मानव अस्तित्व केवल प्रकृति के कारण ही संभव है। हमारी हर सांस, हर फल, जीवन का हर स्रोत अंततः प्राकृतिक
-                दुनिया से आता है। मानवता प्रकृति के बाहर या उससे ऊपर नहीं है — हम पूरी तरह से उसके तंत्र में विद्यमान हैं।
+                दुनिया से आता है। मानवता प्रकृति के बाहर या उससे ऊपर नहीं है — हम पूरी तरह से उसके तंत्र में विद्यमान
+                हैं।
             </p>
             <div class="conclusion">
                 मेरे बगीचे में मिला हुआ पेड़ मेरे लिए एक वनस्पति जिज्ञासा से अधिक बन गया। यह एक स्मरण बन गया कि जीवन
@@ -694,6 +757,16 @@
         </div>
 
         <div class="section">
+            <div class="audio-card">
+                <div class="audio-card-header">
+                    <span class="audio-card-icon">🎧</span>
+                    <span class="audio-card-title">Diesen Artikel anhören</span>
+                </div>
+                <div class="audio-card-subtitle">Vorgelesener Beitrag · Deutsch</div>
+                <audio controls>
+                    <source src="audio/tree_de.mp3" type="audio/mpeg">
+                </audio>
+            </div>
             <div style="text-align: center; margin-top: 20px;">
                 <img src="images/inosculation_3.jpg" alt="Timeline" style="max-width: 100%; height: auto;">
             </div>
