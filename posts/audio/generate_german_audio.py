@@ -69,8 +69,7 @@ sondern Teil einer größeren vernetzten Wirklichkeit, die Ehrfurcht und Respekt
 
 Moderne Wissenschaft beschreibt, wie Bäume Nährstoffe austauschen, chemisch Gefahren signalisieren
 und benachbarte Organismen über unterirdische Netzwerke unterstützen.
-Mein eigener Baum scheint diese Vernetzung physisch widerzuspiegeln:
-zwei getrennte Bäume, die sich langsam anpassten, verschmolzen, konkurrierten und gleichzeitig koexistierten.
+Zwei getrennte Bäume, die sich langsam anpassten, verschmolzen, konkurrierten und gleichzeitig koexistierten.
 Ein Baum wurde dominant. Der andere überlebte innerhalb der gemeinsamen Struktur.
 Wettbewerb und Zusammenarbeit existierten gleichzeitig.
 
@@ -85,7 +84,9 @@ und dass die Natur selbst weit mächtiger, vernetzter und intelligenter ist, als
 
 output_path = "tree_de.mp3"
 
-print("Generating German audio... (this may take a moment)")
+print("Generating German audio with gTTS...")
+
 tts = gTTS(text=text, lang='de', slow=False)
 tts.save(output_path)
+
 print(f"Done! Saved to: {output_path}")
