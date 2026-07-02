@@ -4,213 +4,175 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Retirement in Germany: Key Points</title>
+    <title>Pension Options in Germany</title>
     <style>
         body {
             font-family: 'Georgia', 'Times New Roman', serif;
-            line-height: 1.6;
-            max-width: 900px;
+            line-height: 1.7;
+            max-width: 920px;
             margin: 0 auto;
-            padding: 20px;
-            background-color: #fefefe;
-            color: #333;
+            padding: 30px 20px;
+            background-color: #f0f4f8;
+            color: #2d3748;
         }
 
+        /* ── Language switcher ── */
         .language-switcher {
             text-align: center;
-            margin: 20px 0;
+            margin: 0 0 30px;
         }
 
         .lang-btn {
             display: inline-block;
-            padding: 10px 20px;
-            margin: 0 10px;
-            font-size: 16px;
-            font-weight: bold;
+            padding: 9px 24px;
+            margin: 0 6px;
+            font-size: 15px;
+            font-weight: 600;
+            font-family: 'Georgia', serif;
             color: #fff;
-            background-color: #007BFF;
+            background-color: #4a7fbf;
             border: none;
-            border-radius: 5px;
+            border-radius: 6px;
             cursor: pointer;
-            transition: background-color 0.3s ease, transform 0.2s ease;
+            letter-spacing: 0.3px;
+            transition: background-color 0.25s ease, transform 0.15s ease;
         }
 
         .lang-btn:hover {
-            background-color: #0056b3;
-            transform: scale(1.05);
+            background-color: #2b5ea7;
+            transform: scale(1.04);
         }
 
         .lang-btn.active {
-            background-color: #28a745;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: #1e3a5f;
+            box-shadow: 0 3px 10px rgba(30, 58, 95, 0.35);
         }
 
-        .lang-btn:focus {
-            outline: none;
-        }
+        .lang-btn:focus { outline: none; }
 
+        /* ── Page title ── */
         h1 {
-            color: #8B4513;
+            font-family: 'Georgia', serif;
+            color: #1e3a5f;
             text-align: center;
-            border-bottom: 3px solid #DAA520;
-            padding-bottom: 10px;
-            margin-bottom: 30px;
-        }
-
-        h2 {
-            color: #8B4513;
-            font-size: 1.4em;
-            margin: 0;
-            padding: 16px 22px;
-            background: linear-gradient(135deg, #8B4513 0%, #B8860B 100%);
-            color: #fff;
-            border-radius: 8px 8px 0 0;
-            letter-spacing: 0.3px;
-        }
-
-        .pension-scheme {
-            margin: 40px 0;
-            border: 2px solid #DAA520;
-            border-radius: 10px;
-            overflow: hidden;
-        }
-
-        .scheme-body {
-            padding: 10px;
-        }
-
-        h3 {
-            color: #B8860B;
-            border-left: 5px solid #DAA520;
-            padding-left: 15px;
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-
-        .section {
-            margin-bottom: 40px;
-            padding: 20px;
-            background-color: #fefcf7;
-            border: 1px solid #e8e0d5;
-            border-radius: 8px;
-        }
-
-        .highlight {
-            background-color: #fff8dc;
-            padding: 2px 4px;
-            border-radius: 3px;
-        }
-
-        .sanskrit-term {
-            font-style: italic;
-            color: #8B0000;
-            font-weight: bold;
-        }
-
-        .timeline {
-            background-color: #f0f8ff;
-            padding: 15px;
-            border-left: 4px solid #4169E1;
-            margin: 15px 0;
-        }
-
-        .example {
-            background-color: #f5f5dc;
-            padding: 10px;
-            border-radius: 5px;
-            margin: 10px 0;
-            font-style: italic;
-        }
-
-        ul {
-            padding-left: 25px;
-        }
-
-        li {
-            margin-bottom: 8px;
-        }
-
-        .conclusion {
-            background-color: #e6ffe6;
-            padding: 15px;
-            border-radius: 8px;
-            border-left: 5px solid #32CD32;
-            margin: 20px 0;
-        }
-
-        .note {
-            font-size: 0.9em;
-            color: #666;
-            font-style: italic;
-        }
-
-        .divider {
-            text-align: center;
-            margin: 30px 0;
-            font-size: 1.5em;
-            color: #DAA520;
-        }
-
-
-        .sher {
-            margin: 24px 0;
-            padding: 22px 26px;
-            background: linear-gradient(120deg, #fff5f7 0%, #fffbe6 100%);
-            border: 1px solid #f2e2d8;
-            border-left: 8px solid #e76f51;
-            border-radius: 14px;
-            font-style: italic;
-            text-align: center;
-            line-height: 1.95;
-            color: #3b2f2f;
-            font-family: "Noto Serif Devanagari", "Noto Nastaliq Urdu", Georgia, "Times New Roman", serif;
-            box-shadow: 0 10px 28px rgba(0, 0, 0, 0.08);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .sher::before,
-        .sher::after {
-            content: "❝";
-            position: absolute;
-            font-size: 32px;
-            color: rgba(231, 111, 81, 0.15);
-            line-height: 1;
-            pointer-events: none;
-        }
-
-        .sher::before {
-            top: -8px;
-            left: 10px;
-        }
-
-        .sher::after {
-            content: "❞";
-            bottom: -18px;
-            right: 12px;
-        }
-
-        .sher .verse {
-            display: block;
-            font-weight: 600;
+            font-size: 1.9em;
+            border-bottom: 3px solid #4a7fbf;
+            padding-bottom: 14px;
+            margin-bottom: 36px;
             letter-spacing: 0.2px;
         }
 
-        .sher .verse:nth-of-type(1) {
-            color: #a23e48;
+        /* ── Scheme wrapper ── */
+        .pension-scheme {
+            margin: 36px 0;
+            border: 2px solid #4a7fbf;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 18px rgba(30, 58, 95, 0.10);
         }
 
-        .sher .verse:nth-of-type(2) {
-            color: #6a4c93;
-        }
-
-        .sher .author {
-            margin-top: 12px;
-            font-style: normal;
-            font-weight: 700;
-            color: #0f766e;
+        /* ── Scheme title bar (h2) ── */
+        h2 {
+            margin: 0;
+            padding: 18px 24px;
+            font-size: 1.25em;
+            font-family: 'Georgia', serif;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(135deg, #1e3a5f 0%, #2b6cb0 100%);
             letter-spacing: 0.3px;
+            line-height: 1.4;
         }
+
+        .scheme-body {
+            padding: 16px 16px 6px;
+            background-color: #fff;
+        }
+
+        /* ── Sub-section card ── */
+        .section {
+            margin-bottom: 20px;
+            padding: 20px 22px;
+            background-color: #ffffff;
+            border: 1px solid #d6e4f0;
+            border-left: 4px solid #4a7fbf;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(74, 127, 191, 0.07);
+        }
+
+        /* ── Sub-section heading (h3) ── */
+        h3 {
+            color: #1e3a5f;
+            font-size: 1.05em;
+            margin-top: 22px;
+            margin-bottom: 10px;
+            padding-bottom: 5px;
+            border-bottom: 2px solid #d6e4f0;
+        }
+
+        h3:first-child { margin-top: 0; }
+
+        /* ── Lists ── */
+        ul {
+            padding-left: 22px;
+            margin: 8px 0 12px;
+        }
+
+        li { margin-bottom: 7px; }
+
+        ul ul {
+            margin-top: 6px;
+            padding-left: 20px;
+        }
+
+        /* ── Tables ── */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 14px 0 6px;
+            font-size: 0.95em;
+        }
+
+        th {
+            background-color: #1e3a5f;
+            color: #fff;
+            padding: 11px 14px;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        td {
+            padding: 9px 14px;
+            border-bottom: 1px solid #d6e4f0;
+            vertical-align: top;
+        }
+
+        tr:nth-child(even) td { background-color: #f0f7ff; }
+        tr:hover td { background-color: #dbeafe; }
+
+        /* ── Divider ── */
+        .divider {
+            text-align: center;
+            margin: 32px 0;
+            font-size: 1.4em;
+            color: #4a7fbf;
+            letter-spacing: 6px;
+        }
+
+        /* ── Misc ── */
+        .note {
+            font-size: 0.9em;
+            color: #718096;
+            font-style: italic;
+        }
+
+        .highlight {
+            background-color: #ebf8ff;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        strong { color: #1e3a5f; }
     </style>
 </head>
 
@@ -221,11 +183,11 @@
     </div>
 
     <div id="content-en">
-        <h1>Retirement in Germany: Key Points</h1>
+        <h1>Pension Options in Germany</h1>
 
         <!-- ==================== SCHEME 1 ==================== -->
         <div class="pension-scheme">
-            <h2>Statutory Pension in Germany</h2>
+            <h2>Statutory Pension</h2>
             <div class="scheme-body">
 
                 <div class="section">
@@ -386,7 +348,7 @@
 
         <!-- ==================== SCHEME 2 ==================== -->
         <div class="pension-scheme">
-            <h2>Private Pension Options in Germany – Basis Pension, Flexible Private Pension and ETF Investing</h2>
+            <h2>Private Pension Options – Basis Pension, Flexible Private Pension and ETF Investing</h2>
             <div class="scheme-body">
 
                 <div class="section">
@@ -640,11 +602,11 @@
     </div>
 
     <div id="content-de" style="display: none;">
-        <h1>Rente in Deutschland: Die wichtigsten Punkte</h1>
+        <h1>Rentenoptionen in Deutschland</h1>
 
         <!-- ==================== SCHEMA 1 ==================== -->
         <div class="pension-scheme">
-            <h2>Gesetzliche Rente in Deutschland</h2>
+            <h2>Gesetzliche Rente</h2>
             <div class="scheme-body">
 
                 <div class="section">
@@ -810,7 +772,7 @@
 
         <!-- ==================== SCHEMA 2 ==================== -->
         <div class="pension-scheme">
-            <h2>Private Rentenoptionen in Deutschland – Basisrente, Flexible Private Rentenversicherung und ETF-Investment</h2>
+            <h2>Private Rentenoptionen – Basisrente, Flexible Private Rentenversicherung und ETF-Investment</h2>
             <div class="scheme-body">
 
                 <div class="section">
