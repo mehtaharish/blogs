@@ -101,16 +101,32 @@
         }
 
         /* ── Sub-section heading (h3) ── */
-        h3 {
-            color: #1e3a5f;
-            font-size: 1.05em;
-            margin-top: 22px;
-            margin-bottom: 10px;
-            padding-bottom: 5px;
-            border-bottom: 2px solid #d6e4f0;
-        }
+        h3 { color: #1e3a5f; font-size: 1.05em; margin-top: 22px; margin-bottom: 10px; padding-bottom: 5px; border-bottom: 2px solid #d6e4f0; }
 
         h3:first-child { margin-top: 0; }
+
+        .section > h3:first-child {
+            font-size: 1.13em;
+            font-weight: bold;
+            letter-spacing: 0.2px;
+            background-color: #eef4fb;
+            padding: 10px 14px;
+            border-radius: 5px;
+            border-bottom: none;
+            margin: 0 0 16px;
+        }
+
+        .scheme-2 h3 { color: #1b5e20; }
+        .scheme-2 .section { border-left-color: #4caf50; }
+        .scheme-2 .section > h3:first-child { background-color: #e8f5e9; }
+
+        .scheme-3 h3 { color: #4a148c; }
+        .scheme-3 .section { border-left-color: #9c27b0; }
+        .scheme-3 .section > h3:first-child { background-color: #f3e5f5; }
+
+        .scheme-4 h3 { color: #b71c1c; }
+        .scheme-4 .section { border-left-color: #ef5350; }
+        .scheme-4 .section > h3:first-child { background-color: #ffebee; }
 
         /* ── Lists ── */
         ul {
@@ -186,7 +202,7 @@
         <h1>Pension Options in Germany</h1>
 
         <!-- ==================== SCHEME 1 ==================== -->
-        <div class="pension-scheme">
+        <div class="pension-scheme scheme-1">
             <h2>Statutory Pension</h2>
             <div class="scheme-body">
 
@@ -347,16 +363,20 @@
         <!-- ==================== ADD FURTHER SCHEMES BELOW ==================== -->
 
         <!-- ==================== SCHEME 2 ==================== -->
-        <div class="pension-scheme">
-            <h2>Private Pension Options – Basis Pension, Flexible Private Pension and ETF Investing</h2>
+        <div class="pension-scheme scheme-2">
+            <h2>Private Pension Options – Basis Pension, Flexible Private Pension and State-Supported Altersvorsorgedepot (from 2027)</h2>
             <div class="scheme-body">
 
                 <div class="section">
                     <p>Besides the German statutory pension system, there are additional private retirement products that
-                        can be used for retirement planning and tax optimisation. Two common options are the Basis
-                        Pension (Rürup Pension) and the Flexible Private Pension.</p>
+                        can be used for retirement planning and tax optimisation.</p>
+                    <ol>
+                        <li>Basis Pension (Rürup Pension)</li>
+                        <li>Flexible Private Pension</li>
+                        <li>State-Supported Altersvorsorgedepot (from 2027)</li>
+                    </ol>
                     <p>The examples below assume a monthly contribution of 1,000 EUR over a period of 12 years.</p>
-                    <h3>Assumptions Used in the Examples</h3>
+                    <h3>Assumptions Used in the Examples (Basis Pension and Flexible Private Pension)</h3>
                     <ul>
                         <li>Monthly contribution: 1,000 EUR</li>
                         <li>Contribution period: 12 years</li>
@@ -478,7 +498,170 @@
                 </div>
 
                 <div class="section">
-                    <h3>Flexible Private Pension versus Direct ETF Investment</h3>
+                    <h3>Pension Type 3: State-Supported Altersvorsorgedepot (from 2027)</h3>
+                    <p>From <strong>1 January 2027</strong>, Germany will introduce a new state-supported retirement
+                        investment account called the <strong>Altersvorsorgedepot</strong>.</p>
+                    <p>The new product is intended to modernise private retirement savings and replace the previous
+                        Riester model for newly concluded contracts. Unlike traditional pension insurance products, the
+                        Altersvorsorgedepot focuses on investing in ETFs and investment funds while providing government
+                        subsidies and tax advantages.</p>
+                    <p>It is a voluntary retirement product and complements, rather than replaces, the statutory
+                        pension, the Basis Pension (Rürup), the Flexible Private Pension, and personal ETF
+                        investments.</p>
+                    <h3>Main Characteristics</h3>
+                    <ul>
+                        <li>Voluntary private retirement savings.</li>
+                        <li>Investments primarily in ETFs and investment funds.</li>
+                        <li>Government subsidy on annual contributions.</li>
+                        <li>Tax-deferred investment growth.</li>
+                        <li>Withdrawals taxed during retirement.</li>
+                        <li>Greater payout flexibility than the Basis Pension.</li>
+                        <li>Capital can generally remain available for beneficiaries depending on the selected payout
+                            option.</li>
+                    </ul>
+                    <h3>Government Subsidy</h3>
+                    <p>The government provides an annual subsidy based on the investor's own contributions.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Annual personal contribution</th>
+                                <th>Government subsidy</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>First 360 EUR</td><td>50% subsidy</td></tr>
+                            <tr><td>Remaining contribution up to 1,800 EUR</td><td>25% subsidy</td></tr>
+                            <tr><td><strong>Maximum annual subsidy</strong></td><td><strong>540 EUR</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p>Additional subsidies may be available for eligible children and young investors.</p>
+                    <h3>Example with 150 EUR per Month</h3>
+                    <p>Assumptions: Current age: 50 · Monthly contribution: 150 EUR · Annual contribution: 1,800 EUR ·
+                        Contribution period: 12 years.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Item</th>
+                                <th>Amount</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Personal contributions</td><td>21,600 EUR</td></tr>
+                            <tr><td>Government subsidies</td><td>6,480 EUR</td></tr>
+                            <tr><td><strong>Total invested before returns</strong></td><td><strong>28,080 EUR</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p>Assuming investments grow over time, the portfolio reaches approximately <strong>40,000 EUR</strong>
+                        by the beginning of the retirement payout phase.</p>
+                    <h3>Tax Treatment</h3>
+                    <p><strong>During the contribution phase:</strong></p>
+                    <ul>
+                        <li>Contributions are not tax deductible like the Basis Pension.</li>
+                        <li>Government subsidies are credited directly into the retirement account.</li>
+                        <li>Investment gains remain untaxed while they stay inside the account.</li>
+                        <li>Switching between ETFs or funds inside the account generally does not trigger immediate
+                            taxation.</li>
+                    </ul>
+                    <p>Depending on the individual tax situation, the tax office performs a
+                        <strong>Günstigerprüfung</strong> (favourability check). If the calculated tax deduction is
+                        greater than the subsidy already received, the investor receives the additional difference as a
+                        tax benefit.</p>
+                    <p><strong>During the payout phase:</strong> Unlike a normal ETF portfolio, taxation generally
+                        occurs only when retirement payments are received. The withdrawals are taxed using the
+                        investor's personal income tax rate applicable during retirement.</p>
+                    <h3>Retirement Payout Options</h3>
+                    <p>The retirement payout phase generally begins at <strong>age 65</strong>. It may begin earlier
+                        only if the investor is already receiving a statutory old-age pension or another legally
+                        recognised retirement pension before age 65.</p>
+                    <p>At the beginning of the payout phase, the investor has three options:</p>
+                    <p><strong>Option 1 – Partial lump sum:</strong> Up to <strong>30%</strong> of the accumulated
+                        capital may be withdrawn immediately.</p>
+                    <ul>
+                        <li>Portfolio value: 40,000 EUR</li>
+                        <li>Maximum lump sum: 12,000 EUR</li>
+                        <li>Remaining capital: 28,000 EUR</li>
+                    </ul>
+                    <p>The remaining capital can then be used for a lifetime monthly pension or a payout plan
+                        extending at least until age 85.</p>
+                    <p><strong>Option 2 – Lifetime pension:</strong> The remaining capital is converted into a lifelong
+                        monthly pension. Based on the example portfolio, an estimated monthly pension of approximately
+                        <strong>140 EUR per month</strong>. As with the Basis Pension, the financial benefit depends on
+                        life expectancy.</p>
+                    <p><strong>Option 3 – Payout plan:</strong> Instead of converting the capital into a lifelong
+                        pension, the investor chooses a payout plan.</p>
+                    <ul>
+                        <li>Remaining capital generally stays available.</li>
+                        <li>Unused capital can usually be inherited by beneficiaries.</li>
+                        <li>There is no specific break-even age, since the investor gradually receives their own
+                            capital together with investment returns and government subsidies.</li>
+                        <li>This option may be particularly attractive for investors who wish to preserve capital for
+                            their family or who are concerned about not living long enough to benefit from a lifetime
+                            pension.</li>
+                    </ul>
+                    <h3>Advantages</h3>
+                    <ul>
+                        <li>Government subsidy of up to 540 EUR per year.</li>
+                        <li>Additional subsidies for eligible children and young investors.</li>
+                        <li>Investment in ETFs and investment funds.</li>
+                        <li>Tax-deferred investment growth.</li>
+                        <li>More flexible payout options than the Basis Pension.</li>
+                        <li>No break-even age when the payout plan is selected.</li>
+                        <li>Remaining capital can generally be inherited under the payout plan.</li>
+                    </ul>
+                    <h3>Disadvantages</h3>
+                    <ul>
+                        <li>Money is intended for retirement and cannot be accessed as freely as a personal ETF
+                            portfolio.</li>
+                        <li>Withdrawals are taxed during retirement.</li>
+                        <li>Investment choices are more limited than a normal brokerage account.</li>
+                        <li>Costs are generally higher than a low-cost personal ETF portfolio.</li>
+                        <li>Government subsidies apply only up to the eligible annual contribution limit.</li>
+                    </ul>
+                    <h3>Comparison with Other Private Retirement Options</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Topic</th>
+                                <th>Basis Pension</th>
+                                <th>Flexible Private Pension</th>
+                                <th>Altersvorsorgedepot</th>
+                                <th>Personal ETF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Government subsidy</td><td>No</td><td>No</td><td>Yes</td><td>No</td></tr>
+                            <tr><td>Immediate tax deduction</td><td>Yes</td><td>No</td><td>Possible via Günstigerprüfung</td><td>No</td></tr>
+                            <tr><td>Tax-deferred investment growth</td><td>Yes</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+                            <tr><td>Lump sum withdrawal</td><td>No</td><td>Yes</td><td>Up to 30%</td><td>Yes</td></tr>
+                            <tr><td>Lifetime pension</td><td>Mandatory</td><td>Optional</td><td>Optional</td><td>No</td></tr>
+                            <tr><td>Inheritance</td><td>Limited</td><td>Yes</td><td>Generally possible under payout plan</td><td>Yes</td></tr>
+                            <tr><td>Break-even age</td><td>~73 (effective) / ~88 (full capital)</td><td>Not applicable</td><td>None under payout plan</td><td>Not applicable</td></tr>
+                            <tr><td>Investment flexibility</td><td>Low</td><td>Medium</td><td>Medium</td><td>Very High</td></tr>
+                        </tbody>
+                    </table>
+                    <h3>Overall Assessment</h3>
+                    <p>The Altersvorsorgedepot combines characteristics of both traditional pension products and direct
+                        ETF investing.</p>
+                    <p>Compared with the <strong>Basis Pension</strong>, it offers significantly greater payout
+                        flexibility and avoids the longevity risk if the payout plan is selected.</p>
+                    <p>Compared with the <strong>Flexible Private Pension</strong>, it provides direct government
+                        subsidies while still allowing investments in ETFs and investment funds.</p>
+                    <p>Compared with a <strong>personal ETF portfolio</strong>, it sacrifices some flexibility in
+                        exchange for government support and tax-deferred growth.</p>
+                    <p>For investors who already invest in ETFs, a sensible strategy may be to contribute enough each
+                        year to receive the maximum government subsidy while continuing to invest additional long-term
+                        savings through a low-cost personal ETF portfolio.</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- ==================== SCHEME 3 ==================== -->
+        <div class="pension-scheme scheme-3">
+            <h2>Flexible Private Pension versus Direct ETF Investment</h2>
+            <div class="scheme-body">
+
+                <div class="section">
+                    <h3>Overview</h3>
                     <p>A common question is whether a Flexible Private Pension offers advantages compared to simply
                         investing in ETFs directly through a personal brokerage account.</p>
                     <p>In many cases, the underlying investments are very similar, as Flexible Private Pensions often
@@ -572,26 +755,46 @@
                         this difference may be less important.</p>
                 </div>
 
+            </div>
+        </div>
+        <!-- ==================== SCHEME 4 ==================== -->
+        <div class="pension-scheme scheme-4">
+            <h2>Overall Conclusion</h2>
+            <div class="scheme-body">
+
                 <div class="section">
-                    <h3>Overall Conclusion</h3>
-                    <p>The Basis Pension primarily offers tax optimisation during working years through tax deductions
-                        on contributions. However, since the accumulated capital is converted into a lifelong pension
-                        and cannot be withdrawn as a lump sum, the financial attractiveness depends strongly on life
-                        expectancy.</p>
+                    <p>The <strong>Basis Pension (Rürup)</strong> primarily offers tax optimisation during working
+                        years through tax deductions on contributions. However, since the accumulated capital is
+                        converted into a lifelong pension and cannot be withdrawn as a lump sum, its financial
+                        attractiveness depends strongly on life expectancy.</p>
                     <p>In the example discussed, the break-even point is reached at approximately age 73, where the
                         pension payments received equal the individual's effective contribution after considering the
                         tax advantages. The full pension capital equivalent is recovered only around age 88. Therefore,
-                        the Basis Pension becomes increasingly attractive for individuals who expect to live well into
+                        the Basis Pension is generally more attractive for individuals who expect to live well into
                         their 80s or beyond.</p>
-                    <p>The Flexible Private Pension offers greater flexibility and inheritance options. Its main
-                        advantage compared to direct ETF investing is the favourable taxation, where only 50% of the
-                        investment profit becomes taxable if the contract conditions are fulfilled.</p>
+                    <p>The <strong>Flexible Private Pension</strong> offers greater flexibility and inheritance
+                        options. Its main advantage compared with direct ETF investing is the favourable taxation,
+                        where only 50% of the investment profit becomes taxable if the contract conditions are
+                        fulfilled.</p>
                     <p>However, the higher costs associated with insurance products often offset a large part of this
-                        tax advantage. As a result, the financial outcome of a Flexible Private Pension is often
-                        similar to that of a low-cost personal ETF portfolio.</p>
-                    <p>Direct ETF investing provides maximum flexibility, minimal costs and complete control over
-                        investment decisions, while the Flexible Private Pension exchanges some of this flexibility for
-                        favourable tax treatment and pension-related features.</p>
+                        tax advantage. As a result, the overall financial outcome of a Flexible Private Pension is
+                        frequently similar to that of a low-cost personal ETF portfolio.</p>
+                    <p>The <strong>State-Supported Altersvorsorgedepot</strong> combines several advantages of
+                        traditional pension products with ETF investing. It provides government subsidies,
+                        tax-deferred investment growth and significantly greater payout flexibility than the Basis
+                        Pension. Investors who choose the payout plan instead of a lifelong pension generally avoid
+                        the longevity risk, as the remaining capital stays available and can usually be inherited.</p>
+                    <p>For investors who are eligible for the government subsidy, the Altersvorsorgedepot appears to
+                        be one of the most attractive private retirement options currently available. The government
+                        subsidy alone represents a substantial benefit before any investment returns are earned, while
+                        the long-term growth potential remains similar to investing in ETFs.</p>
+                    <p>Its main limitations are that the money remains dedicated to retirement, withdrawals are taxed
+                        during retirement, and investment flexibility is lower than with a personal ETF portfolio.
+                        Nevertheless, for the subsidised annual contribution amount, these disadvantages are often
+                        outweighed by the government support.</p>
+                    <p>A <strong>personal ETF portfolio</strong> continues to provide maximum flexibility, the lowest
+                        costs and complete control over investment decisions. It remains the preferred solution for
+                        additional long-term investments beyond the subsidised retirement products.</p>
                 </div>
 
             </div>
@@ -605,7 +808,7 @@
         <h1>Rentenoptionen in Deutschland</h1>
 
         <!-- ==================== SCHEMA 1 ==================== -->
-        <div class="pension-scheme">
+        <div class="pension-scheme scheme-1">
             <h2>Gesetzliche Rente</h2>
             <div class="scheme-body">
 
@@ -771,17 +974,21 @@
         <!-- ==================== WEITERE RENTENSYSTEME UNTEN HINZUFÜGEN ==================== -->
 
         <!-- ==================== SCHEMA 2 ==================== -->
-        <div class="pension-scheme">
-            <h2>Private Rentenoptionen – Basisrente, Flexible Private Rentenversicherung und ETF-Investment</h2>
+        <div class="pension-scheme scheme-2">
+            <h2>Private Rentenoptionen – Basisrente, Flexible Private Rentenversicherung und staatlich gefördertes Altersvorsorgedepot (ab 2027)</h2>
             <div class="scheme-body">
 
                 <div class="section">
                     <p>Neben dem gesetzlichen Rentensystem in Deutschland gibt es weitere private Rentenprodukte, die
-                        für die Altersvorsorge und Steueroptimierung genutzt werden können. Zwei gängige Optionen sind
-                        die Basisrente (Rürup-Rente) und die Flexible Private Rentenversicherung.</p>
+                        für die Altersvorsorge und Steueroptimierung genutzt werden können.</p>
+                    <ol>
+                        <li>Basisrente (Rürup-Rente)</li>
+                        <li>Flexible Private Rentenversicherung</li>
+                        <li>Staatlich gefördertes Altersvorsorgedepot (ab 2027)</li>
+                    </ol>
                     <p>Die folgenden Beispiele gehen von einem monatlichen Beitrag von 1.000 EUR über einen Zeitraum
                         von 12 Jahren aus.</p>
-                    <h3>Annahmen für die Beispiele</h3>
+                    <h3>Annahmen für die Beispiele (Basisrente und Flexible Private Rentenversicherung)</h3>
                     <ul>
                         <li>Monatlicher Beitrag: 1.000 EUR</li>
                         <li>Beitragszeitraum: 12 Jahre</li>
@@ -905,7 +1112,175 @@
                 </div>
 
                 <div class="section">
-                    <h3>Flexible Private Rentenversicherung vs. Direktes ETF-Investment</h3>
+                    <h3>Rentenart 3: Staatlich gefördertes Altersvorsorgedepot (ab 2027)</h3>
+                    <p>Ab dem <strong>1. Januar 2027</strong> wird Deutschland ein neues staatlich gefördertes
+                        Altersvorsorgekonto einführen, das als <strong>Altersvorsorgedepot</strong> bezeichnet wird.</p>
+                    <p>Das neue Produkt soll die private Altersvorsorge modernisieren und das bisherige Riester-Modell
+                        für neu abgeschlossene Verträge ablösen. Im Gegensatz zu herkömmlichen
+                        Rentenversicherungsprodukten konzentriert sich das Altersvorsorgedepot auf die Anlage in ETFs
+                        und Investmentfonds bei gleichzeitiger Bereitstellung staatlicher Zulagen und
+                        Steuervorteile.</p>
+                    <p>Es ist ein freiwilliges Altersvorsorgeprodukt und ergänzt anstatt zu ersetzen: die gesetzliche
+                        Rente, die Basisrente (Rürup), die Flexible Private Rentenversicherung und persönliche
+                        ETF-Anlagen.</p>
+                    <h3>Hauptmerkmale</h3>
+                    <ul>
+                        <li>Freiwillige private Altersvorsorge.</li>
+                        <li>Anlagen vorwiegend in ETFs und Investmentfonds.</li>
+                        <li>Staatliche Zulage auf jährliche Beiträge.</li>
+                        <li>Steuerlich aufgeschobenes Anlagewachstum.</li>
+                        <li>Auszahlungen werden im Rentenalter besteuert.</li>
+                        <li>Größere Auszahlungsflexibilität als bei der Basisrente.</li>
+                        <li>Kapital kann je nach gewählter Auszahlungsoption grundsätzlich für Begünstigte erhalten
+                            bleiben.</li>
+                    </ul>
+                    <h3>Staatliche Zulage</h3>
+                    <p>Der Staat gewährt eine jährliche Zulage basierend auf den eigenen Beiträgen des Anlegers.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Jährlicher Eigenbeitrag</th>
+                                <th>Staatliche Zulage</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Erste 360 EUR</td><td>50% Zulage</td></tr>
+                            <tr><td>Restlicher Beitrag bis 1.800 EUR</td><td>25% Zulage</td></tr>
+                            <tr><td><strong>Maximale jährliche Zulage</strong></td><td><strong>540 EUR</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p>Zusätzliche Zulagen können für anspruchsberechtigte Kinder und junge Anleger verfügbar sein.</p>
+                    <h3>Beispiel mit 150 EUR pro Monat</h3>
+                    <p>Annahmen: Aktuelles Alter: 50 · Monatlicher Beitrag: 150 EUR · Jährlicher Beitrag: 1.800 EUR ·
+                        Beitragszeitraum: 12 Jahre.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Position</th>
+                                <th>Betrag</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Eigenbeiträge</td><td>21.600 EUR</td></tr>
+                            <tr><td>Staatliche Zulagen</td><td>6.480 EUR</td></tr>
+                            <tr><td><strong>Gesamt investiert vor Rendite</strong></td><td><strong>28.080 EUR</strong></td></tr>
+                        </tbody>
+                    </table>
+                    <p>Unter der Annahme, dass die Anlagen im Laufe der Zeit wachsen, erreicht das Portfolio zu Beginn
+                        der Rentenphase ca. <strong>40.000 EUR</strong>.</p>
+                    <h3>Steuerliche Behandlung</h3>
+                    <p><strong>Während der Einzahlungsphase:</strong></p>
+                    <ul>
+                        <li>Beiträge sind nicht steuerlich absetzbar wie bei der Basisrente.</li>
+                        <li>Staatliche Zulagen werden direkt dem Altersvorsorgekonto gutgeschrieben.</li>
+                        <li>Anlagegewinne bleiben steuerfrei, solange sie im Konto verbleiben.</li>
+                        <li>Der Wechsel zwischen ETFs oder Fonds innerhalb des Kontos löst in der Regel keine
+                            sofortige Besteuerung aus.</li>
+                    </ul>
+                    <p>Je nach individueller Steuersituation führt das Finanzamt eine
+                        <strong>Günstigerprüfung</strong> durch. Wenn der berechnete Steuerabzug höher ist als die
+                        bereits erhaltene Zulage, erhält der Anleger die zusätzliche Differenz als Steuervorteil.</p>
+                    <p><strong>Während der Auszahlungsphase:</strong> Im Gegensatz zu einem normalen ETF-Portfolio
+                        erfolgt die Besteuerung in der Regel erst bei Erhalt der Rentenleistungen. Die Auszahlungen
+                        werden mit dem persönlichen Einkommensteuersatz besteuert, der im Ruhestand gilt.</p>
+                    <h3>Rentenauszahlungsoptionen</h3>
+                    <p>Die Rentenphase beginnt in der Regel mit <strong>65 Jahren</strong>. Sie kann früher beginnen,
+                        wenn der Anleger bereits vor dem 65. Lebensjahr eine gesetzliche Altersrente oder eine andere
+                        gesetzlich anerkannte Rente bezieht.</p>
+                    <p>Zu Beginn der Auszahlungsphase hat der Anleger drei Optionen:</p>
+                    <p><strong>Option 1 – Teilweise Einmalzahlung:</strong> Bis zu <strong>30%</strong> des
+                        angesammelten Kapitals können sofort ausgezahlt werden.</p>
+                    <ul>
+                        <li>Portfoliowert: 40.000 EUR</li>
+                        <li>Maximale Einmalzahlung: 12.000 EUR</li>
+                        <li>Verbleibendes Kapital: 28.000 EUR</li>
+                    </ul>
+                    <p>Das verbleibende Kapital kann dann für eine lebenslange monatliche Rente oder einen
+                        Auszahlungsplan genutzt werden, der mindestens bis zum 85. Lebensjahr reicht.</p>
+                    <p><strong>Option 2 – Lebenslange Rente:</strong> Das verbleibende Kapital wird in eine
+                        lebenslange monatliche Rente umgewandelt. Auf Basis des Beispiels ergibt sich eine geschätzte
+                        monatliche Rente von ca. <strong>140 EUR pro Monat</strong>. Wie bei der Basisrente hängt der
+                        finanzielle Vorteil von der Lebenserwartung ab.</p>
+                    <p><strong>Option 3 – Auszahlungsplan:</strong> Anstatt das Kapital in eine lebenslange Rente
+                        umzuwandeln, wählt der Anleger einen Auszahlungsplan.</p>
+                    <ul>
+                        <li>Verbleibendes Kapital bleibt grundsätzlich verfügbar.</li>
+                        <li>Ungenutztes Kapital kann in der Regel an Begünstigte vererbt werden.</li>
+                        <li>Es gibt <strong>kein spezifisches Break-Even-Alter</strong>, da der Anleger schrittweise
+                            sein eigenes Kapital zusammen mit Anlagerenditen und staatlichen Zulagen erhält.</li>
+                        <li>Diese Option kann besonders attraktiv für Anleger sein, die Kapital für ihre Familie
+                            erhalten möchten oder befürchten, nicht lange genug zu leben, um von einer lebenslangen
+                            Rente zu profitieren.</li>
+                    </ul>
+                    <h3>Vorteile</h3>
+                    <ul>
+                        <li>Staatliche Zulage von bis zu 540 EUR pro Jahr.</li>
+                        <li>Zusätzliche Zulagen für anspruchsberechtigte Kinder und junge Anleger.</li>
+                        <li>Anlage in ETFs und Investmentfonds.</li>
+                        <li>Steuerlich aufgeschobenes Anlagewachstum.</li>
+                        <li>Flexiblere Auszahlungsoptionen als bei der Basisrente.</li>
+                        <li>Kein Break-Even-Alter bei Wahl des Auszahlungsplans.</li>
+                        <li>Verbleibendes Kapital kann im Rahmen des Auszahlungsplans grundsätzlich vererbt werden.</li>
+                    </ul>
+                    <h3>Nachteile</h3>
+                    <ul>
+                        <li>Das Geld ist für die Altersvorsorge bestimmt und kann nicht so frei abgerufen werden wie
+                            ein persönliches ETF-Portfolio.</li>
+                        <li>Auszahlungen werden im Rentenalter besteuert.</li>
+                        <li>Die Anlageauswahl ist eingeschränkter als bei einem normalen Brokerage-Konto.</li>
+                        <li>Die Kosten sind in der Regel höher als bei einem kostengünstigen persönlichen
+                            ETF-Portfolio.</li>
+                        <li>Staatliche Zulagen gelten nur bis zur anspruchsberechtigten jährlichen
+                            Beitragsgrenze.</li>
+                    </ul>
+                    <h3>Vergleich mit anderen privaten Altersvorsorgeoptionen</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Thema</th>
+                                <th>Basisrente</th>
+                                <th>Flexible Private Rentenversicherung</th>
+                                <th>Altersvorsorgedepot</th>
+                                <th>Persönliches ETF</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td>Staatliche Zulage</td><td>Nein</td><td>Nein</td><td>Ja</td><td>Nein</td></tr>
+                            <tr><td>Sofortiger Steuerabzug</td><td>Ja</td><td>Nein</td><td>Möglich via Günstigerprüfung</td><td>Nein</td></tr>
+                            <tr><td>Steuerlich aufgeschobenes Wachstum</td><td>Ja</td><td>Ja</td><td>Ja</td><td>Nein</td></tr>
+                            <tr><td>Kapitalauszahlung</td><td>Nein</td><td>Ja</td><td>Bis zu 30%</td><td>Ja</td></tr>
+                            <tr><td>Lebenslange Rente</td><td>Pflicht</td><td>Optional</td><td>Optional</td><td>Nein</td></tr>
+                            <tr><td>Erbschaft</td><td>Begrenzt</td><td>Ja</td><td>Grundsätzlich möglich im Auszahlungsplan</td><td>Ja</td></tr>
+                            <tr><td>Break-Even-Alter</td><td>~73 (effektiv) / ~88 (volles Kapital)</td><td>Nicht anwendbar</td><td>Keines im Auszahlungsplan</td><td>Nicht anwendbar</td></tr>
+                            <tr><td>Anlageflexibilität</td><td>Niedrig</td><td>Mittel</td><td>Mittel</td><td>Sehr hoch</td></tr>
+                        </tbody>
+                    </table>
+                    <h3>Gesamtbewertung</h3>
+                    <p>Das Altersvorsorgedepot verbindet Merkmale sowohl traditioneller Rentenprodukte als auch der
+                        direkten ETF-Anlage.</p>
+                    <p>Im Vergleich zur <strong>Basisrente</strong> bietet es deutlich größere
+                        Auszahlungsflexibilität und vermeidet das Langlebigkeitsrisiko, wenn der Auszahlungsplan
+                        gewählt wird.</p>
+                    <p>Im Vergleich zur <strong>Flexiblen Privaten Rentenversicherung</strong> bietet es direkte
+                        staatliche Zulagen bei gleichzeitiger Möglichkeit, in ETFs und Investmentfonds zu
+                        investieren.</p>
+                    <p>Im Vergleich zu einem <strong>persönlichen ETF-Portfolio</strong> gibt es etwas Flexibilität
+                        auf, im Gegenzug für staatliche Unterstützung und steuerlich aufgeschobenes Wachstum.</p>
+                    <p>Für Anleger, die bereits in ETFs investieren, kann eine sinnvolle Strategie darin bestehen,
+                        jedes Jahr ausreichend einzuzahlen, um die maximale staatliche Zulage zu erhalten, während
+                        weitere langfristige Ersparnisse über ein kostengünstiges persönliches ETF-Portfolio angelegt
+                        werden.</p>
+                </div>
+
+            </div>
+        </div>
+        <!-- ==================== SCHEMA 3 ==================== -->
+        <div class="pension-scheme scheme-3">
+            <h2>Flexible Private Rentenversicherung versus Direktes ETF-Investment</h2>
+            <div class="scheme-body">
+
+                <div class="section">
+                    <h3>Überblick</h3>
                     <p>Eine häufige Frage ist, ob eine Flexible Private Rentenversicherung im Vergleich zur direkten
                         ETF-Anlage über ein persönliches Brokerage-Konto Vorteile bietet.</p>
                     <p>In vielen Fällen sind die zugrunde liegenden Anlagen sehr ähnlich, da Flexible Private
@@ -1000,28 +1375,49 @@
                         Marktbedingungen investieren, ist dieser Unterschied möglicherweise weniger wichtig.</p>
                 </div>
 
+            </div>
+        </div>
+        <!-- ==================== SCHEMA 4 ==================== -->
+        <div class="pension-scheme scheme-4">
+            <h2>Gesamtfazit</h2>
+            <div class="scheme-body">
+
                 <div class="section">
-                    <h3>Gesamtfazit</h3>
-                    <p>Die Basisrente bietet hauptsächlich Steueroptimierung während der Erwerbsjahre durch
-                        Steuerabzüge auf Beiträge. Da das angesammelte Kapital jedoch in eine lebenslange Rente
-                        umgewandelt wird und nicht als Einmalzahlung ausgezahlt werden kann, hängt die finanzielle
-                        Attraktivität stark von der Lebenserwartung ab.</p>
+                    <p>Die <strong>Basisrente (Rürup)</strong> bietet hauptsächlich Steueroptimierung während der
+                        Erwerbsjahre durch Steuerabzüge auf Beiträge. Da das angesammelte Kapital jedoch in eine
+                        lebenslange Rente umgewandelt wird und nicht als Einmalzahlung ausgezahlt werden kann, hängt
+                        ihre finanzielle Attraktivität stark von der Lebenserwartung ab.</p>
                     <p>Im besprochenen Beispiel wird der Break-Even-Punkt bei etwa 73 Jahren erreicht, wo die
                         erhaltenen Rentenzahlungen dem effektiven Beitrag der Person nach Berücksichtigung der
                         Steuervorteile entsprechen. Das vollständige Rentenkapitaläquivalent wird erst um das 88.
-                        Lebensjahr zurückerhalten. Daher wird die Basisrente für Personen, die erwarten, weit in die
-                        80er Jahre oder darüber hinaus zu leben, zunehmend attraktiver.</p>
-                    <p>Die Flexible Private Rentenversicherung bietet größere Flexibilität und
+                        Lebensjahr zurückerhalten. Daher ist die Basisrente generell attraktiver für Personen, die
+                        erwarten, weit in die 80er Jahre oder darüber hinaus zu leben.</p>
+                    <p>Die <strong>Flexible Private Rentenversicherung</strong> bietet größere Flexibilität und
                         Erbschaftsmöglichkeiten. Ihr Hauptvorteil gegenüber der direkten ETF-Anlage ist die günstige
                         Besteuerung, bei der nur 50% des Anlagegewinns steuerpflichtig werden, wenn die
                         Vertragsbedingungen erfüllt sind.</p>
                     <p>Die höheren Kosten, die mit Versicherungsprodukten verbunden sind, gleichen jedoch oft einen
-                        großen Teil dieses Steuervorteils aus. Infolgedessen ist das finanzielle Ergebnis einer
-                        Flexiblen Privaten Rentenversicherung oft ähnlich wie das eines kostengünstigen persönlichen
+                        großen Teil dieses Steuervorteils aus. Infolgedessen ist das finanzielle Gesamtergebnis einer
+                        Flexiblen Privaten Rentenversicherung häufig ähnlich wie das eines kostengünstigen persönlichen
                         ETF-Portfolios.</p>
-                    <p>Die direkte ETF-Anlage bietet maximale Flexibilität, minimale Kosten und vollständige Kontrolle
-                        über Anlageentscheidungen, während die Flexible Private Rentenversicherung einen Teil dieser
-                        Flexibilität gegen günstige steuerliche Behandlung und rentenbezogene Merkmale eintauscht.</p>
+                    <p>Das <strong>staatlich geförderte Altersvorsorgedepot</strong> verbindet mehrere Vorteile
+                        traditioneller Rentenprodukte mit der ETF-Anlage. Es bietet staatliche Zulagen, steuerlich
+                        aufgeschobenes Anlagewachstum und deutlich größere Auszahlungsflexibilität als die Basisrente.
+                        Anleger, die den Auszahlungsplan anstelle einer lebenslangen Rente wählen, vermeiden in der
+                        Regel das Langlebigkeitsrisiko, da das verbleibende Kapital verfügbar bleibt und in der Regel
+                        vererbt werden kann.</p>
+                    <p>Für Anleger, die Anspruch auf die staatliche Zulage haben, erscheint das Altersvorsorgedepot
+                        als eine der attraktivsten privaten Altersvorsorgeoptionen, die derzeit verfügbar sind. Die
+                        staatliche Zulage allein stellt einen erheblichen Vorteil dar, bevor überhaupt Anlagerenditen
+                        erzielt werden, während das langfristige Wachstumspotenzial dem einer ETF-Anlage ähnelt.</p>
+                    <p>Seine wesentlichen Einschränkungen bestehen darin, dass das Geld für die Altersvorsorge
+                        bestimmt bleibt, Auszahlungen im Rentenalter besteuert werden und die Anlageflexibilität
+                        geringer ist als bei einem persönlichen ETF-Portfolio. Dennoch werden für den geförderten
+                        Jahresbeitrag diese Nachteile häufig durch die staatliche Unterstützung aufgewogen.</p>
+                    <p>Ein <strong>persönliches ETF-Portfolio</strong> bietet weiterhin maximale Flexibilität, die
+                        niedrigsten Kosten und vollständige Kontrolle über Anlageentscheidungen. Es bleibt die
+                        bevorzugte Lösung für zusätzliche langfristige Anlagen über die geförderten
+                        Altersvorsorgeprodukte hinaus.</p>
                 </div>
 
             </div>
